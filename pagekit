@@ -1,0 +1,8 @@
+#!/usr/bin/env php
+<?php
+
+if (PHP_SAPI !== 'cli') {
+	exit('脚本需要从命令行界面（cli）运行');
+}
+
+require_once __DIR__ . '/index.php';

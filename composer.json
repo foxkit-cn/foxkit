@@ -1,0 +1,48 @@
+{
+    "name": "foxkit\/foxkit",
+    "type": "project",
+    "description": "A modular and lightweight CMS.",
+    "keywords": [
+        "cms",
+        "foxkit"
+    ],
+    "homepage": "https://github.com/foxkit-cn/foxkit",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "cnguu",
+            "email": "www@cnguu.cn"
+        }
+    ],
+    "require": {
+        "doctrine/annotations": "~1.2.3",
+        "doctrine/dbal": "~2.5.1",
+        "ircmaxell/random-lib": "~1.0.0",
+        "maximebf/debugbar": "~1.11.0",
+        "monolog/monolog": "~1.13",
+        "nikic/php-parser": "~2.0.0",
+        "psr/log": "~1.0.0",
+        "swiftmailer/swiftmailer": "~5.4.5",
+        "symfony/debug": "~3.0.0",
+        "symfony/finder": "~3.0.0",
+        "symfony/http-foundation": "~3.0.0",
+        "symfony/routing": "~3.0.0",
+        "symfony/stopwatch": "~3.0.0",
+        "symfony/templating": "~3.0.0",
+        "symfony/translation": "~3.0.0",
+        "twig/twig": "^1.22"
+    },
+    "autoload": {
+        "psr-4": {
+            "Foxkit\\": "app/modules/application/src",
+            "Foxkit\\Installer\\": "app/installer/src",
+            "Foxkit\\System\\": "app/system/src",
+            "Foxkit\\Config\\": "app/modules/config/src",
+            "Foxkit\\Console\\": "app/console/src",
+            "Foxkit\\Migration\\": "app/modules/migration/src"
+        }
+    },
+    "config": {
+        "vendor-dir": "app/vendor"
+    }
+}
