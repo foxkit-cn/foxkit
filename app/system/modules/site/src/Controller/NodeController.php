@@ -1,10 +1,10 @@
 <?php
 
-namespace Pagekit\Site\Controller;
+namespace Foxkit\Site\Controller;
 
-use Pagekit\Application as App;
-use Pagekit\Site\Model\Node;
-use Pagekit\User\Model\Role;
+use Foxkit\Application as App;
+use Foxkit\Site\Model\Node;
+use Foxkit\User\Model\Role;
 
 class NodeController
 {

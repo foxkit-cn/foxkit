@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Site\Controller;
+namespace Foxkit\Site\Controller;
 
-use Pagekit\Application as App;
-use Pagekit\Site\Model\Page;
+use Foxkit\Application as App;
+use Foxkit\Site\Model\Page;
 
 class PageController
 {

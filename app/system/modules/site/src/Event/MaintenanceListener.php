@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Site\Event;
+namespace Foxkit\Site\Event;
 
-use Pagekit\Application as App;
-use Pagekit\Event\EventSubscriberInterface;
+use Foxkit\Application as App;
+use Foxkit\Event\EventSubscriberInterface;
 
 class MaintenanceListener implements EventSubscriberInterface
 {
@@ -21,7 +21,7 @@ class MaintenanceListener implements EventSubscriberInterface
         if ($site->config('maintenance.enabled') && !(App::isAdmin() || $request->attributes->get('_maintenance') || App::user()->hasAccess('site: maintenance access') || App::user()->hasAccess('system: access admin area'))) {
 
             $message = $site->config('maintenance.msg') ?: __("We'll be back soon.");
-            $logo = $site->config('maintenance.logo') ?: 'app/system/assets/images/pagekit-logo-large-black.svg';
+            $logo = $site->config('maintenance.logo') ?: 'app/system/assets/images/foxkit-logo-large-black.svg';
             $response = App::view('system/theme:views/maintenance.php', compact('message', 'logo'));
 
             $request->attributes->set('_disable_debugbar', true);

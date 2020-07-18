@@ -4,11 +4,11 @@ return [
 
     'name' => 'system/intl',
 
-    'main' => 'Pagekit\\Intl\\IntlModule',
+    'main' => 'Foxkit\\Intl\\IntlModule',
 
     'autoload' => [
 
-        'Pagekit\\Intl\\' => 'src'
+        'Foxkit\\Intl\\' => 'src'
 
     ],
 
@@ -21,7 +21,7 @@ return [
     'routes' => [
         '/system/intl' => [
             'name' => '@system/intl',
-            'controller' => 'Pagekit\\Intl\\Controller\\IntlController'
+            'controller' => 'Foxkit\\Intl\\Controller\\IntlController'
         ],
     ],
 

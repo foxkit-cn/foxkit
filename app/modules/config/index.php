@@ -1,6 +1,6 @@
 <?php
 
-use Pagekit\Config\ConfigManager;
+use Foxkit\Config\ConfigManager;
 
 return [
 
@@ -35,7 +35,7 @@ return [
 
     'autoload' => [
 
-        'Pagekit\\Config\\' => 'src'
+        'Foxkit\\Config\\' => 'src'
 
     ],
 

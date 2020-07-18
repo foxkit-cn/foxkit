@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Filesystem\Archive;
+namespace Foxkit\Filesystem\Archive;
 
 interface ArchiveInterface
 {

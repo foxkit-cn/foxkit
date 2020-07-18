@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Debug\Storage;
+namespace Foxkit\Debug\Storage;
 
 use DebugBar\Storage\PdoStorage;
 

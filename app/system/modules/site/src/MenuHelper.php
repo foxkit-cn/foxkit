@@ -1,10 +1,10 @@
 <?php
 
-namespace Pagekit\Site;
+namespace Foxkit\Site;
 
-use Pagekit\Application as App;
-use Pagekit\Site\Model\Node;
-use Pagekit\View\Helper\Helper;
+use Foxkit\Application as App;
+use Foxkit\Site\Model\Node;
+use Foxkit\View\Helper\Helper;
 
 class MenuHelper extends Helper
 {

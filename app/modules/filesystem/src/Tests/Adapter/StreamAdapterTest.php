@@ -1,14 +1,14 @@
 <?php
 
-namespace Pagekit\Filesystem\Tests\Adapter;
+namespace Foxkit\Filesystem\Tests\Adapter;
 
-use Pagekit\Filesystem\Adapter\StreamAdapter;
-use Pagekit\Filesystem\Filesystem;
-use Pagekit\Filesystem\StreamWrapper;
+use Foxkit\Filesystem\Adapter\StreamAdapter;
+use Foxkit\Filesystem\Filesystem;
+use Foxkit\Filesystem\StreamWrapper;
 
 class StreamAdapterTest extends \PHPUnit_Framework_TestCase
 {
-    use \Pagekit\Tests\FileUtil;
+    use \Foxkit\Tests\FileUtil;
 
     protected $file;
     protected $fixtures;

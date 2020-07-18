@@ -1,14 +1,14 @@
 <?php
 
-namespace Pagekit\User\Event;
+namespace Foxkit\User\Event;
 
-use Pagekit\Application as App;
-use Pagekit\Auth\Auth;
-use Pagekit\Auth\Event\AuthenticateEvent;
-use Pagekit\Auth\Event\AuthorizeEvent;
-use Pagekit\Auth\Exception\AuthException;
-use Pagekit\Event\EventSubscriberInterface;
-use Pagekit\User\Auth\UserProvider;
+use Foxkit\Application as App;
+use Foxkit\Auth\Auth;
+use Foxkit\Auth\Event\AuthenticateEvent;
+use Foxkit\Auth\Event\AuthorizeEvent;
+use Foxkit\Auth\Exception\AuthException;
+use Foxkit\Event\EventSubscriberInterface;
+use Foxkit\User\Auth\UserProvider;
 
 class AuthorizationListener implements EventSubscriberInterface
 {

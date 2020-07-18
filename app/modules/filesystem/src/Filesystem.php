@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Filesystem;
+namespace Foxkit\Filesystem;
 
-use Pagekit\Filesystem\Adapter\AdapterInterface;
-use Pagekit\Routing\Generator\UrlGenerator;
+use Foxkit\Filesystem\Adapter\AdapterInterface;
+use Foxkit\Routing\Generator\UrlGenerator;
 
 class Filesystem
 {

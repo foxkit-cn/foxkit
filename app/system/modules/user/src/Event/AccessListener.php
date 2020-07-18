@@ -1,14 +1,14 @@
 <?php
 
-namespace Pagekit\User\Event;
+namespace Foxkit\User\Event;
 
 use Doctrine\Common\Annotations\Reader;
 use Doctrine\Common\Annotations\SimpleAnnotationReader;
-use Pagekit\Application as App;
-use Pagekit\Auth\Event\AuthorizeEvent;
-use Pagekit\Auth\Exception\AuthException;
-use Pagekit\Event\EventSubscriberInterface;
-use Pagekit\User\Annotation\Access;
+use Foxkit\Application as App;
+use Foxkit\Auth\Event\AuthorizeEvent;
+use Foxkit\Auth\Exception\AuthException;
+use Foxkit\Event\EventSubscriberInterface;
+use Foxkit\User\Annotation\Access;
 
 class AccessListener implements EventSubscriberInterface
 {
@@ -34,7 +34,7 @@ class AccessListener implements EventSubscriberInterface
     {
         if (!$this->reader) {
             $this->reader = new SimpleAnnotationReader;
-            $this->reader->addNamespace('Pagekit\User\Annotation');
+            $this->reader->addNamespace('Foxkit\User\Annotation');
         }
 
         if (!$route->getControllerClass()) {

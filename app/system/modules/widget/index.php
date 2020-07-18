@@ -1,9 +1,9 @@
 <?php
 
-use Pagekit\Widget\Model\Widget;
-use Pagekit\Widget\PositionHelper;
-use Pagekit\Widget\PositionManager;
-use Pagekit\Widget\WidgetManager;
+use Foxkit\Widget\Model\Widget;
+use Foxkit\Widget\PositionHelper;
+use Foxkit\Widget\PositionManager;
+use Foxkit\Widget\WidgetManager;
 
 return [
 
@@ -39,7 +39,7 @@ return [
 
     'autoload' => [
 
-        'Pagekit\\Widget\\' => 'src'
+        'Foxkit\\Widget\\' => 'src'
 
     ],
 
@@ -47,11 +47,11 @@ return [
 
         '/site/widget' => [
             'name' => '@site/widget',
-            'controller' => 'Pagekit\\Widget\\Controller\\WidgetController'
+            'controller' => 'Foxkit\\Widget\\Controller\\WidgetController'
         ],
         '/api/site/widget' => [
             'name' => '@site/api/widget',
-            'controller' => 'Pagekit\\Widget\\Controller\\WidgetApiController'
+            'controller' => 'Foxkit\\Widget\\Controller\\WidgetApiController'
         ]
 
     ],
@@ -114,7 +114,7 @@ return [
         },
 
         'package.enable' => function ($event, $package) use ($app) {
-            if ($package->getType() === 'pagekit-theme') {
+            if ($package->getType() === 'foxkit-theme') {
                 $new = $app->config($package->get('module'));
                 $old = $app->config($app['theme']->name);
                 $assigned = [];

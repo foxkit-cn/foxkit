@@ -1,14 +1,14 @@
 <?php
 
-namespace Pagekit\Console\Commands;
+namespace Foxkit\Console\Commands;
 
-use Pagekit\Application\Console\Command;
-use Pagekit\Installer\Installer;
-use Pagekit\Application as App;
+use Foxkit\Application\Console\Command;
+use Foxkit\Installer\Installer;
+use Foxkit\Application as App;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
-use Pagekit\Module\Loader\ConfigLoader;
+use Foxkit\Module\Loader\ConfigLoader;
 
 
 class SetupCommand extends Command
@@ -21,7 +21,7 @@ class SetupCommand extends Command
     /**
      * {@inheritdoc}
      */
-    protected $description = 'Setup a Pagekit installation';
+    protected $description = 'Setup a Foxkit installation';
 
     /**
      * {@inheritdoc}
@@ -30,7 +30,7 @@ class SetupCommand extends Command
     {
         $this->addOption('username', 'u', InputOption::VALUE_REQUIRED, 'Admin username', 'admin');
         $this->addOption('password', 'p', InputOption::VALUE_REQUIRED, 'Admin account password');
-        $this->addOption('title', 't', InputOption::VALUE_OPTIONAL, 'Site title', 'Pagekit');
+        $this->addOption('title', 't', InputOption::VALUE_OPTIONAL, 'Site title', 'Foxkit');
         $this->addOption('mail', 'm', InputOption::VALUE_OPTIONAL, 'Admin account email', 'admin@example.com');
         $this->addOption('db-driver', 'd', InputOption::VALUE_REQUIRED, 'DB driver (\'sqlite\' or \'mysql\')', 'sqlite');
         $this->addOption('db-prefix', null, InputOption::VALUE_OPTIONAL, 'DB prefix', 'pk_');
@@ -52,7 +52,7 @@ class SetupCommand extends Command
             exit;
         }
 
-        $this->line("Setting up Pagekit installation...");
+        $this->line("Setting up Foxkit installation...");
 
         $app = $this->container;
 

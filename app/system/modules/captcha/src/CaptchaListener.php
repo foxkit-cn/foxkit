@@ -1,12 +1,12 @@
 <?php
 
-namespace Pagekit\Captcha;
+namespace Foxkit\Captcha;
 
 use Doctrine\Common\Annotations\Reader;
 use Doctrine\Common\Annotations\SimpleAnnotationReader;
-use Pagekit\Application as App;
-use Pagekit\Captcha\Annotation\Captcha;
-use Pagekit\Event\EventSubscriberInterface;
+use Foxkit\Application as App;
+use Foxkit\Captcha\Annotation\Captcha;
+use Foxkit\Event\EventSubscriberInterface;
 
 class CaptchaListener implements EventSubscriberInterface
 {
@@ -32,7 +32,7 @@ class CaptchaListener implements EventSubscriberInterface
     {
         if (!$this->reader) {
             $this->reader = new SimpleAnnotationReader;
-            $this->reader->addNamespace('Pagekit\Captcha\Annotation');
+            $this->reader->addNamespace('Foxkit\Captcha\Annotation');
         }
 
         if (!$route->getControllerClass()) {

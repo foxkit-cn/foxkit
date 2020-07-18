@@ -1,10 +1,10 @@
 <?php
 
-namespace Pagekit\Routing\Event;
+namespace Foxkit\Routing\Event;
 
 use Doctrine\Common\Annotations\Reader;
 use Doctrine\Common\Annotations\SimpleAnnotationReader;
-use Pagekit\Event\EventSubscriberInterface;
+use Foxkit\Event\EventSubscriberInterface;
 
 class ConfigureRouteListener implements EventSubscriberInterface
 {
@@ -19,7 +19,7 @@ class ConfigureRouteListener implements EventSubscriberInterface
     public function __construct(Reader $reader = null)
     {
         $this->reader    = $reader;
-        $this->namespace = 'Pagekit\Routing\Annotation';
+        $this->namespace = 'Foxkit\Routing\Annotation';
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Database\Query;
+namespace Foxkit\Database\Query;
 
 class CompositeExpression implements \Countable
 {

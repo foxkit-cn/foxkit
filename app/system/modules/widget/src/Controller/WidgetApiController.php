@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Widget\Controller;
+namespace Foxkit\Widget\Controller;
 
-use Pagekit\Application as App;
-use Pagekit\Widget\Model\Widget;
+use Foxkit\Application as App;
+use Foxkit\Widget\Model\Widget;
 
 /**
  * @Access("system: manage widgets")

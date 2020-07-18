@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Filter\Tests;
+namespace Foxkit\Filter\Tests;
 
-use Pagekit\Filter\AlphaFilter;
+use Foxkit\Filter\AlphaFilter;
 
 class AlphaTest extends \PHPUnit_Framework_TestCase
 {

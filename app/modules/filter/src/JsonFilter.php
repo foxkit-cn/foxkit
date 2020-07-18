@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Filter;
+namespace Foxkit\Filter;
 
 /**
  * This filter decodes a JSON string to a array.

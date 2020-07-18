@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Auth\Handler;
+namespace Foxkit\Auth\Handler;
 
-use Pagekit\Cookie\CookieJar;
-use Pagekit\Database\Connection;
+use Foxkit\Cookie\CookieJar;
+use Foxkit\Database\Connection;
 use RandomLib\Generator;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;

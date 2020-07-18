@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Filter\Tests;
+namespace Foxkit\Filter\Tests;
 
-use Pagekit\Filter\FilterChain;
+use Foxkit\Filter\FilterChain;
 
 class FilterChainTest extends \PHPUnit_Framework_TestCase
 {
@@ -59,7 +59,7 @@ class FilterChainTest extends \PHPUnit_Framework_TestCase
 
     protected function getFilterMock()
     {
-        $filter = $this->getMock('Pagekit\Filter\FilterInterface');
+        $filter = $this->getMock('Foxkit\Filter\FilterInterface');
         $filter->expects($this->any())
                ->method('filter');
 

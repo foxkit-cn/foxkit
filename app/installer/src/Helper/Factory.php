@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Installer\Helper;
+namespace Foxkit\Installer\Helper;
 
 use Composer\Config;
 use Composer\Factory as BaseFactory;

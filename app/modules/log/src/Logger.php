@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Log;
+namespace Foxkit\Log;
 
 use Monolog\Logger as BaseLogger;
 

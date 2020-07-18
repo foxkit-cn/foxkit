@@ -1,10 +1,10 @@
 <?php
 
-namespace Pagekit\User\Model;
+namespace Foxkit\User\Model;
 
-use Pagekit\Application\Exception;
-use Pagekit\Auth\UserInterface;
-use Pagekit\System\Model\DataModelTrait;
+use Foxkit\Application\Exception;
+use Foxkit\Auth\UserInterface;
+use Foxkit\System\Model\DataModelTrait;
 
 /**
  * @Entity(tableClass="@system_user")

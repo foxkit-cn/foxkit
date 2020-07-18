@@ -1,13 +1,13 @@
 <?php
 
-namespace Pagekit\Site\Model;
+namespace Foxkit\Site\Model;
 
-use Pagekit\Application as App;
-use Pagekit\System\Model\DataModelTrait;
-use Pagekit\System\Model\NodeInterface;
-use Pagekit\System\Model\NodeTrait;
-use Pagekit\User\Model\AccessModelTrait;
-use Pagekit\User\Model\User;
+use Foxkit\Application as App;
+use Foxkit\System\Model\DataModelTrait;
+use Foxkit\System\Model\NodeInterface;
+use Foxkit\System\Model\NodeTrait;
+use Foxkit\User\Model\AccessModelTrait;
+use Foxkit\User\Model\User;
 
 /**
  * @Entity(tableClass="@system_node")

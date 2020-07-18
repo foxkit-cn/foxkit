@@ -1,6 +1,6 @@
 <?php
 
-use Pagekit\Info\InfoHelper;
+use Foxkit\Info\InfoHelper;
 
 return [
 
@@ -16,7 +16,7 @@ return [
 
     'autoload' => [
 
-        'Pagekit\\Info\\' => 'src'
+        'Foxkit\\Info\\' => 'src'
 
     ],
 
@@ -24,7 +24,7 @@ return [
 
         '/system/info' => [
             'name' => '@system/info',
-            'controller' => 'Pagekit\\Info\\Controller\\InfoController'
+            'controller' => 'Foxkit\\Info\\Controller\\InfoController'
         ]
 
     ],

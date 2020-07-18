@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Dashboard;
+namespace Foxkit\Dashboard;
 
-use Pagekit\Application as App;
-use Pagekit\Module\Module;
+use Foxkit\Application as App;
+use Foxkit\Module\Module;
 
 class DashboardModule extends Module
 {

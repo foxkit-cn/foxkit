@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Console\Commands;
+namespace Foxkit\Console\Commands;
 
-use Pagekit\Application\Console\Command;
-use Pagekit\Console\NodeVisitor\PhpNodeVisitor;
+use Foxkit\Application\Console\Command;
+use Foxkit\Console\NodeVisitor\PhpNodeVisitor;
 use Symfony\Component\Console\Helper\ProgressBar;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -251,7 +251,7 @@ class ExtensionTranslateCommand extends Command
         return <<<EOD
 msgid ""
 msgstr ""
-"Project-Id-Version: Pagekit $version ($extension, $domain)\\n"
+"Project-Id-Version: Foxkit $version ($extension, $domain)\\n"
 "POT-Creation-Date: $date\\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\\n"

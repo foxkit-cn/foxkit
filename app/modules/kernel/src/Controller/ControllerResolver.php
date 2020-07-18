@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Kernel\Controller;
+namespace Foxkit\Kernel\Controller;
 
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\Request;

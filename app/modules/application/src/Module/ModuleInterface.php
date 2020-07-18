@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Module;
+namespace Foxkit\Module;
 
-use Pagekit\Application as App;
+use Foxkit\Application as App;
 
 interface ModuleInterface
 {

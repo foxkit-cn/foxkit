@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Installer\Package;
+namespace Foxkit\Installer\Package;
 
 interface PackageInterface extends \JsonSerializable
 {

@@ -44,7 +44,7 @@
         },
 
         data: function () {
-            return _.merge({}, $pagekit);
+            return _.merge({}, $foxkit);
         },
 
         methods: {

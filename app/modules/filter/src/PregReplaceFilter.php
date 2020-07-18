@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Filter;
+namespace Foxkit\Filter;
 
 /**
  * This filter performs a regular expression search and replace.

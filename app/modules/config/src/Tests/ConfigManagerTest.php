@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Config\Tests;
+namespace Foxkit\Config\Tests;
 
 use Doctrine\Common\Cache\ArrayCache;
-use Pagekit\Config\ConfigManager;
+use Foxkit\Config\ConfigManager;
 
 class ConfigManagerTest extends \PHPUnit_Framework_TestCase
 {
@@ -162,7 +162,7 @@ class ConfigManagerTest extends \PHPUnit_Framework_TestCase
     protected function getConnection()
     {
         $mock = $this
-            ->getMockBuilder('Pagekit\Database\Connection')
+            ->getMockBuilder('Foxkit\Database\Connection')
             ->disableOriginalConstructor()
             ->setMethods(
                 [

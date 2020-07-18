@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Kernel\Controller;
+namespace Foxkit\Kernel\Controller;
 
-use Pagekit\Event\EventSubscriberInterface;
+use Foxkit\Event\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\Response;
 
 class ControllerListener implements EventSubscriberInterface

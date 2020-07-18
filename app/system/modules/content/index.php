@@ -1,9 +1,9 @@
 <?php
 
-use Pagekit\Content\ContentHelper;
-use Pagekit\Content\Plugin\MarkdownPlugin;
-use Pagekit\Content\Plugin\SimplePlugin;
-use Pagekit\Content\Plugin\VideoPlugin;
+use Foxkit\Content\ContentHelper;
+use Foxkit\Content\Plugin\MarkdownPlugin;
+use Foxkit\Content\Plugin\SimplePlugin;
+use Foxkit\Content\Plugin\VideoPlugin;
 
 return [
 

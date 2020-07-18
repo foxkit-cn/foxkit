@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Tests;
+namespace Foxkit\Tests;
 
 trait FtpUtil
 {

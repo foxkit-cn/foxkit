@@ -1,12 +1,12 @@
 <?php
 
-namespace Pagekit\User\Controller;
+namespace Foxkit\User\Controller;
 
-use Pagekit\Application as App;
-use Pagekit\Auth\Auth;
-use Pagekit\Auth\Exception\AuthException;
-use Pagekit\Auth\Exception\BadCredentialsException;
-use Pagekit\Session\Csrf\Exception\CsrfException;
+use Foxkit\Application as App;
+use Foxkit\Auth\Auth;
+use Foxkit\Auth\Exception\AuthException;
+use Foxkit\Auth\Exception\BadCredentialsException;
+use Foxkit\Session\Csrf\Exception\CsrfException;
 
 class AuthController
 {

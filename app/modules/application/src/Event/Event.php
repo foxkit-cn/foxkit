@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Event;
+namespace Foxkit\Event;
 
-use Pagekit\Util\Arr;
+use Foxkit\Util\Arr;
 
 class Event implements EventInterface, \ArrayAccess
 {

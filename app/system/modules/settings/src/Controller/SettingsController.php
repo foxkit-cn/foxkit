@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\System\Controller;
+namespace Foxkit\System\Controller;
 
-use Pagekit\Application as App;
-use Pagekit\Config\Config;
+use Foxkit\Application as App;
+use Foxkit\Config\Config;
 
 /**
  * @Access("system: access settings", admin=true)

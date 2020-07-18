@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Filesystem\Adapter;
+namespace Foxkit\Filesystem\Adapter;
 
 class StreamAdapter extends FileAdapter
 {
@@ -16,7 +16,7 @@ class StreamAdapter extends FileAdapter
      * @param string $url;
      * @param string $wrapper;
      */
-    public function __construct($path, $url = '', $wrapper = 'Pagekit\Filesystem\StreamWrapper')
+    public function __construct($path, $url = '', $wrapper = 'Foxkit\Filesystem\StreamWrapper')
     {
         parent::__construct($path, $url);
 

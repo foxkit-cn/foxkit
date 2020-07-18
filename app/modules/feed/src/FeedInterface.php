@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Feed;
+namespace Foxkit\Feed;
 
 interface FeedInterface
 {

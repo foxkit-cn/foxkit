@@ -1,13 +1,13 @@
 <?php
 
-use Pagekit\Installer\Package\PackageScripts;
-use Pagekit\Kernel\Event\ExceptionListener;
+use Foxkit\Installer\Package\PackageScripts;
+use Foxkit\Kernel\Event\ExceptionListener;
 
 return [
 
     'name' => 'system',
 
-    'main' => 'Pagekit\\System\\SystemModule',
+    'main' => 'Foxkit\\System\\SystemModule',
 
     'include' => 'modules/*/index.php',
 
@@ -40,11 +40,11 @@ return [
 
         '/' => [
             'name' => '@system',
-            'controller' => 'Pagekit\\System\\Controller\\AdminController'
+            'controller' => 'Foxkit\\System\\Controller\\AdminController'
         ],
         '/system/migration' => [
             'name' => '@system/migration',
-            'controller' => 'Pagekit\\System\\Controller\\MigrationController'
+            'controller' => 'Foxkit\\System\\Controller\\MigrationController'
         ]
 
     ],
@@ -81,7 +81,7 @@ return [
         'boot' => function ($event, $app) {
 
             if (!$app['debug']) {
-                $app->subscribe(new ExceptionListener('Pagekit\System\Controller\ExceptionController::showAction'));
+                $app->subscribe(new ExceptionListener('Foxkit\System\Controller\ExceptionController::showAction'));
             }
 
             $app['db.em']; // -TODO- fix me

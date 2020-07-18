@@ -1,7 +1,7 @@
 <?php
 
-use Pagekit\Installer\Package\PackageFactory;
-use Pagekit\Kernel\Exception\NotFoundException;
+use Foxkit\Installer\Package\PackageFactory;
+use Foxkit\Kernel\Exception\NotFoundException;
 
 return [
 
@@ -26,7 +26,7 @@ return [
             $app['routes']->add([
                 'path' => '/installer',
                 'name' => '@installer',
-                'controller' => 'Pagekit\Installer\Controller\InstallerController'
+                'controller' => 'Foxkit\Installer\Controller\InstallerController'
             ]);
 
             $app->on('request', function ($event, $request) use ($app) {
@@ -61,15 +61,15 @@ return [
 
         '/system/package' => [
             'name' => '@system/package',
-            'controller' => 'Pagekit\Installer\Controller\PackageController'
+            'controller' => 'Foxkit\Installer\Controller\PackageController'
         ],
         '/system/marketplace' => [
             'name' => '@system/marketplace',
-            'controller' => 'Pagekit\Installer\Controller\MarketplaceController'
+            'controller' => 'Foxkit\Installer\Controller\MarketplaceController'
         ],
         '/system/update' => [
             'name' => '@system/update',
-            'controller' => 'Pagekit\Installer\Controller\UpdateController'
+            'controller' => 'Foxkit\Installer\Controller\UpdateController'
         ]
 
     ],

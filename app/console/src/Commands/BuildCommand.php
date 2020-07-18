@@ -1,10 +1,10 @@
 <?php
 
-namespace Pagekit\Console\Commands;
+namespace Foxkit\Console\Commands;
 
-use Pagekit\Application as App;
-use Pagekit\Application\Console\Command;
-use Pagekit\Installer\Helper\Composer;
+use Foxkit\Application as App;
+use Foxkit\Application\Console\Command;
+use Foxkit\Installer\Helper\Composer;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -26,7 +26,7 @@ class BuildCommand extends Command
      * @var string[]
      */
     protected $excludes = [
-        '^(tmp|config\.php|pagekit.+\.zip|pagekit.db|.+\.map)',
+        '^(tmp|config\.php|foxkit.+\.zip|foxkit.db|.+\.map)',
         '^app\/assets\/[^\/]+\/(dist\/vue-.+\.js|dist\/jquery\.js|lodash\.js)',
         '^app\/assets\/(jquery|vue)\/(src|perf|external)',
         '^app\/vendor\/lusitanian\/oauth\/examples',
@@ -46,8 +46,8 @@ class BuildCommand extends Command
         $vers = $this->container->version();
         $filter = '/' . implode('|', $this->excludes) . '/i';
         $packages = [
-            'pagekit/blog' => '*',
-            'pagekit/theme-one' => '*'
+            'foxkit/blog' => '*',
+            'foxkit/theme-one' => '*'
         ];
 
         $config = [];
@@ -70,7 +70,7 @@ class BuildCommand extends Command
 
         $zip = new \ZipArchive;
 
-        if (true !== $zip->open($zipFile = "{$path}/pagekit-{$vers}.zip", \ZipArchive::CREATE | \ZipArchive::OVERWRITE)) {
+        if (true !== $zip->open($zipFile = "{$path}/foxkit-{$vers}.zip", \ZipArchive::CREATE | \ZipArchive::OVERWRITE)) {
             $this->abort("Can't open ZIP extension in '{$zipFile}'");
         }
 

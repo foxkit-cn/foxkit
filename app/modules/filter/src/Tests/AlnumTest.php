@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Filter\Tests;
+namespace Foxkit\Filter\Tests;
 
-use Pagekit\Filter\AlnumFilter;
+use Foxkit\Filter\AlnumFilter;
 
 class AlnumTest extends \PHPUnit_Framework_TestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\User\Annotation;
+namespace Foxkit\User\Annotation;
 
 /**
  * @Annotation

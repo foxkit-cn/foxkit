@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Kernel\Event;
+namespace Foxkit\Kernel\Event;
 
-use Pagekit\Kernel\HttpKernelInterface;
+use Foxkit\Kernel\HttpKernelInterface;
 
 class ExceptionEvent extends KernelEvent
 {

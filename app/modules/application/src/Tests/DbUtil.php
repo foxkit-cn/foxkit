@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Tests;
+namespace Foxkit\Tests;
 
 trait DbUtil
 {
@@ -80,7 +80,7 @@ trait DbUtil
                 }
             }
 
-            $conn = \Doctrine\DBAL\DriverManager::getConnection(array_merge(['wrapperClass' => 'Pagekit\Database\Connection'], $realDbParams), null, null);
+            $conn = \Doctrine\DBAL\DriverManager::getConnection(array_merge(['wrapperClass' => 'Foxkit\Database\Connection'], $realDbParams), null, null);
         } else {
             $params = [
                 'driver' => 'pdo_sqlite',
@@ -90,7 +90,7 @@ trait DbUtil
                 $params['path'] = $GLOBALS['db_path'];
                 unlink($GLOBALS['db_path']);
             }
-            $conn = \Doctrine\DBAL\DriverManager::getConnection(array_merge(['wrapperClass' => 'Pagekit\Database\Connection'], $params));
+            $conn = \Doctrine\DBAL\DriverManager::getConnection(array_merge(['wrapperClass' => 'Foxkit\Database\Connection'], $params));
         }
 
         return $conn;

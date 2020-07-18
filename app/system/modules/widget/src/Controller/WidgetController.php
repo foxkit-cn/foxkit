@@ -1,11 +1,11 @@
 <?php
 
-namespace Pagekit\Widget\Controller;
+namespace Foxkit\Widget\Controller;
 
-use Pagekit\Application as App;
-use Pagekit\Site\Model\Node;
-use Pagekit\User\Model\Role;
-use Pagekit\Widget\Model\Widget;
+use Foxkit\Application as App;
+use Foxkit\Site\Model\Node;
+use Foxkit\User\Model\Role;
+use Foxkit\Widget\Model\Widget;
 
 /**
  * @Access("system: manage widgets", admin=true)

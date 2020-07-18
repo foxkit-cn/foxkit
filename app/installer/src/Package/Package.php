@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Installer\Package;
+namespace Foxkit\Installer\Package;
 
-use Pagekit\Util\Arr;
+use Foxkit\Util\Arr;
 
 class Package implements PackageInterface
 {

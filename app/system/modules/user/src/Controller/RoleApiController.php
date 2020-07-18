@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\User\Controller;
+namespace Foxkit\User\Controller;
 
-use Pagekit\Application as App;
-use Pagekit\User\Model\Role;
+use Foxkit\Application as App;
+use Foxkit\User\Model\Role;
 
 /**
  * @Access("user: manage user permissions")

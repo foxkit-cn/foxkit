@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Application;
+namespace Foxkit\Application;
 
 use Pagekit\Filesystem\Filesystem;
 use Pagekit\Filesystem\Locator;

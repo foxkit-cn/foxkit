@@ -4,11 +4,11 @@ return [
 
     'name' => 'system/dashboard',
 
-    'main' => 'Pagekit\\Dashboard\\DashboardModule',
+    'main' => 'Foxkit\\Dashboard\\DashboardModule',
 
     'autoload' => [
 
-        'Pagekit\\Dashboard\\' => 'src'
+        'Foxkit\\Dashboard\\' => 'src'
 
     ],
 
@@ -16,7 +16,7 @@ return [
 
         '/dashboard' => [
             'name' => '@dashboard',
-            'controller' => 'Pagekit\\Dashboard\\Controller\\DashboardController'
+            'controller' => 'Foxkit\\Dashboard\\Controller\\DashboardController'
         ]
 
     ],

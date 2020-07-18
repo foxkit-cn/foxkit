@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Site\Model;
+namespace Foxkit\Site\Model;
 
-use Pagekit\Database\ORM\ModelTrait;
-use Pagekit\System\Model\DataModelTrait;
+use Foxkit\Database\ORM\ModelTrait;
+use Foxkit\System\Model\DataModelTrait;
 
 /**
  * @Entity(tableClass="@system_page")

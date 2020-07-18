@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Application\Traits;
+namespace Foxkit\Application\Traits;
 
 use Pagekit\Kernel\Event\ExceptionListenerWrapper;
 use Symfony\Component\HttpFoundation\Request;

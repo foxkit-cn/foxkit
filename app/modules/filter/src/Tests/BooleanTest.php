@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Filter\Tests;
+namespace Foxkit\Filter\Tests;
 
-use Pagekit\Filter\BooleanFilter;
+use Foxkit\Filter\BooleanFilter;
 
 class BooleanTest extends \PHPUnit_Framework_TestCase
 {

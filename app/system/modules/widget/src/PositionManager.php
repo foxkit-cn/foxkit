@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Widget;
+namespace Foxkit\Widget;
 
-use Pagekit\Application as App;
-use Pagekit\Config\Config;
+use Foxkit\Application as App;
+use Foxkit\Config\Config;
 
 class PositionManager implements \JsonSerializable
 {

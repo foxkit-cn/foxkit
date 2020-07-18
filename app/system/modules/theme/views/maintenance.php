@@ -12,7 +12,7 @@
         <div class="uk-height-viewport uk-flex uk-flex-center uk-flex-middle uk-text-center">
             <div class="tm-container">
 
-                <img class="uk-margin-large-bottom" src="<?= $view->url()->getStatic($logo) ?>" alt="Pagekit">
+                <img class="uk-margin-large-bottom" src="<?= $view->url()->getStatic($logo) ?>" alt="Foxkit">
 
                 <div class="uk-panel uk-panel-box">
                     <h1><?= __('Maintenance') ?></h1>

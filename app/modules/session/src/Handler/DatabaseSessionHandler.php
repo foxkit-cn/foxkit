@@ -1,11 +1,11 @@
 <?php
 
-namespace Pagekit\Session\Handler;
+namespace Foxkit\Session\Handler;
 
 use Doctrine\DBAL\ConnectionException;
 use Doctrine\DBAL\Platforms\MySqlPlatform;
 use Doctrine\DBAL\Platforms\SqlitePlatform;
-use Pagekit\Database\Connection;
+use Foxkit\Database\Connection;
 
 class DatabaseSessionHandler implements \SessionHandlerInterface
 {

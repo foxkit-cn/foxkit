@@ -37,7 +37,7 @@
             }
 
             var components = this.$options.components, type = 'editor-' + this.type, self = this,
-                Editor = components[type] || components['editor-' + window.$pagekit.editor] || components['editor-textarea'];
+                Editor = components[type] || components['editor-' + window.$foxkit.editor] || components['editor-textarea'];
 
             new Editor({parent: this}).$on('ready', function () {
 

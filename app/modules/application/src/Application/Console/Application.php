@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Application\Console;
+namespace Foxkit\Application\Console;
 
 use Pagekit\Application as Container;
 use Pagekit\Event\Event;

@@ -1,12 +1,12 @@
 <?php
 
-namespace Pagekit;
+namespace Foxkit;
 
-use Pagekit\Application\Traits\EventTrait;
-use Pagekit\Application\Traits\RouterTrait;
-use Pagekit\Application\Traits\StaticTrait;
-use Pagekit\Event\EventDispatcher;
-use Pagekit\Module\ModuleManager;
+use Foxkit\Application\Traits\EventTrait;
+use Foxkit\Application\Traits\RouterTrait;
+use Foxkit\Application\Traits\StaticTrait;
+use Foxkit\Event\EventDispatcher;
+use Foxkit\Module\ModuleManager;
 use Symfony\Component\HttpFoundation\Request;
 
 class Application extends Container

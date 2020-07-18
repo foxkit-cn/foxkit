@@ -18,8 +18,8 @@
                 <img class="uk-margin-large-bottom" src="<?= $view->url()->getStatic('app/system/assets/images/pagekit-logo-large-black.svg') ?>" alt="Pagekit">
 
                 <form class="uk-panel uk-panel-box" action="<?= $view->url('@system/migration/migrate') ?>">
-                    <h1><?= __('Update Pagekit') ?></h1>
-                    <p><?= __('Pagekit has been updated! Before we send you on your way, we have to update your database to the newest version.') ?></p>
+                    <h1><?= __('Update Foxkit') ?></h1>
+                    <p><?= __('Foxkit has been updated! Before we send you on your way, we have to update your database to the newest version.') ?></p>
                     <p>
                         <?php if ($redirect): ?>
                             <input type="hidden" name="redirect" value="<?php echo $redirect ?>">

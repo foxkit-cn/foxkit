@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Site\Model;
+namespace Foxkit\Site\Model;
 
-use Pagekit\Application as App;
-use Pagekit\Database\ORM\ModelTrait;
+use Foxkit\Application as App;
+use Foxkit\Database\ORM\ModelTrait;
 
 trait NodeModelTrait
 {

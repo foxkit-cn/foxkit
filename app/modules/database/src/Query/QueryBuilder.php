@@ -1,12 +1,12 @@
 <?php
 
-namespace Pagekit\Database\Query;
+namespace Foxkit\Database\Query;
 
 use Closure;
 use Doctrine\DBAL\Driver\Statement;
 use Doctrine\DBAL\Platforms\MySqlPlatform;
 use Doctrine\DBAL\Types\Type;
-use Pagekit\Database\Connection;
+use Foxkit\Database\Connection;
 use PDO;
 
 class QueryBuilder

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Database\ORM;
+namespace Foxkit\Database\ORM;
 
 class QueryBuilder
 {
@@ -15,7 +15,7 @@ class QueryBuilder
     protected $metadata;
 
     /**
-     * @var \Pagekit\Database\Query\QueryBuilder
+     * @var \Foxkit\Database\Query\QueryBuilder
      */
     protected $query;
 

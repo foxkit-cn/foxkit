@@ -12,7 +12,7 @@
          bootstrap="../../Tests/bootstrap.php"
 >
     <testsuites>
-        <testsuite name="Pagekit Filesystem Component Test Suite">
+        <testsuite name="Foxkit Filesystem Component Test Suite">
             <directory>./Tests/</directory>
         </testsuite>
     </testsuites>

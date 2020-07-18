@@ -1,10 +1,10 @@
 <?php
 
-namespace Pagekit\Debug\Event;
+namespace Foxkit\Debug\Event;
 
-use Pagekit\Event\Event;
-use Pagekit\Event\EventDispatcherInterface;
-use Pagekit\Event\EventInterface;
+use Foxkit\Event\Event;
+use Foxkit\Event\EventDispatcherInterface;
+use Foxkit\Event\EventInterface;
 use Symfony\Component\Stopwatch\Stopwatch;
 
 /**

@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Kernel\Event;
+namespace Foxkit\Kernel\Event;
 
-use Pagekit\Event\EventSubscriberInterface;
-use Pagekit\Kernel\Exception\HttpException;
+use Foxkit\Event\EventSubscriberInterface;
+use Foxkit\Kernel\Exception\HttpException;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Debug\Exception\FlattenException;
 use Symfony\Component\HttpFoundation\Request;

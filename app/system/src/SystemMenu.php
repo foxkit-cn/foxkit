@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\System;
+namespace Foxkit\System;
 
-use Pagekit\Application as App;
-use Pagekit\Util\ArrObject;
+use Foxkit\Application as App;
+use Foxkit\Util\ArrObject;
 
 class SystemMenu implements \IteratorAggregate, \JsonSerializable
 {

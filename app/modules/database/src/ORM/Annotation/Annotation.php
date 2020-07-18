@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Database\ORM\Annotation;
+namespace Foxkit\Database\ORM\Annotation;
 
 /**
  * The Annotation interface.

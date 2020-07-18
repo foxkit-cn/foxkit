@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Comment;
+namespace Foxkit\Comment;
 
-use Pagekit\Content\Event\ContentEvent;
-use Pagekit\Event\EventSubscriberInterface;
+use Foxkit\Content\Event\ContentEvent;
+use Foxkit\Event\EventSubscriberInterface;
 
 class CommentPlugin implements EventSubscriberInterface
 {

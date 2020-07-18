@@ -1,11 +1,11 @@
 <?php
 
-namespace Pagekit\Database\ORM;
+namespace Foxkit\Database\ORM;
 
 use Doctrine\Common\Cache\Cache;
-use Pagekit\Database\Connection;
-use Pagekit\Database\ORM\Loader\LoaderInterface;
-use Pagekit\Event\EventDispatcherInterface;
+use Foxkit\Database\Connection;
+use Foxkit\Database\ORM\Loader\LoaderInterface;
+use Foxkit\Event\EventDispatcherInterface;
 
 class MetadataManager
 {

@@ -13,6 +13,6 @@ module.exports = function (Vue) {
 
     });
 
-    Vue.cache.set('_csrf', window.$pagekit.csrf);
+    Vue.cache.set('_csrf', window.$foxkit.csrf);
 
 };

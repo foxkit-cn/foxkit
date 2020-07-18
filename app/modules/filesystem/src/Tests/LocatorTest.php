@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Filesystem\Tests;
+namespace Foxkit\Filesystem\Tests;
 
-use Pagekit\Filesystem\Filesystem;
-use Pagekit\Filesystem\Locator;
+use Foxkit\Filesystem\Filesystem;
+use Foxkit\Filesystem\Locator;
 
 class LocatorTest extends \PHPUnit_Framework_TestCase
 {

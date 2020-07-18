@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Auth\Event;
+namespace Foxkit\Auth\Event;
 
 class LoginEvent extends GetResponseEvent
 {

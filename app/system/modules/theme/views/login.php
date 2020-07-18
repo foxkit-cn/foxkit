@@ -15,7 +15,7 @@
         <div class="uk-height-viewport uk-flex uk-flex-center uk-flex-middle uk-text-center">
             <div class="tm-container tm-container-small">
 
-                <img class="uk-margin-large-bottom" src="<?= $view->url()->getStatic('app/system/assets/images/pagekit-logo-text.svg') ?>" alt="Pagekit">
+                <img class="uk-margin-large-bottom" src="<?= $view->url()->getStatic('app/system/assets/images/foxkit-logo-text.svg') ?>" alt="Foxkit">
 
                 <?= $view->render('messages') ?>
 

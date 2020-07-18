@@ -1,11 +1,11 @@
 <?php
 
-namespace Pagekit\User\Auth;
+namespace Foxkit\User\Auth;
 
-use Pagekit\Auth\Encoder\PasswordEncoderInterface;
-use Pagekit\Auth\UserInterface;
-use Pagekit\Auth\UserProviderInterface;
-use Pagekit\User\Model\User;
+use Foxkit\Auth\Encoder\PasswordEncoderInterface;
+use Foxkit\Auth\UserInterface;
+use Foxkit\Auth\UserProviderInterface;
+use Foxkit\User\Model\User;
 
 class UserProvider implements UserProviderInterface
 {

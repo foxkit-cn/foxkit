@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\View\Event;
+namespace Foxkit\View\Event;
 
-use Pagekit\Application as App;
-use Pagekit\Event\EventSubscriberInterface;
+use Foxkit\Application as App;
+use Foxkit\Event\EventSubscriberInterface;
 
 class ResponseListener implements EventSubscriberInterface
 {

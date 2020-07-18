@@ -1,10 +1,10 @@
 <?php
 
-namespace Pagekit\Debug\DataCollector;
+namespace Foxkit\Debug\DataCollector;
 
 use DebugBar\DataCollector\DataCollectorInterface;
-use Pagekit\Auth\Auth;
-use Pagekit\User\Model\User;
+use Foxkit\Auth\Auth;
+use Foxkit\User\Model\User;
 
 class AuthDataCollector implements DataCollectorInterface
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Filter\Tests;
+namespace Foxkit\Filter\Tests;
 
-use Pagekit\Filter\IntFilter;
+use Foxkit\Filter\IntFilter;
 
 class IntTest extends \PHPUnit_Framework_TestCase
 {

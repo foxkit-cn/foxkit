@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Intl\Controller;
+namespace Foxkit\Intl\Controller;
 
-use Pagekit\Application as App;
+use Foxkit\Application as App;
 
 class IntlController
 {

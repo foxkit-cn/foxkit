@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Kernel\Event;
+namespace Foxkit\Kernel\Event;
 
-use Pagekit\Event\EventSubscriberInterface;
+use Foxkit\Event\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class JsonResponseListener implements EventSubscriberInterface

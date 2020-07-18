@@ -1,10 +1,10 @@
 <?php
 
-namespace Pagekit\Site\Event;
+namespace Foxkit\Site\Event;
 
-use Pagekit\Application as App;
-use Pagekit\Event\EventSubscriberInterface;
-use Pagekit\Site\Model\Page;
+use Foxkit\Application as App;
+use Foxkit\Event\EventSubscriberInterface;
+use Foxkit\Site\Model\Page;
 
 class PageListener implements EventSubscriberInterface
 {

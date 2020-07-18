@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Finder\Event;
+namespace Foxkit\Finder\Event;
 
-use Pagekit\Event\Event;
+use Foxkit\Event\Event;
 
 class FileAccessEvent extends Event
 {

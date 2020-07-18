@@ -1,5 +1,5 @@
 <?php
-namespace Pagekit\Application\Console;
+namespace Foxkit\Application\Console;
 
 use Pagekit\Container;
 use Symfony\Component\Console\Command\Command as BaseCommand;

@@ -1,23 +1,23 @@
 <?php
 
-use Pagekit\Event\PrefixEventDispatcher;
-use Pagekit\Twig\TwigEngine;
-use Pagekit\View\Asset\AssetFactory;
-use Pagekit\View\Asset\AssetManager;
-use Pagekit\View\Helper\DataHelper;
-use Pagekit\View\Helper\DeferredHelper;
-use Pagekit\View\Helper\GravatarHelper;
-use Pagekit\View\Helper\MapHelper;
-use Pagekit\View\Helper\MarkdownHelper;
-use Pagekit\View\Helper\MetaHelper;
-use Pagekit\View\Helper\ScriptHelper;
-use Pagekit\View\Helper\SectionHelper;
-use Pagekit\View\Helper\StyleHelper;
-use Pagekit\View\Helper\TokenHelper;
-use Pagekit\View\Helper\UrlHelper;
-use Pagekit\View\Loader\FilesystemLoader;
-use Pagekit\View\PhpEngine;
-use Pagekit\View\View;
+use Foxkit\Event\PrefixEventDispatcher;
+use Foxkit\Twig\TwigEngine;
+use Foxkit\View\Asset\AssetFactory;
+use Foxkit\View\Asset\AssetManager;
+use Foxkit\View\Helper\DataHelper;
+use Foxkit\View\Helper\DeferredHelper;
+use Foxkit\View\Helper\GravatarHelper;
+use Foxkit\View\Helper\MapHelper;
+use Foxkit\View\Helper\MarkdownHelper;
+use Foxkit\View\Helper\MetaHelper;
+use Foxkit\View\Helper\ScriptHelper;
+use Foxkit\View\Helper\SectionHelper;
+use Foxkit\View\Helper\StyleHelper;
+use Foxkit\View\Helper\TokenHelper;
+use Foxkit\View\Helper\UrlHelper;
+use Foxkit\View\Loader\FilesystemLoader;
+use Foxkit\View\PhpEngine;
+use Foxkit\View\View;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Templating\TemplateNameParser;
 

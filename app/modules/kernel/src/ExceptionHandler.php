@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Kernel;
+namespace Foxkit\Kernel;
 
-use Pagekit\Kernel\Exception\HttpException;
+use Foxkit\Kernel\Exception\HttpException;
 use Symfony\Component\Debug\Exception\FlattenException;
 use Symfony\Component\Debug\ExceptionHandler as DebugExceptionHandler;
 

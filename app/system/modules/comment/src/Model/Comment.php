@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Comment\Model;
+namespace Foxkit\Comment\Model;
 
 /**
  * @MappedSuperclass
@@ -34,7 +34,7 @@ abstract class Comment
     /**
      * Should be mapped by the end developer.
      *
-     * @var \Pagekit\Comment\Model\Comment
+     * @var \Foxkit\Comment\Model\Comment
      */
     public $parent;
 

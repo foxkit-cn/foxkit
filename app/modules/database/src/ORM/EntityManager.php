@@ -1,11 +1,11 @@
 <?php
 
-namespace Pagekit\Database\ORM;
+namespace Foxkit\Database\ORM;
 
-use Pagekit\Database\Connection;
-use Pagekit\Database\Events;
-use Pagekit\Event\EventDispatcherInterface;
-use Pagekit\Event\PrefixEventDispatcher;
+use Foxkit\Database\Connection;
+use Foxkit\Database\Events;
+use Foxkit\Event\EventDispatcherInterface;
+use Foxkit\Event\PrefixEventDispatcher;
 
 class EntityManager
 {
@@ -126,7 +126,7 @@ class EntityManager
         $metadata = $this->getMetadata(current($entities));
         $mapping  = $metadata->getRelationMapping($name);
 
-        if (!class_exists($class = 'Pagekit\Database\ORM\\Relation\\'.$mapping['type'])) {
+        if (!class_exists($class = 'Foxkit\Database\ORM\\Relation\\'.$mapping['type'])) {
             throw new \LogicException(sprintf("Unable to find relation class '%s'", $class));
         }
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Filter\Tests;
+namespace Foxkit\Filter\Tests;
 
-use Pagekit\Filter\StripNewlinesFilter;
+use Foxkit\Filter\StripNewlinesFilter;
 
 class StripNewlinesTest extends \PHPUnit_Framework_TestCase
 {

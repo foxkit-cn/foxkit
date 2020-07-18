@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\View\Helper;
+namespace Foxkit\View\Helper;
 
-use Pagekit\View\Asset\AssetManager;
-use Pagekit\View\View;
+use Foxkit\View\Asset\AssetManager;
+use Foxkit\View\View;
 
 class StyleHelper implements HelperInterface, \IteratorAggregate
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Filter\Tests;
+namespace Foxkit\Filter\Tests;
 
-use Pagekit\Filter\JsonFilter;
+use Foxkit\Filter\JsonFilter;
 
 class JsonTest extends \PHPUnit_Framework_TestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Mail;
+namespace Foxkit\Mail;
 
 use Swift_RfcComplianceException;
 use Swift_SmtpTransport;

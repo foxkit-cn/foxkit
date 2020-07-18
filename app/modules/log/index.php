@@ -1,7 +1,7 @@
 <?php
 
-use Pagekit\Log\Handler\DebugBarHandler;
-use Pagekit\Log\Logger;
+use Foxkit\Log\Handler\DebugBarHandler;
+use Foxkit\Log\Logger;
 
 return [
 
@@ -28,7 +28,7 @@ return [
 
     'autoload' => [
 
-        'Pagekit\\Log\\' => 'src'
+        'Foxkit\\Log\\' => 'src'
 
     ],
 

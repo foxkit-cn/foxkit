@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Database\Types;
+namespace Foxkit\Database\Types;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\JsonArrayType as BaseJsonArrayType;

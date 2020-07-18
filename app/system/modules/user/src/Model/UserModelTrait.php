@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\User\Model;
+namespace Foxkit\User\Model;
 
-use Pagekit\Database\ORM\ModelTrait;
+use Foxkit\Database\ORM\ModelTrait;
 
 trait UserModelTrait
 {

@@ -16,7 +16,7 @@
                 <div class="uk-text-center" v-el:start v-show="step == 'start'">
 
                     <a class="uk-panel" @click="gotoStep('language')">
-                        <img src="app/system/assets/images/pagekit-logo-large.svg" alt="Pagekit">
+                        <img src="app/system/assets/images/foxkit-logo-large.svg" alt="Foxkit">
                         <p>
                             <svg class="tm-arrow" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                                 <line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="2" y1="18" x2="36" y2="18"/>
@@ -102,7 +102,7 @@
                                 <div class="uk-form-row">
                                     <label for="form-mysql-dbname" class="uk-form-label">{{ 'Database Name' | trans }}</label>
                                     <div class="uk-form-controls">
-                                        <input id="form-mysql-dbname" class="uk-width-1-1" type="text" name="dbname" value="pagekit" v-model="config.database.connections.mysql.dbname" v-validate:required>
+                                        <input id="form-mysql-dbname" class="uk-width-1-1" type="text" name="dbname" value="foxkit" v-model="config.database.connections.mysql.dbname" v-validate:required>
                                         <p class="uk-form-help-block uk-text-danger" v-show="formDatabase.dbname.invalid">{{ 'Database name cannot be blank.' | trans }}</p>
                                     </div>
                                 </div>

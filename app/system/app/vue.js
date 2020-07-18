@@ -1,6 +1,6 @@
 function install (Vue) {
 
-    var config = window.$pagekit;
+    var config = window.$foxkit;
 
     Vue.config.debug = false;
     Vue.cache = Vue.prototype.$cache = require('./lib/cache')(config.url);

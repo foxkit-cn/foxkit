@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\View\Event;
+namespace Foxkit\View\Event;
 
-use Pagekit\Event\Event;
+use Foxkit\Event\Event;
 
 class ViewEvent extends Event
 {

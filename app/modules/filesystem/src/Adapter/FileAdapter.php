@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Filesystem\Adapter;
+namespace Foxkit\Filesystem\Adapter;
 
 class FileAdapter implements AdapterInterface
 {

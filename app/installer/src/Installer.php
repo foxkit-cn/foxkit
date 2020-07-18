@@ -1,15 +1,15 @@
 <?php
 
-namespace Pagekit\Installer;
+namespace Foxkit\Installer;
 
 use Doctrine\DBAL\DBALException;
 use Doctrine\DBAL\DriverManager;
 use Doctrine\DBAL\Exception\ConnectionException;
-use Pagekit\Application;
-use Pagekit\Config\Config;
-use Pagekit\Installer\Package\PackageManager;
-use Pagekit\Installer\Package\PackageScripts;
-use Pagekit\Util\Arr;
+use Foxkit\Application;
+use Foxkit\Config\Config;
+use Foxkit\Installer\Package\PackageManager;
+use Foxkit\Installer\Package\PackageScripts;
+use Foxkit\Util\Arr;
 use Symfony\Component\Console\Output\NullOutput;
 
 
@@ -23,7 +23,7 @@ class Installer
 
 
     /**
-     * @var Application Pagekit Application instance
+     * @var Application Foxkit Application instance
      */
     protected $app;
 
@@ -64,7 +64,7 @@ class Installer
 
                 if ($this->app->db()->getUtility()->tableExists('@system_config')) {
                     $status = 'tables-exist';
-                    $message = __('Existing Pagekit installation detected. Choose different table prefix?');
+                    $message = __('Existing Foxkit installation detected. Choose different table prefix?');
                 } else {
                     $status = 'no-tables';
                 }
@@ -129,7 +129,7 @@ class Installer
             $packageManager = new PackageManager(new NullOutput());
             foreach (glob($this->app->get('path.packages') . '/*/*/composer.json') as $package) {
                 $package = $this->app->package()->load($package);
-                if ($package->get('type') === 'pagekit-extension' || $package->get('type') === 'pagekit-theme' ) {
+                if ($package->get('type') === 'foxkit-extension' || $package->get('type') === 'foxkit-theme' ) {
                     $packageManager->enable($package);
                 }
             }

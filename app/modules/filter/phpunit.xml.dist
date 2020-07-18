@@ -12,7 +12,7 @@
          bootstrap="../../../../vendor/autoload.php"
 >
     <testsuites>
-        <testsuite name="Pagekit Filter Component Test Suite">
+        <testsuite name="Foxkit Filter Component Test Suite">
             <directory>./Tests/</directory>
         </testsuite>
     </testsuites>

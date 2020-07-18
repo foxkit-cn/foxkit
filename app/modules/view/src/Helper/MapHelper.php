@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\View\Helper;
+namespace Foxkit\View\Helper;
 
 use Pagekit\View\View;
 

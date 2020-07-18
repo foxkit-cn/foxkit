@@ -96,7 +96,7 @@
             },
             defaults: {
                 count: 5,
-                url: 'http://pagekit.com/blog/feed',
+                url: 'https://foxkit.cn/blog/feed',
                 content: ''
             }
 

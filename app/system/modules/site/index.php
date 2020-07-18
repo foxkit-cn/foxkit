@@ -1,10 +1,10 @@
 <?php
 
-use Pagekit\Site\Event\MaintenanceListener;
-use Pagekit\Site\Event\NodesListener;
-use Pagekit\Site\Event\PageListener;
-use Pagekit\Site\MenuHelper;
-use Pagekit\Site\Model\Node;
+use Foxkit\Site\Event\MaintenanceListener;
+use Foxkit\Site\Event\NodesListener;
+use Foxkit\Site\Event\PageListener;
+use Foxkit\Site\MenuHelper;
+use Foxkit\Site\Model\Node;
 
 return [
 

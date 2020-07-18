@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Content\Event;
+namespace Foxkit\Content\Event;
 
-use Pagekit\Event\Event;
+use Foxkit\Event\Event;
 
 class ContentEvent extends Event
 {

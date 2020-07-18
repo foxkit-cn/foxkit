@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Routing;
+namespace Foxkit\Routing;
 
-use Pagekit\Event\EventDispatcherInterface;
+use Foxkit\Event\EventDispatcherInterface;
 
 class Middleware
 {

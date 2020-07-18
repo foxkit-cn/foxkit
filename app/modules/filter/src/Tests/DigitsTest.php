@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Filter\Tests;
+namespace Foxkit\Filter\Tests;
 
-use Pagekit\Filter\DigitsFilter;
+use Foxkit\Filter\DigitsFilter;
 
 class DigitsTest extends \PHPUnit_Framework_TestCase
 {

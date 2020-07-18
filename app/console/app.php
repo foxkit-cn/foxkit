@@ -1,9 +1,9 @@
 <?php
 
-use Pagekit\Application as App;
-use Pagekit\Application\Console\Application as Console;
-use Pagekit\Module\Loader\AutoLoader;
-use Pagekit\Module\Loader\ConfigLoader;
+use Foxkit\Application as App;
+use Foxkit\Application\Console\Application as Console;
+use Foxkit\Module\Loader\AutoLoader;
+use Foxkit\Module\Loader\ConfigLoader;
 
 $loader = require $path.'/autoload.php';
 
@@ -27,5 +27,5 @@ if ($app['config.file']) {
 }
 $app['module']->load('console');
 
-$console = new Console($app, 'Pagekit', $app->version());
+$console = new Console($app, 'Foxkit', $app->version());
 $console->run();

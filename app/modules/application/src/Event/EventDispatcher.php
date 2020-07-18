@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Event;
+namespace Foxkit\Event;
 
 class EventDispatcher implements EventDispatcherInterface
 {
@@ -24,7 +24,7 @@ class EventDispatcher implements EventDispatcherInterface
      *
      * @param string $event
      */
-    public function __construct($event = 'Pagekit\Event\Event')
+    public function __construct($event = 'Foxkit\Event\Event')
     {
         $this->event = $event;
     }

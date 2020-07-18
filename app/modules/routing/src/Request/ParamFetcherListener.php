@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Routing\Request;
+namespace Foxkit\Routing\Request;
 
-use Pagekit\Event\EventSubscriberInterface;
+use Foxkit\Event\EventSubscriberInterface;
 
 class ParamFetcherListener implements EventSubscriberInterface
 {

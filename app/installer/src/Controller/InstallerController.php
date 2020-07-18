@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Installer\Controller;
+namespace Foxkit\Installer\Controller;
 
-use Pagekit\Application as App;
-use Pagekit\Installer\Installer;
+use Foxkit\Application as App;
+use Foxkit\Installer\Installer;
 
 class InstallerController
 {
@@ -27,7 +27,7 @@ class InstallerController
 
         return [
             '$view' => [
-                'title' => __('Pagekit Installer'),
+                'title' => __('Foxkit Installer'),
                 'name' => 'app/installer/views/installer.php',
             ],
             '$installer' => [

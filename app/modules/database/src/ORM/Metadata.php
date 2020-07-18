@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Database\ORM;
+namespace Foxkit\Database\ORM;
 
 use Doctrine\DBAL\Types\Type;
 

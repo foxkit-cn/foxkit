@@ -1,13 +1,13 @@
 <?php
 
-namespace Pagekit\Console\Commands;
+namespace Foxkit\Console\Commands;
 
-use Pagekit\Application\Console\Command;
-use Pagekit\Installer\SelfUpdater;
+use Foxkit\Application\Console\Command;
+use Foxkit\Installer\SelfUpdater;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
-use Pagekit\Application as App;
+use Foxkit\Application as App;
 
 class SelfupdateCommand extends Command
 {
@@ -19,7 +19,7 @@ class SelfupdateCommand extends Command
     /**
      * {@inheritdoc}
      */
-    protected $description = 'Checks for newer Pagekit versions and installs the latest';
+    protected $description = 'Checks for newer Foxkit versions and installs the latest';
 
     /**
      * {@inheritdoc}

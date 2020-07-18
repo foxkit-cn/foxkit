@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Auth\Handler;
+namespace Foxkit\Auth\Handler;
 
 interface HandlerInterface
 {

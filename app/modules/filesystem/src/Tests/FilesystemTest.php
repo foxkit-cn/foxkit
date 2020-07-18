@@ -1,13 +1,13 @@
 <?php
 
-namespace Pagekit\Filesystem\Tests;
+namespace Foxkit\Filesystem\Tests;
 
-use Pagekit\Filesystem\Adapter\FileAdapter;
-use Pagekit\Filesystem\Filesystem;
+use Foxkit\Filesystem\Adapter\FileAdapter;
+use Foxkit\Filesystem\Filesystem;
 
 class FileTest extends \PHPUnit_Framework_TestCase
 {
-    use \Pagekit\Tests\FileUtil;
+    use \Foxkit\Tests\FileUtil;
 
     protected $file;
     protected $fixtures;

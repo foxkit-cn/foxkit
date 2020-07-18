@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Config\Tests;
+namespace Foxkit\Config\Tests;
 
-use Pagekit\Config\Config;
-use Pagekit\Config\Loader\PhpLoader;
+use Foxkit\Config\Config;
+use Foxkit\Config\Loader\PhpLoader;
 
 class ConfigTest extends \PHPUnit_Framework_TestCase
 {

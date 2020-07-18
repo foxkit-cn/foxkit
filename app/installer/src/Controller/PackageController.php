@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Installer\Controller;
+namespace Foxkit\Installer\Controller;
 
-use Pagekit\Application as App;
-use Pagekit\Installer\Package\PackageManager;
+use Foxkit\Application as App;
+use Foxkit\Installer\Package\PackageManager;
 
 /**
  * @Access("system: manage packages", admin=true)
@@ -22,7 +22,7 @@ class PackageController
 
     public function themesAction()
     {
-        $packages = array_values(App::package()->all('pagekit-theme'));
+        $packages = array_values(App::package()->all('foxkit-theme'));
 
         foreach ($packages as $package) {
             if ($module = App::module($package->get('module'))) {
@@ -51,7 +51,7 @@ class PackageController
 
     public function extensionsAction()
     {
-        $packages = array_values(App::package()->all('pagekit-extension'));
+        $packages = array_values(App::package()->all('foxkit-extension'));
 
         foreach ($packages as $package) {
             if ($module = App::module($package->get('module'))) {
@@ -140,8 +140,8 @@ class PackageController
             App::abort(400, __('"composer.json" file not valid.'));
         }
 
-        if ($package->get('type') !== 'pagekit-' . $type) {
-            App::abort(400, __('No Pagekit %type%', ['%type%' => $type]));
+        if ($package->get('type') !== 'foxkit-' . $type) {
+            App::abort(400, __('No Foxkit %type%', ['%type%' => $type]));
         }
 
         $filename = str_replace('/', '-', $package->getName()) . '-' . $package->get('version') . '.zip';

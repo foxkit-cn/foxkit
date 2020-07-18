@@ -42,5 +42,5 @@ sftp-config.json
 /app/system/modules/theme/css/*
 /packages/*
 /config.php
-/pagekit*.zip
-/pagekit.db
+/foxkit*.zip
+/foxkit.db

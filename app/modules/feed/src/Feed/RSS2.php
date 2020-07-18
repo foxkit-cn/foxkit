@@ -1,13 +1,13 @@
 <?php
 
-namespace Pagekit\Feed\Feed;
+namespace Foxkit\Feed\Feed;
 
-use Pagekit\Feed\Feed;
+use Foxkit\Feed\Feed;
 
 class RSS2 extends Feed
 {
     protected $mime = 'application/rss+xml';
-    protected $item = 'Pagekit\Feed\Item\RSS2';
+    protected $item = 'Foxkit\Feed\Item\RSS2';
 
     /**
      * {@inheritdoc}

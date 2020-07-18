@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Routing\Loader;
+namespace Foxkit\Routing\Loader;
 
-use Pagekit\Event\EventDispatcherInterface;
-use Pagekit\Routing\Route;
+use Foxkit\Event\EventDispatcherInterface;
+use Foxkit\Routing\Route;
 use Symfony\Component\Routing\RouteCollection;
 
 class RoutesLoader implements LoaderInterface
@@ -57,7 +57,7 @@ class RoutesLoader implements LoaderInterface
                 }
 
             } else {
-                
+
                 $this->addRoute($route);
 
             }

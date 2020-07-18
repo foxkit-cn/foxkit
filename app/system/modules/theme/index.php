@@ -32,7 +32,7 @@ return [
 
             $user = $app['user'];
 
-            $view->data('$pagekit', [
+            $view->data('$foxkit', [
                 'editor' => $app->module('system/editor')->config('editor'),
                 'storage' => $app->module('system/finder')->config('storage'),
                 'user' => [

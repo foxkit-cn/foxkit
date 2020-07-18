@@ -1,10 +1,10 @@
 <?php
 
-namespace Pagekit\Site;
+namespace Foxkit\Site;
 
-use Pagekit\Application as App;
-use Pagekit\Module\Module;
-use Pagekit\Site\Model\Node;
+use Foxkit\Application as App;
+use Foxkit\Module\Module;
+use Foxkit\Site\Model\Node;
 
 class SiteModule extends Module
 {

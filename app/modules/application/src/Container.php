@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit;
+namespace Foxkit;
 
 class Container implements \ArrayAccess
 {
@@ -30,7 +30,7 @@ class Container implements \ArrayAccess
             $this->offsetSet($name, $value);
         }
 
-        if (in_array('Pagekit\Application\Traits\StaticTrait', class_uses($this))) {
+        if (in_array('Foxkit\Application\Traits\StaticTrait', class_uses($this))) {
             static::$instance = $this;
         }
     }

@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\View\Asset;
+namespace Foxkit\View\Asset;
 
-use Pagekit\Application as App;
+use Foxkit\Application as App;
 
 class FileLocatorAsset extends FileAsset
 {

@@ -28,7 +28,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="uk-text-nowrap">{{ 'Pagekit Version' | trans }}</td>
+                                <td class="uk-text-nowrap">{{ 'Foxkit Version' | trans }}</td>
                                 <td>{{ info.version }}</td>
                             </tr>
                             <tr>

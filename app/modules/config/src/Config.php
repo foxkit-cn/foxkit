@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Config;
+namespace Foxkit\Config;
 
-use Pagekit\Util\Arr;
+use Foxkit\Util\Arr;
 
 class Config implements \ArrayAccess, \Countable, \JsonSerializable
 {

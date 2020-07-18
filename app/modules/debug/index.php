@@ -2,15 +2,15 @@
 
 use DebugBar\DataCollector\MemoryCollector;
 use DebugBar\DataCollector\TimeDataCollector;
-use Pagekit\Debug\DataCollector\AuthDataCollector;
-use Pagekit\Debug\DataCollector\DatabaseDataCollector;
-use Pagekit\Debug\DataCollector\EventDataCollector;
-use Pagekit\Debug\DataCollector\ProfileDataCollector;
-use Pagekit\Debug\DataCollector\RoutesDataCollector;
-use Pagekit\Debug\DataCollector\SystemDataCollector;
-use Pagekit\Debug\DebugBar;
-use Pagekit\Debug\Event\TraceableEventDispatcher;
-use Pagekit\Debug\Storage\SqliteStorage;
+use Foxkit\Debug\DataCollector\AuthDataCollector;
+use Foxkit\Debug\DataCollector\DatabaseDataCollector;
+use Foxkit\Debug\DataCollector\EventDataCollector;
+use Foxkit\Debug\DataCollector\ProfileDataCollector;
+use Foxkit\Debug\DataCollector\RoutesDataCollector;
+use Foxkit\Debug\DataCollector\SystemDataCollector;
+use Foxkit\Debug\DebugBar;
+use Foxkit\Debug\Event\TraceableEventDispatcher;
+use Foxkit\Debug\Storage\SqliteStorage;
 use Symfony\Component\Stopwatch\Stopwatch;
 
 return [
@@ -118,7 +118,7 @@ return [
 
     'autoload' => [
 
-        'Pagekit\\Debug\\' => 'src'
+        'Foxkit\\Debug\\' => 'src'
 
     ],
 

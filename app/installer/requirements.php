@@ -345,12 +345,12 @@ class RequirementCollection implements IteratorAggregate
 }
 
 /**
- * This class specifies all Pagekit requirements and optional recommendations.
+ * This class specifies all Foxkit requirements and optional recommendations.
  *
  * @author Tobias Schultze <http://tobion.de>
  * @author Fabien Potencier <fabien@symfony.com>
  */
-class PagekitRequirements extends RequirementCollection
+class FoxkitRequirements extends RequirementCollection
 {
     const REQUIRED_PHP_VERSION = '5.5.9';
 
@@ -369,8 +369,8 @@ class PagekitRequirements extends RequirementCollection
         $this->addRequirement(
             version_compare($installedPhpVersion, self::REQUIRED_PHP_VERSION, '>='),
             sprintf('PHP version must be at least %s (%s installed)', self::REQUIRED_PHP_VERSION, $installedPhpVersion),
-            sprintf('You are running PHP version "<strong>%s</strong>", but Pagekit needs at least PHP "<strong>%s</strong>" to run.
-                Before using Pagekit, upgrade your PHP installation, preferably to the latest version.',
+            sprintf('You are running PHP version "<strong>%s</strong>", but Foxkit needs at least PHP "<strong>%s</strong>" to run.
+                Before using Foxkit, upgrade your PHP installation, preferably to the latest version.',
                 $installedPhpVersion, self::REQUIRED_PHP_VERSION),
             sprintf('Install PHP %s or newer (installed version is %s)', self::REQUIRED_PHP_VERSION, $installedPhpVersion)
         );
@@ -536,4 +536,4 @@ class PagekitRequirements extends RequirementCollection
     }
 }
 
-return new PagekitRequirements($path);
+return new FoxkitRequirements($path);

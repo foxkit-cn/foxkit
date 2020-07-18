@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\User\Model;
+namespace Foxkit\User\Model;
 
-use Pagekit\Application as App;
+use Foxkit\Application as App;
 
 trait AccessModelTrait
 {

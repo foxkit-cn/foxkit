@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Auth;
+namespace Foxkit\Auth;
 
 final class AuthEvents
 {

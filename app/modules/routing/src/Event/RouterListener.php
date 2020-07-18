@@ -1,10 +1,10 @@
 <?php
 
-namespace Pagekit\Routing\Event;
+namespace Foxkit\Routing\Event;
 
-use Pagekit\Event\EventSubscriberInterface;
-use Pagekit\Kernel\Exception\MethodNotAllowedException as MethodNotAllowedHttpException;
-use Pagekit\Kernel\Exception\NotFoundException as NotFoundHttpException;
+use Foxkit\Event\EventSubscriberInterface;
+use Foxkit\Kernel\Exception\MethodNotAllowedException as MethodNotAllowedHttpException;
+use Foxkit\Kernel\Exception\NotFoundException as NotFoundHttpException;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Routing\Exception\MethodNotAllowedException;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;

@@ -12,7 +12,7 @@ return [
 
         'table' => '@system_auth',
         'cookie' => [
-            'name' => 'pagekit_auth',
+            'name' => 'foxkit_auth',
             'lifetime' => 315360000
         ]
 
@@ -31,7 +31,7 @@ return [
         'files' => "$path/tmp/sessions",
         'table' => '@system_session',
         'cookie' => [
-            'name' => 'pagekit_session',
+            'name' => 'foxkit_session',
             'httponly' => true
         ]
 

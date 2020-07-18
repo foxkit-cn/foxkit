@@ -42,7 +42,7 @@
         props: ['source'],
 
         data: function () {
-            return _.merge({image: undefined, video: undefined}, $pagekit);
+            return _.merge({image: undefined, video: undefined}, $foxkit);
         },
 
         computed: {

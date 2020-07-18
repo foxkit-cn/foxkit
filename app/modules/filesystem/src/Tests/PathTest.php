@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Filesystem\Tests;
+namespace Foxkit\Filesystem\Tests;
 
-use Pagekit\Filesystem\Path;
+use Foxkit\Filesystem\Path;
 
 class PathTest extends \PHPUnit_Framework_TestCase
 {
