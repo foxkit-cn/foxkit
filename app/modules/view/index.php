@@ -166,7 +166,7 @@ return [
 
     'autoload' => [
 
-        'Pagekit\\View\\' => 'src'
+        'Foxkit\\View\\' => 'src'
 
     ]
 

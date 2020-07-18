@@ -2,7 +2,7 @@
 
 namespace Foxkit\View\Helper;
 
-use Pagekit\View\View;
+use Foxkit\View\View;
 
 class MapHelper implements HelperInterface, \IteratorAggregate
 {

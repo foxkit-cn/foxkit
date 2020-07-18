@@ -30,7 +30,9 @@
         "symfony/stopwatch": "~3.0.0",
         "symfony/templating": "~3.0.0",
         "symfony/translation": "~3.0.0",
-        "twig/twig": "^1.22"
+        "twig/twig": "^1.22",
+        "ext-json": "*",
+        "ext-pdo": "*"
     },
     "autoload": {
         "psr-4": {

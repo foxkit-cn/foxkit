@@ -22,7 +22,7 @@ class AnnotationLoader implements LoaderInterface
     /**
      * @var string
      */
-    protected $namespace = 'Pagekit\Database\ORM\Annotation';
+    protected $namespace = 'Foxkit\Database\ORM\Annotation';
 
     /**
      * {@inheritdoc}

@@ -1,7 +1,7 @@
 <?php
 namespace Foxkit\Application\Console;
 
-use Pagekit\Container;
+use Foxkit\Container;
 use Symfony\Component\Console\Command\Command as BaseCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -46,7 +46,7 @@ class Command extends BaseCommand
     protected $container;
 
     /**
-     * The Pagekit config.
+     * The Foxkit config.
      *
      * @var array
      */
@@ -62,7 +62,7 @@ class Command extends BaseCommand
     }
 
     /**
-     * Set the Pagekit application instance.
+     * Set the Foxkit application instance.
      *
      * @param Container $container
      */
@@ -72,7 +72,7 @@ class Command extends BaseCommand
     }
 
     /**
-     * Set the Pagekit config.
+     * Set the Foxkit config.
      *
      * @param array $config
      */

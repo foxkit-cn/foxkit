@@ -2,7 +2,7 @@
 
 namespace Foxkit\Application\Traits;
 
-use Pagekit\Kernel\Event\ExceptionListenerWrapper;
+use Foxkit\Kernel\Event\ExceptionListenerWrapper;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
