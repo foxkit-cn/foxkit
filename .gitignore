@@ -38,7 +38,7 @@ sftp-config.json
 /app/assets/*
 !/app/assets/codemirror
 !/app/assets/marked
-/app/installer/assets/css/*
+!/app/installer/assets/css/*
 /app/system/modules/theme/css/*
 /packages/*
 /config.php

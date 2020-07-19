@@ -1,83 +1,53 @@
 <?php
 
 return [
-
     'application' => [
-
-        'version' => '0.0.1'
-
+        'version' => '0.0.1', // 保持与 package.json 一致
     ],
-
     'auth' => [
-
         'table' => '@system_auth',
         'cookie' => [
             'name' => 'foxkit_auth',
-            'lifetime' => 315360000
-        ]
-
+            'lifetime' => 315360000,
+        ],
     ],
-
     'debug' => [
-
-        'file' => "sqlite:$path/tmp/temp/debug.db"
-
+        'file' => "sqlite:{$path}/tmp/temp/debug.db",
     ],
-
     'session' => [
-
         'storage' => 'database',
         'lifetime' => 900,
-        'files' => "$path/tmp/sessions",
+        'files' => "{$path}/tmp/sessions",
         'table' => '@system_session',
         'cookie' => [
             'name' => 'foxkit_session',
-            'httponly' => true
-        ]
-
+            'httponly' => true,
+        ],
     ],
-
     'filesystem' => [
-
-        'path' => $path
-
+        'path' => $path,
     ],
-
     'system/cache' => [
-
         'caches' => [
-
             'cache' => [
-
                 'storage' => 'auto',
-                'path' => "$path/tmp/cache",
-                'prefix' => sha1($path)
-
+                'path' => "{$path}/tmp/cache",
+                'prefix' => sha1($path),
             ],
-
             'cache.phpfile' => [
-
                 'storage' => 'phpfile',
-                'path' => "$path/tmp/cache"
-
-            ]
-
-        ]
-
+                'path' => "{$path}/tmp/cache",
+            ],
+        ],
     ],
-
     'system/dashboard' => [
-
         'defaults' => [
-
             'userdefault' => [
                 'id' => 'userdefault',
                 'type' => 'user',
                 'show' => 'login',
-                'display' => 'thumbnail'
-            ]
-        ]
-
-    ]
-
+                'display' => 'thumbnail',
+            ],
+        ],
+    ],
 ];
