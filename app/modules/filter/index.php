@@ -1,6 +1,6 @@
 <?php
 
-use Pagekit\Filter\FilterManager;
+use Foxkit\Filter\FilterManager;
 
 return [
 
@@ -16,7 +16,7 @@ return [
 
     'autoload' => [
 
-        'Pagekit\\Filter\\' => 'src'
+        'Foxkit\\Filter\\' => 'src'
 
     ],
 

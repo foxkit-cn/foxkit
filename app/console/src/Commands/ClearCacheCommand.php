@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Console\Commands;
+namespace Foxkit\Console\Commands;
 
-use Pagekit\Application\Console\Command;
+use Foxkit\Application\Console\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Installer\Package;
+namespace Foxkit\Installer\Package;
 
-use Pagekit\Application as App;
+use Foxkit\Application as App;
 
 class PackageScripts
 {

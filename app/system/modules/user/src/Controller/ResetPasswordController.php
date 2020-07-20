@@ -1,10 +1,10 @@
 <?php
 
-namespace Pagekit\User\Controller;
+namespace Foxkit\User\Controller;
 
-use Pagekit\Application as App;
-use Pagekit\Application\Exception;
-use Pagekit\User\Model\User;
+use Foxkit\Application as App;
+use Foxkit\Application\Exception;
+use Foxkit\User\Model\User;
 
 class ResetPasswordController
 {

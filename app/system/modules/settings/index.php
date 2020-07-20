@@ -6,7 +6,7 @@ return [
 
     'autoload' => [
 
-        'Pagekit\\System\\' => 'src'
+        'Foxkit\\System\\' => 'src'
 
     ],
 
@@ -14,7 +14,7 @@ return [
 
         '/system/settings' => [
             'name' => '@system/settings',
-            'controller' => 'Pagekit\\System\\Controller\\SettingsController'
+            'controller' => 'Foxkit\\System\\Controller\\SettingsController'
         ]
 
     ],

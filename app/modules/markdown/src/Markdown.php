@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Markdown;
+namespace Foxkit\Markdown;
 
-use Pagekit\Markdown\Lexer\BlockLexer;
+use Foxkit\Markdown\Lexer\BlockLexer;
 
 class Markdown
 {

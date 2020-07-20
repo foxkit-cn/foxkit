@@ -1,6 +1,6 @@
 <?php
 
-use Pagekit\Comment\CommentPlugin;
+use Foxkit\Comment\CommentPlugin;
 
 return [
 
@@ -14,7 +14,7 @@ return [
 
     'autoload' => [
 
-        'Pagekit\\Comment\\' => 'src'
+        'Foxkit\\Comment\\' => 'src'
 
     ]
 

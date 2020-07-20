@@ -1,11 +1,11 @@
 <?php
 
-namespace Pagekit\Application;
+namespace Foxkit\Application;
 
-use Pagekit\Filesystem\Filesystem;
-use Pagekit\Filesystem\Locator;
-use Pagekit\Routing\Generator\UrlGenerator;
-use Pagekit\Routing\Router;
+use Foxkit\Filesystem\Filesystem;
+use Foxkit\Filesystem\Locator;
+use Foxkit\Routing\Generator\UrlGenerator;
+use Foxkit\Routing\Router;
 use Symfony\Component\Routing\Exception\InvalidParameterException;
 use Symfony\Component\Routing\Exception\MissingMandatoryParametersException;
 use Symfony\Component\Routing\Exception\RouteNotFoundException;

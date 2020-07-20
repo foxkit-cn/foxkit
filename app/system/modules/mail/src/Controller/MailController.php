@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Mail\Controller;
+namespace Foxkit\Mail\Controller;
 
-use Pagekit\Application as App;
-use Pagekit\Util\Arr;
+use Foxkit\Application as App;
+use Foxkit\Util\Arr;
 
 /**
  * @Access("system: access settings", admin=true)

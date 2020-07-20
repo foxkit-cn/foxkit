@@ -1,11 +1,11 @@
 <?php
 
-namespace Pagekit\User;
+namespace Foxkit\User;
 
-use Pagekit\Application as App;
-use Pagekit\Module\Module;
-use Pagekit\User\Model\Role;
-use Pagekit\User\Model\User;
+use Foxkit\Application as App;
+use Foxkit\Module\Module;
+use Foxkit\User\Model\Role;
+use Foxkit\User\Model\User;
 
 class UserModule extends Module
 {

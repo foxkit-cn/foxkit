@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\System\Controller;
+namespace Foxkit\System\Controller;
 
-use Pagekit\Application as App;
-use Pagekit\Installer\Package\PackageScripts;
+use Foxkit\Application as App;
+use Foxkit\Installer\Package\PackageScripts;
 
 /**
  * @Access("system: software updates", admin=true)
@@ -32,7 +32,7 @@ class MigrationController
 
         return [
             '$view' => [
-                'title' => __('Update Pagekit'),
+                'title' => __('Update Foxkit'),
                 'name' => 'system/theme:views/migration.php',
                 'layout' => false
             ],
@@ -47,7 +47,7 @@ class MigrationController
     {
         if ($updates = $this->scripts->hasUpdates()) {
             $this->scripts->update();
-            $message =  __('Your Pagekit database has been updated successfully.');
+            $message =  __('Your Foxkit database has been updated successfully.');
         } else {
             $message =  __('Your database is up to date.');
         }

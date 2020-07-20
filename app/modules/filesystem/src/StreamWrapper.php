@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Filesystem;
+namespace Foxkit\Filesystem;
 
 class StreamWrapper
 {

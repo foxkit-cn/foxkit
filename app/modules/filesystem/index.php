@@ -1,9 +1,9 @@
 <?php
 
-use Pagekit\Filesystem\Adapter\FileAdapter;
-use Pagekit\Filesystem\Filesystem;
-use Pagekit\Filesystem\Locator;
-use Pagekit\Filesystem\StreamWrapper;
+use Foxkit\Filesystem\Adapter\FileAdapter;
+use Foxkit\Filesystem\Filesystem;
+use Foxkit\Filesystem\Locator;
+use Foxkit\Filesystem\StreamWrapper;
 
 return [
 
@@ -51,7 +51,7 @@ return [
 
     'autoload' => [
 
-        'Pagekit\\Filesystem\\' => 'src'
+        'Foxkit\\Filesystem\\' => 'src'
 
     ],
 

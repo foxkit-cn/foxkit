@@ -1,20 +1,20 @@
 <?php
 
-use Pagekit\Site\Event\MaintenanceListener;
-use Pagekit\Site\Event\NodesListener;
-use Pagekit\Site\Event\PageListener;
-use Pagekit\Site\MenuHelper;
-use Pagekit\Site\Model\Node;
+use Foxkit\Site\Event\MaintenanceListener;
+use Foxkit\Site\Event\NodesListener;
+use Foxkit\Site\Event\PageListener;
+use Foxkit\Site\MenuHelper;
+use Foxkit\Site\Model\Node;
 
 return [
 
     'name' => 'system/site',
 
-    'main' => 'Pagekit\\Site\\SiteModule',
+    'main' => 'Foxkit\\Site\\SiteModule',
 
     'autoload' => [
 
-        'Pagekit\\Site\\' => 'src'
+        'Foxkit\\Site\\' => 'src'
 
     ],
 
@@ -23,7 +23,7 @@ return [
         'page' => [
             'name' => '@page',
             'label' => 'Page',
-            'controller' => 'Pagekit\\Site\\Controller\\PageController::indexAction'
+            'controller' => 'Foxkit\\Site\\Controller\\PageController::indexAction'
         ]
 
     ],
@@ -32,19 +32,19 @@ return [
 
         '/' => [
             'name' => '@site',
-            'controller' => 'Pagekit\\Site\\Controller\\NodeController'
+            'controller' => 'Foxkit\\Site\\Controller\\NodeController'
         ],
         '/api/site/menu' => [
             'name' => '@site/api/menu',
-            'controller' => 'Pagekit\\Site\\Controller\\MenuApiController'
+            'controller' => 'Foxkit\\Site\\Controller\\MenuApiController'
         ],
         '/api/site/node' => [
             'name' => '@site/api/node',
-            'controller' => 'Pagekit\\Site\\Controller\\NodeApiController'
+            'controller' => 'Foxkit\\Site\\Controller\\NodeApiController'
         ],
         '/api/site/page' => [
             'name' => '@site/api/page',
-            'controller' => 'Pagekit\\Site\\Controller\\PageApiController'
+            'controller' => 'Foxkit\\Site\\Controller\\PageApiController'
         ]
 
     ],
@@ -205,7 +205,7 @@ return [
         },
 
         'package.enable' => function ($event, $package) use ($app) {
-            if ($package->getType() === 'pagekit-theme') {
+            if ($package->getType() === 'foxkit-theme') {
                 $new = $app->config($package->get('module'));
                 $old = $app->config($app['theme']->name);
 

@@ -1,13 +1,14 @@
-var _ = require('lodash');
-var glob = require('glob');
-var path = require('path');
-var exports = [];
+const path = require('path');
+const glob = require('glob');
+const {merge} = require('lodash');
 
-glob.sync('{app/modules/**,app/installer/**,app/system/**,packages/**}/webpack.config.js', {ignore: 'packages/**/node_modules/**'}).forEach(function (file) {
-    var dir = path.join(__dirname, path.dirname(file));
-    exports = exports.concat(require('./' + file).map(function (config) {
-        return _.merge({context: dir, output: {path: dir}}, config);
-    }));
+let result = [];
+
+glob.sync('{app/modules/**,app/installer/**,app/system/**,packages/**}/webpack.config.js', {ignore: 'packages/**/node_modules/**'}).forEach(file => {
+  const dir = path.join(__dirname, path.dirname(file));
+  result = result.concat(require(`./${file}`).map(config => {
+    return merge({context: dir, output: {path: dir}}, config);
+  }));
 });
 
-module.exports = exports;
+module.exports = result;

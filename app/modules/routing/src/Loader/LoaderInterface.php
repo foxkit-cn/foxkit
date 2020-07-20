@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Routing\Loader;
+namespace Foxkit\Routing\Loader;
 
-use Pagekit\Routing\Route;
+use Foxkit\Routing\Route;
 
 interface LoaderInterface
 {

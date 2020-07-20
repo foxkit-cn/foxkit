@@ -1,12 +1,12 @@
 <?php
 
-namespace Pagekit\Cache;
+namespace Foxkit\Cache;
 
 use Doctrine\Common\Cache\ApcCache;
 use Doctrine\Common\Cache\ArrayCache;
 use Doctrine\Common\Cache\XcacheCache;
-use Pagekit\Application as App;
-use Pagekit\Module\Module;
+use Foxkit\Application as App;
+use Foxkit\Module\Module;
 
 class CacheModule extends Module
 {

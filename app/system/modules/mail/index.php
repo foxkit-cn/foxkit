@@ -1,7 +1,7 @@
 <?php
 
-use Pagekit\Mail\Mailer;
-use Pagekit\Mail\Plugin\ImpersonatePlugin;
+use Foxkit\Mail\Mailer;
+use Foxkit\Mail\Plugin\ImpersonatePlugin;
 
 return [
 
@@ -76,7 +76,7 @@ return [
 
     'autoload' => [
 
-        'Pagekit\\Mail\\' => 'src'
+        'Foxkit\\Mail\\' => 'src'
 
     ],
 
@@ -84,7 +84,7 @@ return [
 
         '/system' => [
             'name' => '@system',
-            'controller' => 'Pagekit\\Mail\\Controller\\MailController'
+            'controller' => 'Foxkit\\Mail\\Controller\\MailController'
         ]
 
     ],

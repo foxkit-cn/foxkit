@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Comment\Model;
+namespace Foxkit\Comment\Model;
 
 use Pagekit\Database\ORM\ModelTrait;
 

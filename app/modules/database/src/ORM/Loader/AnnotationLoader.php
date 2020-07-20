@@ -1,16 +1,16 @@
 <?php
 
-namespace Pagekit\Database\ORM\Loader;
+namespace Foxkit\Database\ORM\Loader;
 
 use Doctrine\Common\Annotations\SimpleAnnotationReader;
-use Pagekit\Database\ORM\Annotation\Annotation;
-use Pagekit\Database\ORM\Annotation\BelongsTo;
-use Pagekit\Database\ORM\Annotation\Column;
-use Pagekit\Database\ORM\Annotation\Entity;
-use Pagekit\Database\ORM\Annotation\HasOne;
-use Pagekit\Database\ORM\Annotation\OrderBy;
-use Pagekit\Database\ORM\Relation\HasMany;
-use Pagekit\Database\ORM\Relation\ManyToMany;
+use Foxkit\Database\ORM\Annotation\Annotation;
+use Foxkit\Database\ORM\Annotation\BelongsTo;
+use Foxkit\Database\ORM\Annotation\Column;
+use Foxkit\Database\ORM\Annotation\Entity;
+use Foxkit\Database\ORM\Annotation\HasOne;
+use Foxkit\Database\ORM\Annotation\OrderBy;
+use Foxkit\Database\ORM\Relation\HasMany;
+use Foxkit\Database\ORM\Relation\ManyToMany;
 
 class AnnotationLoader implements LoaderInterface
 {
@@ -22,7 +22,7 @@ class AnnotationLoader implements LoaderInterface
     /**
      * @var string
      */
-    protected $namespace = 'Pagekit\Database\ORM\Annotation';
+    protected $namespace = 'Foxkit\Database\ORM\Annotation';
 
     /**
      * {@inheritdoc}

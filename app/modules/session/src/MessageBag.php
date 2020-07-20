@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Session;
+namespace Foxkit\Session;
 
 use Symfony\Component\HttpFoundation\Session\Flash\AutoExpireFlashBag;
 

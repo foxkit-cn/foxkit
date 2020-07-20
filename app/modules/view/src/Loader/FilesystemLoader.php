@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\View\Loader;
+namespace Foxkit\View\Loader;
 
-use Pagekit\Filesystem\Locator;
+use Foxkit\Filesystem\Locator;
 use Symfony\Component\Templating\Loader\LoaderInterface;
 use Symfony\Component\Templating\Storage\FileStorage;
 use Symfony\Component\Templating\TemplateReferenceInterface;

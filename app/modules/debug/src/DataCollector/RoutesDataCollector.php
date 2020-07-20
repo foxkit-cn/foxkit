@@ -1,10 +1,10 @@
 <?php
 
-namespace Pagekit\Debug\DataCollector;
+namespace Foxkit\Debug\DataCollector;
 
 use DebugBar\DataCollector\DataCollectorInterface;
-use Pagekit\Event\EventDispatcherInterface;
-use Pagekit\Routing\Router;
+use Foxkit\Event\EventDispatcherInterface;
+use Foxkit\Routing\Router;
 
 class RoutesDataCollector implements DataCollectorInterface
 {

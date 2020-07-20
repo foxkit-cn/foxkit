@@ -3,10 +3,10 @@
 use Doctrine\DBAL\DriverManager;
 use Doctrine\DBAL\Logging\DebugStack;
 use Doctrine\DBAL\Types\Type;
-use Pagekit\Database\ORM\EntityManager;
-use Pagekit\Database\ORM\Loader\AnnotationLoader;
-use Pagekit\Database\ORM\MetadataManager;
-use Pagekit\Event\PrefixEventDispatcher;
+use Foxkit\Database\ORM\EntityManager;
+use Foxkit\Database\ORM\Loader\AnnotationLoader;
+use Foxkit\Database\ORM\MetadataManager;
+use Foxkit\Event\PrefixEventDispatcher;
 
 $config = [
 
@@ -15,7 +15,7 @@ $config = [
     'main' => function ($app) {
 
         $default = [
-            'wrapperClass' => 'Pagekit\Database\Connection'
+            'wrapperClass' => 'Foxkit\Database\Connection'
         ];
 
         $app['dbs'] = function () use ($default) {
@@ -54,13 +54,13 @@ $config = [
             return new DebugStack();
         };
 
-        Type::overrideType(Type::SIMPLE_ARRAY, '\Pagekit\Database\Types\SimpleArrayType');
-        Type::overrideType(Type::JSON_ARRAY, '\Pagekit\Database\Types\JsonArrayType');
+        Type::overrideType(Type::SIMPLE_ARRAY, '\Foxkit\Database\Types\SimpleArrayType');
+        Type::overrideType(Type::JSON_ARRAY, '\Foxkit\Database\Types\JsonArrayType');
     },
 
     'autoload' => [
 
-        'Pagekit\\Database\\' => 'src'
+        'Foxkit\\Database\\' => 'src'
 
     ],
 
@@ -87,7 +87,7 @@ $config = [
             'sqlite' => [
 
                 'driver' => 'pdo_sqlite',
-                'path' => "pagekit.db",
+                'path' => "foxkit.db",
                 'charset' => 'utf8',
                 'prefix' => 'pk_',
                 'driverOptions' => [

@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Console\Commands;
+namespace Foxkit\Console\Commands;
 
-use Pagekit\Application\Console\Command;
-use Pagekit\Installer\Package\PackageManager;
+use Foxkit\Application\Console\Command;
+use Foxkit\Installer\Package\PackageManager;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -18,7 +18,7 @@ class UninstallCommand extends Command
     /**
      * {@inheritdoc}
      */
-    protected $description = 'Uninstalls a Pagekit package';
+    protected $description = 'Uninstalls a Foxkit package';
 
     /**
      * {@inheritdoc}

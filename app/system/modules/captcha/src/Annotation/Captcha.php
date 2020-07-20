@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Captcha\Annotation;
+namespace Foxkit\Captcha\Annotation;
 
 /**
  * @Annotation

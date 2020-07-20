@@ -1,13 +1,13 @@
 <?php
 
-namespace Pagekit\View;
+namespace Foxkit\View;
 
-use Pagekit\Event\EventDispatcherInterface;
-use Pagekit\Event\EventInterface;
-use Pagekit\Event\PrefixEventDispatcher;
-use Pagekit\Util\ArrObject;
-use Pagekit\View\Event\ViewEvent;
-use Pagekit\View\Helper\HelperInterface;
+use Foxkit\Event\EventDispatcherInterface;
+use Foxkit\Event\EventInterface;
+use Foxkit\Event\PrefixEventDispatcher;
+use Foxkit\Util\ArrObject;
+use Foxkit\View\Event\ViewEvent;
+use Foxkit\View\Helper\HelperInterface;
 use Symfony\Component\Templating\DelegatingEngine;
 use Symfony\Component\Templating\EngineInterface;
 

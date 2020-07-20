@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Filesystem\Archive;
+namespace Foxkit\Filesystem\Archive;
 
-use Pagekit\Filesystem\Exception\RuntimeException;
+use Foxkit\Filesystem\Exception\RuntimeException;
 
 class Zip implements ArchiveInterface
 {

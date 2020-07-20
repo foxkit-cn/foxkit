@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Session\Csrf\Provider;
+namespace Foxkit\Session\Csrf\Provider;
 
 class DefaultCsrfProvider implements CsrfProviderInterface
 {

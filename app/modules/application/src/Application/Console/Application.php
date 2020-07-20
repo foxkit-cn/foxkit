@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Application\Console;
+namespace Foxkit\Application\Console;
 
-use Pagekit\Application as Container;
-use Pagekit\Event\Event;
+use Foxkit\Application as Container;
+use Foxkit\Event\Event;
 use Symfony\Component\Console\Application as BaseApplication;
 use Symfony\Component\Console\Command\Command as BaseCommand;
 use Symfony\Component\Console\Input\InputInterface;
@@ -12,7 +12,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 class Application extends BaseApplication
 {
     /**
-     * The Pagekit application instance.
+     * The Foxkit application instance.
      *
      * @var Container
      */

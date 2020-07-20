@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Routing\Generator;
+namespace Foxkit\Routing\Generator;
 
 use Symfony\Component\Routing\Generator\UrlGenerator as BaseUrlGenerator;
 

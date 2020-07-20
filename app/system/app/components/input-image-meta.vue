@@ -72,7 +72,7 @@
         },
 
         data: function () {
-            return _.merge({img: {}}, $pagekit);
+            return _.merge({img: {}}, $foxkit);
         },
 
         ready: function () {

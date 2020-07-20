@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Database;
+namespace Foxkit\Database;
 
 use Doctrine\Common\EventManager;
 use Doctrine\DBAL\Cache\QueryCacheProfile;

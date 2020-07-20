@@ -1,11 +1,11 @@
 <?php
 
-namespace Pagekit\User\Event;
+namespace Foxkit\User\Event;
 
-use Pagekit\Application as App;
-use Pagekit\Auth\Event\LoginEvent;
-use Pagekit\Event\EventSubscriberInterface;
-use Pagekit\User\Model\User;
+use Foxkit\Application as App;
+use Foxkit\Auth\Event\LoginEvent;
+use Foxkit\Event\EventSubscriberInterface;
+use Foxkit\User\Model\User;
 
 class UserListener implements EventSubscriberInterface
 {

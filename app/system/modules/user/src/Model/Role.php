@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\User\Model;
+namespace Foxkit\User\Model;
 
 /**
  * @Entity(tableClass="@system_role")

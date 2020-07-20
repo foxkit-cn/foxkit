@@ -27,7 +27,7 @@
         </div>
     </div>
 
-    <p>{{{ 'Is your language not available? Please help out by translating Pagekit into your own language on %link%.' | trans {link:link} }}}</p>
+    <p>{{{ 'Is your language not available? Please help out by translating Foxkit into your own language on %link%.' | trans {link:link} }}}</p>
 
 </template>
 

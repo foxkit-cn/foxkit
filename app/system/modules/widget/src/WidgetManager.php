@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Widget;
+namespace Foxkit\Widget;
 
-use Pagekit\Application;
-use Pagekit\Module\ModuleManager;
+use Foxkit\Application;
+use Foxkit\Module\ModuleManager;
 
 class WidgetManager extends ModuleManager
 {
@@ -16,7 +16,7 @@ class WidgetManager extends ModuleManager
     {
         parent::__construct($app);
 
-        $this->defaults['class'] = 'Pagekit\Widget\Model\Type';
+        $this->defaults['class'] = 'Foxkit\Widget\Model\Type';
     }
 
     /**

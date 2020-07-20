@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Info;
+namespace Foxkit\Info;
 
 use Doctrine\DBAL\Driver\PDOConnection;
-use Pagekit\Application as App;
+use Foxkit\Application as App;
 use Symfony\Component\HttpFoundation\ServerBag;
 
 class InfoHelper

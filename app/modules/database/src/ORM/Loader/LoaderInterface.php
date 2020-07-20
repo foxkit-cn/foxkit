@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Database\ORM\Loader;
+namespace Foxkit\Database\ORM\Loader;
 
 interface LoaderInterface
 {

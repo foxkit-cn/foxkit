@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Markdown;
+namespace Foxkit\Markdown;
 
-use Pagekit\Markdown\Lexer\InlineLexer;
+use Foxkit\Markdown\Lexer\InlineLexer;
 
 class Parser
 {

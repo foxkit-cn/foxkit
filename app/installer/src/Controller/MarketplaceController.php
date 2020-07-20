@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Installer\Controller;
+namespace Foxkit\Installer\Controller;
 
-use Pagekit\Application as App;
+use Foxkit\Application as App;
 
 /**
  * @Access("system: manage packages", admin=true)
@@ -22,9 +22,9 @@ class MarketplaceController
             ],
             '$data' => [
                 'title' => 'Themes',
-                'type' => 'pagekit-theme',
+                'type' => 'foxkit-theme',
                 'api' => App::get('system.api'),
-                'installed' => array_values(App::package()->all('pagekit-theme')),
+                'installed' => array_values(App::package()->all('foxkit-theme')),
                 'page' => $page
             ]
         ];
@@ -42,9 +42,9 @@ class MarketplaceController
             ],
             '$data' => [
                 'title' => 'Extensions',
-                'type' => 'pagekit-extension',
+                'type' => 'foxkit-extension',
                 'api' => App::get('system.api'),
-                'installed' => array_values(App::package()->all('pagekit-extension')),
+                'installed' => array_values(App::package()->all('foxkit-extension')),
                 'page' => $page
             ]
         ];

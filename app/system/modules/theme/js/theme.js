@@ -9,7 +9,7 @@ Vue.ready(function () {
                 nav: null,
                 item: null,
                 subnav: null
-            }, window.$pagekit);
+            }, window.$foxkit);
         },
 
         created: function () {

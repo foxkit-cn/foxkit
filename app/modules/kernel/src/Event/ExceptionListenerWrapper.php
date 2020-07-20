@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Kernel\Event;
+namespace Foxkit\Kernel\Event;
 
-use Pagekit\Kernel\Exception\HttpException;
+use Foxkit\Kernel\Exception\HttpException;
 use Symfony\Component\HttpFoundation\Response;
 
 class ExceptionListenerWrapper

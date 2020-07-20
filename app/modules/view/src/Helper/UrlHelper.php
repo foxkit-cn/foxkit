@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\View\Helper;
+namespace Foxkit\View\Helper;
 
-use Pagekit\Application\UrlProvider;
-use Pagekit\Routing\Generator\UrlGenerator;
+use Foxkit\Application\UrlProvider;
+use Foxkit\Routing\Generator\UrlGenerator;
 
 class UrlHelper extends Helper
 {

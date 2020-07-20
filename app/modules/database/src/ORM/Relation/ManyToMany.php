@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Database\ORM\Relation;
+namespace Foxkit\Database\ORM\Relation;
 
-use Pagekit\Database\ORM\QueryBuilder;
+use Foxkit\Database\ORM\QueryBuilder;
 
 class ManyToMany extends Relation
 {

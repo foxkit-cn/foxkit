@@ -1,6 +1,6 @@
 <?php
 
-use Pagekit\Cookie\CookieJar;
+use Foxkit\Cookie\CookieJar;
 
 return [
 
@@ -16,7 +16,7 @@ return [
 
     'autoload' => [
 
-        'Pagekit\\Cookie\\' => 'src'
+        'Foxkit\\Cookie\\' => 'src'
 
     ],
 

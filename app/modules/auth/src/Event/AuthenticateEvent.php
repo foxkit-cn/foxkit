@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Auth\Event;
+namespace Foxkit\Auth\Event;
 
-use Pagekit\Auth\UserInterface;
+use Foxkit\Auth\UserInterface;
 
 class AuthenticateEvent extends Event
 {

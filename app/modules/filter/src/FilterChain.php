@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Filter;
+namespace Foxkit\Filter;
 
 class FilterChain implements \Countable, FilterInterface
 {

@@ -303,7 +303,7 @@
                         action: this.$url.route('system/finder/upload'),
 
                         before: function (options) {
-                            $.extend(options.params, {path: finder.path, root: finder.getRoot(), _csrf: $pagekit.csrf});
+                            $.extend(options.params, {path: finder.path, root: finder.getRoot(), _csrf: $foxkit.csrf});
                         },
 
                         loadstart: function () {

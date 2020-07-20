@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Debug\DataCollector;
+namespace Foxkit\Debug\DataCollector;
 
 use DebugBar\DataCollector\DataCollectorInterface;
-use Pagekit\Info\InfoHelper;
+use Foxkit\Info\InfoHelper;
 
 class SystemDataCollector implements DataCollectorInterface
 {

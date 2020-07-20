@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Auth\Exception;
+namespace Foxkit\Auth\Exception;
 
-use Pagekit\Auth\UserInterface;
+use Foxkit\Auth\UserInterface;
 
 class AuthException extends \Exception
 {

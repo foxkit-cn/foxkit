@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\View\Helper;
+namespace Foxkit\View\Helper;
 
-use Pagekit\Event\EventDispatcherInterface;
-use Pagekit\View\View;
+use Foxkit\Event\EventDispatcherInterface;
+use Foxkit\View\View;
 
 class DeferredHelper implements HelperInterface
 {

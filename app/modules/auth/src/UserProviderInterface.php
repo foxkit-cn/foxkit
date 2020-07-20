@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Auth;
+namespace Foxkit\Auth;
 
 interface UserProviderInterface
 {
@@ -19,7 +19,7 @@ interface UserProviderInterface
      * @return UserInterface|null
      */
     public function findByUsername($username);
-    
+
     /**
      * Retrieves a user by the given credentials.
      *

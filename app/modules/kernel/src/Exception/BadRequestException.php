@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Kernel\Exception;
+namespace Foxkit\Kernel\Exception;
 
 class BadRequestException extends HttpException
 {

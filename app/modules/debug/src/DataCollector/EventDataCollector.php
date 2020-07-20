@@ -1,10 +1,10 @@
 <?php
 
-namespace Pagekit\Debug\DataCollector;
+namespace Foxkit\Debug\DataCollector;
 
 use DebugBar\DataCollector\DataCollectorInterface;
-use Pagekit\Debug\Event\TraceableEventDispatcher;
-use Pagekit\Event\EventDispatcherInterface;
+use Foxkit\Debug\Event\TraceableEventDispatcher;
+use Foxkit\Event\EventDispatcherInterface;
 
 class EventDataCollector implements DataCollectorInterface
 {

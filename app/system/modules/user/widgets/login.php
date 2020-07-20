@@ -1,6 +1,6 @@
 <?php
 
-use Pagekit\Auth\Auth;
+use Foxkit\Auth\Auth;
 
 return [
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace Pagekit\Content\Plugin;
+namespace Foxkit\Content\Plugin;
 
-use Pagekit\Application as App;
-use Pagekit\Content\Event\ContentEvent;
-use Pagekit\Event\EventSubscriberInterface;
+use Foxkit\Application as App;
+use Foxkit\Content\Event\ContentEvent;
+use Foxkit\Event\EventSubscriberInterface;
 
 class MarkdownPlugin implements EventSubscriberInterface
 {

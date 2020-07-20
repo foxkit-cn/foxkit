@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\System\Controller;
+namespace Foxkit\System\Controller;
 
-use Pagekit\Application as App;
+use Foxkit\Application as App;
 use Symfony\Component\Debug\Exception\FlattenException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,7 +18,7 @@ class ExceptionController
      */
     public function showAction(Request $request, FlattenException $exception)
     {
-        if (is_subclass_of($exception->getClass(), 'Pagekit\Kernel\Exception\HttpException')) {
+        if (is_subclass_of($exception->getClass(), 'Foxkit\Kernel\Exception\HttpException')) {
             $title = $exception->getMessage();
         } else {
             $title = __('Whoops, looks like something went wrong.');

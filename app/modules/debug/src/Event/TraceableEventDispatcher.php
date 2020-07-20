@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Debug\Event;
+namespace Foxkit\Debug\Event;
 
-use Pagekit\Event\EventDispatcherInterface;
-use Pagekit\Event\EventSubscriberInterface;
+use Foxkit\Event\EventDispatcherInterface;
+use Foxkit\Event\EventSubscriberInterface;
 use Symfony\Component\Stopwatch\Stopwatch;
 use Psr\Log\LoggerInterface;
 

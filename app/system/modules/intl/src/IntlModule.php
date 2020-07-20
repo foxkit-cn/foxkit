@@ -1,13 +1,13 @@
 <?php
 
-namespace Pagekit\Intl;
+namespace Foxkit\Intl;
 
-use Pagekit\Application as App;
-use Pagekit\Intl\Loader\ArrayLoader;
-use Pagekit\Intl\Loader\MoFileLoader;
-use Pagekit\Intl\Loader\PhpFileLoader;
-use Pagekit\Intl\Loader\PoFileLoader;
-use Pagekit\Module\Module;
+use Foxkit\Application as App;
+use Foxkit\Intl\Loader\ArrayLoader;
+use Foxkit\Intl\Loader\MoFileLoader;
+use Foxkit\Intl\Loader\PhpFileLoader;
+use Foxkit\Intl\Loader\PoFileLoader;
+use Foxkit\Module\Module;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Translation\Translator;
 use Symfony\Component\Translation\TranslatorInterface;

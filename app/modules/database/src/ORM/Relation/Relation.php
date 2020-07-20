@@ -1,10 +1,10 @@
 <?php
 
-namespace Pagekit\Database\ORM\Relation;
+namespace Foxkit\Database\ORM\Relation;
 
-use Pagekit\Database\ORM\EntityManager;
-use Pagekit\Database\ORM\Metadata;
-use Pagekit\Database\ORM\QueryBuilder;
+use Foxkit\Database\ORM\EntityManager;
+use Foxkit\Database\ORM\Metadata;
+use Foxkit\Database\ORM\QueryBuilder;
 
 /**
  * The Relation class handles relations between entities.

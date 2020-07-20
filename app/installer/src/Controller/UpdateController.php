@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Installer\Controller;
+namespace Foxkit\Installer\Controller;
 
-use Pagekit\Application as App;
-use Pagekit\Installer\SelfUpdater;
+use Foxkit\Application as App;
+use Foxkit\Installer\SelfUpdater;
 use Symfony\Component\Console\Output\StreamOutput;
 
 /**

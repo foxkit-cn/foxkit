@@ -1,8 +1,8 @@
 <?php
 
-use Pagekit\Application\Response;
-use Pagekit\Application\UrlProvider;
-use Pagekit\Kernel\ExceptionHandler;
+use Foxkit\Application\Response;
+use Foxkit\Application\UrlProvider;
+use Foxkit\Kernel\ExceptionHandler;
 use Symfony\Component\Debug\ErrorHandler;
 
 return [

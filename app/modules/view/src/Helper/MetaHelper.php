@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\View\Helper;
+namespace Foxkit\View\Helper;
 
-use Pagekit\View\View;
+use Foxkit\View\View;
 
 class MetaHelper implements HelperInterface, \IteratorAggregate
 {
@@ -63,7 +63,7 @@ class MetaHelper implements HelperInterface, \IteratorAggregate
 
         return $this;
     }
-    
+
     /**
      * Removes a meta tag.
      *
@@ -73,9 +73,9 @@ class MetaHelper implements HelperInterface, \IteratorAggregate
 	public function remove( $name )
 	{
 		if (isset($this->metas[$name])) {
-			unset($this->metas[$name]);			
-		} 
-        
+			unset($this->metas[$name]);
+		}
+
         return $this;
 	}
 

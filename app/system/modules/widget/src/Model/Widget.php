@@ -1,10 +1,10 @@
 <?php
 
-namespace Pagekit\Widget\Model;
+namespace Foxkit\Widget\Model;
 
-use Pagekit\Database\ORM\ModelTrait;
-use Pagekit\System\Model\DataModelTrait;
-use Pagekit\User\Model\AccessModelTrait;
+use Foxkit\Database\ORM\ModelTrait;
+use Foxkit\System\Model\DataModelTrait;
+use Foxkit\User\Model\AccessModelTrait;
 
 /**
  * @Entity(tableClass="@system_widget")

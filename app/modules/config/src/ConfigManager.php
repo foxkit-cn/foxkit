@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Config;
+namespace Foxkit\Config;
 
 use Doctrine\DBAL\Platforms\MySqlPlatform;
-use Pagekit\Database\Connection;
+use Foxkit\Database\Connection;
 
 class ConfigManager implements \IteratorAggregate
 {

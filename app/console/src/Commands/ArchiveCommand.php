@@ -1,11 +1,11 @@
 <?php
 
-namespace Pagekit\Console\Commands;
+namespace Foxkit\Console\Commands;
 
 use Composer\Json\JsonFile;
 use Composer\Package\Archiver\PharArchiver;
 use Composer\Util\Filesystem;
-use Pagekit\Application\Console\Command;
+use Foxkit\Application\Console\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;

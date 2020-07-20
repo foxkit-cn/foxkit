@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\View\Helper;
+namespace Foxkit\View\Helper;
 
-use Pagekit\Session\Csrf\Provider\CsrfProviderInterface;
+use Foxkit\Session\Csrf\Provider\CsrfProviderInterface;
 
 class TokenHelper extends Helper
 {

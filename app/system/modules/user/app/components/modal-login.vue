@@ -85,7 +85,7 @@
                     if (res.data.csrf) {
 
                         this.$cache.set('_csrf', res.data.csrf);
-                        this.$cache.set('_session', window.$pagekit.csrf);
+                        this.$cache.set('_session', window.$foxkit.csrf);
                         this.$session.flush();
 
                         return login();

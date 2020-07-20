@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Site;
+namespace Foxkit\Site;
 
-use Pagekit\Application as App;
-use Pagekit\Config\Config;
+use Foxkit\Application as App;
+use Foxkit\Config\Config;
 
 class MenuManager implements \JsonSerializable
 {

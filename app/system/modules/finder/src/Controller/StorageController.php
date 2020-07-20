@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Finder\Controller;
+namespace Foxkit\Finder\Controller;
 
-use Pagekit\Application as App;
+use Foxkit\Application as App;
 
 /**
  * @Access("system: manage storage", admin=true)

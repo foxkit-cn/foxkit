@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Routing\Annotation;
+namespace Foxkit\Routing\Annotation;
 
 use Symfony\Component\Routing\Annotation\Route as BaseRoute;
 

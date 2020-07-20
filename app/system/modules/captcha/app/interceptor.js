@@ -4,14 +4,14 @@ let requestResolve, requestReject;
 if (config.grecaptcha) {
 
     Vue.asset({
-        js: ['https://www.google.com/recaptcha/api.js?onload=pagekit_onRecaptchaLoad&render=explicit']
+        js: ['https://www.google.com/recaptcha/api.js?onload=foxkit_onRecaptchaLoad&render=explicit']
     });
 
     let resolveLoad;
     const loadPromise = new Vue.Promise(resolve => {
         resolveLoad = resolve;
     });
-    window.pagekit_onRecaptchaLoad = () => {
+    window.foxkit_onRecaptchaLoad = () => {
         let div = document.createElement('div');
 
         document.body.appendChild(div);

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Filter;
+namespace Foxkit\Filter;
 
 class FilterManager
 {
@@ -8,20 +8,20 @@ class FilterManager
      * @var array
      */
     protected $defaults = [
-        'addrelnofollow' => 'Pagekit\Filter\AddRelNofollowFilter',
-        'alnum'          => 'Pagekit\Filter\AlnumFilter',
-        'alpha'          => 'Pagekit\Filter\AlphaFilter',
-        'bool'           => 'Pagekit\Filter\BooleanFilter',
-        'boolean'        => 'Pagekit\Filter\BooleanFilter',
-        'digits'         => 'Pagekit\Filter\DigitsFilter',
-        'int'            => 'Pagekit\Filter\IntFilter',
-        'integer'        => 'Pagekit\Filter\IntFilter',
-        'float'          => 'Pagekit\Filter\FloatFilter',
-        'json'           => 'Pagekit\Filter\JsonFilter',
-        'pregreplace'    => 'Pagekit\Filter\PregReplaceFilter',
-        'slugify'        => 'Pagekit\Filter\SlugifyFilter',
-        'string'         => 'Pagekit\Filter\StringFilter',
-        'stripnewlines'  => 'Pagekit\Filter\StripNewlinesFilter'
+        'addrelnofollow' => 'Foxkit\Filter\AddRelNofollowFilter',
+        'alnum'          => 'Foxkit\Filter\AlnumFilter',
+        'alpha'          => 'Foxkit\Filter\AlphaFilter',
+        'bool'           => 'Foxkit\Filter\BooleanFilter',
+        'boolean'        => 'Foxkit\Filter\BooleanFilter',
+        'digits'         => 'Foxkit\Filter\DigitsFilter',
+        'int'            => 'Foxkit\Filter\IntFilter',
+        'integer'        => 'Foxkit\Filter\IntFilter',
+        'float'          => 'Foxkit\Filter\FloatFilter',
+        'json'           => 'Foxkit\Filter\JsonFilter',
+        'pregreplace'    => 'Foxkit\Filter\PregReplaceFilter',
+        'slugify'        => 'Foxkit\Filter\SlugifyFilter',
+        'string'         => 'Foxkit\Filter\StringFilter',
+        'stripnewlines'  => 'Foxkit\Filter\StripNewlinesFilter'
     ];
 
     /**

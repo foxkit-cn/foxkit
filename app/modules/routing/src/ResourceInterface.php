@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Routing;
+namespace Foxkit\Routing;
 
 interface ResourceInterface extends \Serializable
 {

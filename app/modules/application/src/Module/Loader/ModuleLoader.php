@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Module\Loader;
+namespace Foxkit\Module\Loader;
 
-use Pagekit\Application;
+use Foxkit\Application;
 
 class ModuleLoader implements LoaderInterface
 {
@@ -31,7 +31,7 @@ class ModuleLoader implements LoaderInterface
         $module = new $class($module);
         $module->main($this->app);
 
-        if (is_a($module, 'Pagekit\Event\EventSubscriberInterface')) {
+        if (is_a($module, 'Foxkit\Event\EventSubscriberInterface')) {
             $this->app->subscribe($module);
         }
 

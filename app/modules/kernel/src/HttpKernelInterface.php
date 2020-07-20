@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Kernel;
+namespace Foxkit\Kernel;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

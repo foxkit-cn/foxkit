@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Application;
+namespace Foxkit\Application;
 
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\JsonResponse;

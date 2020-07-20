@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Module\Loader;
+namespace Foxkit\Module\Loader;
 
 class CallableLoader implements LoaderInterface
 {

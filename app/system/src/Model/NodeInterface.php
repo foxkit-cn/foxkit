@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\System\Model;
+namespace Foxkit\System\Model;
 
 interface NodeInterface extends \IteratorAggregate, \Countable
 {

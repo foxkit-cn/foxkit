@@ -4,11 +4,11 @@ return [
 
     'name' => 'system/cache',
 
-    'main' => 'Pagekit\\Cache\\CacheModule',
+    'main' => 'Foxkit\\Cache\\CacheModule',
 
     'autoload' => [
 
-        'Pagekit\\Cache\\' => 'src'
+        'Foxkit\\Cache\\' => 'src'
 
     ],
 
@@ -16,7 +16,7 @@ return [
 
         '/system/cache' => [
             'name' => '@system/cache',
-            'controller' => 'Pagekit\\Cache\\Controller\\CacheController'
+            'controller' => 'Foxkit\\Cache\\Controller\\CacheController'
         ]
 
     ],

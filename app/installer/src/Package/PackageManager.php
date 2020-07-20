@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Installer\Package;
+namespace Foxkit\Installer\Package;
 
-use Pagekit\Application as App;
-use Pagekit\Installer\Helper\Composer;
+use Foxkit\Application as App;
+use Foxkit\Installer\Helper\Composer;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Output\StreamOutput;
 
@@ -132,9 +132,9 @@ class PackageManager
 
             $scripts->enable();
 
-            if ($package->getType() == 'pagekit-theme') {
+            if ($package->getType() == 'foxkit-theme') {
                 App::config('system')->set('site.theme', $package->get('module'));
-            } elseif ($package->getType() == 'pagekit-extension') {
+            } elseif ($package->getType() == 'foxkit-extension') {
                 App::config('system')->push('extensions', $package->get('module'));
             }
         }
@@ -152,7 +152,7 @@ class PackageManager
         foreach ($packages as $package) {
             $this->getScripts($package)->disable();
 
-            if ($package->getType() == 'pagekit-extension') {
+            if ($package->getType() == 'foxkit-extension') {
                 App::config('system')->pull('extensions', $package->get('module'));
             }
         }

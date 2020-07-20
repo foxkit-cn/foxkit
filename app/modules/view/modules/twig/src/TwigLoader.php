@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Twig;
+namespace Foxkit\Twig;
 
-use Pagekit\View\Loader\FilesystemLoader;
+use Foxkit\View\Loader\FilesystemLoader;
 use Symfony\Component\Templating\TemplateNameParser;
 use Symfony\Component\Templating\TemplateNameParserInterface;
 

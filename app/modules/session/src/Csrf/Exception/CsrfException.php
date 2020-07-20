@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Session\Csrf\Exception;
+namespace Foxkit\Session\Csrf\Exception;
 
-use Pagekit\Kernel\Exception\UnauthorizedException;
+use Foxkit\Kernel\Exception\UnauthorizedException;
 
 class CsrfException extends UnauthorizedException
 {

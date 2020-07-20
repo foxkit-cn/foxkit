@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\System\Model;
+namespace Foxkit\System\Model;
 
-use Pagekit\Util\Arr;
+use Foxkit\Util\Arr;
 
 trait DataModelTrait
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Pagekit\Module;
+namespace Foxkit\Module;
 
-use Pagekit\Application as App;
-use Pagekit\Event\EventSubscriberInterface;
-use Pagekit\Util\Arr;
+use Foxkit\Application as App;
+use Foxkit\Event\EventSubscriberInterface;
+use Foxkit\Util\Arr;
 
 class Module implements ModuleInterface, EventSubscriberInterface
 {

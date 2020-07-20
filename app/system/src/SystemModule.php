@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\System;
+namespace Foxkit\System;
 
-use Pagekit\Application as App;
-use Pagekit\Module\Module;
+use Foxkit\Application as App;
+use Foxkit\Module\Module;
 use Symfony\Component\Finder\Finder;
 
 class SystemModule extends Module

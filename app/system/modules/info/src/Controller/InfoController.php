@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Info\Controller;
+namespace Foxkit\Info\Controller;
 
-use Pagekit\Application as App;
+use Foxkit\Application as App;
 
 /**
  * @Access(admin=true)

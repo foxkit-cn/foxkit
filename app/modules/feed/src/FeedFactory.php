@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Feed;
+namespace Foxkit\Feed;
 
 class FeedFactory
 {
@@ -8,9 +8,9 @@ class FeedFactory
      * @var string[]
      */
     protected $feeds = [
-        Feed::ATOM => 'Pagekit\Feed\Feed\Atom',
-        Feed::RSS1 => 'Pagekit\Feed\Feed\RSS1',
-        Feed::RSS2 => 'Pagekit\Feed\Feed\RSS2'
+        Feed::ATOM => 'Foxkit\Feed\Feed\Atom',
+        Feed::RSS1 => 'Foxkit\Feed\Feed\RSS1',
+        Feed::RSS2 => 'Foxkit\Feed\Feed\RSS2'
     ];
 
     /**
@@ -34,8 +34,8 @@ class FeedFactory
      */
     public function register($type, $class)
     {
-        if (!is_string($class) || !is_subclass_of($class, 'Pagekit\Feed\FeedInterface')) {
-            throw new \InvalidArgumentException(sprintf('Given type class "%s" is not of type Pagekit\Feed\FeedInterface', (string) $class));
+        if (!is_string($class) || !is_subclass_of($class, 'Foxkit\Feed\FeedInterface')) {
+            throw new \InvalidArgumentException(sprintf('Given type class "%s" is not of type Foxkit\Feed\FeedInterface', (string) $class));
         }
 
         $this->feeds[$type] = $class;

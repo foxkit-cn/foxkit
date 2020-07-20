@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Event;
+namespace Foxkit\Event;
 
 interface EventSubscriberInterface
 {

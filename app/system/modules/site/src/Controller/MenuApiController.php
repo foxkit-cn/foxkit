@@ -1,11 +1,11 @@
 <?php
 
-namespace Pagekit\Site\Controller;
+namespace Foxkit\Site\Controller;
 
-use Pagekit\Application as App;
-use Pagekit\Config\Config;
-use Pagekit\Kernel\Exception\ConflictException;
-use Pagekit\Site\Model\Node;
+use Foxkit\Application as App;
+use Foxkit\Config\Config;
+use Foxkit\Kernel\Exception\ConflictException;
+use Foxkit\Site\Model\Node;
 
 /**
  * @Access("site: manage site")

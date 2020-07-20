@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Feed\Item;
+namespace Foxkit\Feed\Item;
 
-use Pagekit\Feed\Feed;
-use Pagekit\Feed\Item;
+use Foxkit\Feed\Feed;
+use Foxkit\Feed\Item;
 
 class RSS1 extends Item
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Kernel\Event;
+namespace Foxkit\Kernel\Event;
 
 class ControllerEvent extends KernelEvent
 {

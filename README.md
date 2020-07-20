@@ -10,7 +10,7 @@ FoxKit 是一个轻量级的 CMS
 
 1. 下载 [最新版本](https://github.com/foxkit-cn/foxkit/releases)
 2. 解压压缩包并将解缩的文件夹复制到您的 Web 服务器
-3. 在浏览器中打开网址，即 `http://localhost/pagekit` 并按照安装程序进行操作
+3. 在浏览器中打开网址，即 `http://localhost/foxkit` 并按照安装程序进行操作
 
 ## 从源码开始安装
 
@@ -21,7 +21,7 @@ FoxKit 是一个轻量级的 CMS
 FoxKit 提供了一组命令来在命令行上运行常规任务，您可以使用以下命令查看可用的命令：
 
 ```bash
-./pagekit --help
+./foxkit --help
 ```
 
 ## 贡献

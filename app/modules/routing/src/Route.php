@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Routing;
+namespace Foxkit\Routing;
 
 use Symfony\Component\Routing\Route as BaseRoute;
 

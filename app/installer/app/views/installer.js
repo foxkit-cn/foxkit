@@ -61,7 +61,7 @@ var Installer = {
             var config = _.cloneDeep(this.config);
 
             _.forEach(config.database.connections, function (connection, name) {
-                if (name != config.database.default) {
+                if (name !== config.database.default) {
                     delete(config.database.connections[name]);
                 } else if (connection.host) {
                     connection.host = connection.host.replace(/:(\d+)$/, function (match, port) {
@@ -78,7 +78,7 @@ var Installer = {
                     data = {message: 'Whoops, something went wrong'};
                 }
 
-                if (data.status == 'no-tables') {
+                if (data.status === 'no-tables') {
                     this.gotoStep('site');
                     this.config = config;
                 } else {
@@ -111,7 +111,7 @@ var Installer = {
                         data = {message: 'Whoops, something went wrong'};
                     }
 
-                    if (data.status == 'success') {
+                    if (data.status === 'success') {
                         this.$set('status', 'finished');
 
                         // redirect to login after 3s

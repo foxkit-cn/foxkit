@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Debug\DataCollector;
+namespace Foxkit\Debug\DataCollector;
 
 use DebugBar\DataCollector\DataCollectorInterface;
 use DebugBar\Storage\StorageInterface;

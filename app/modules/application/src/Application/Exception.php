@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Application;
+namespace Foxkit\Application;
 
 class Exception extends \RuntimeException
 {

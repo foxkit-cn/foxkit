@@ -7,7 +7,7 @@
 
             <div v-show="hasUpdate">
                 <span class="pk-icon-bell uk-margin-small-right"></span>
-                {{ 'Pagekit %version% is available.' | trans update }} <a href="admin/system/update">{{ 'Update now!' | trans }}</a>
+                {{ 'Foxkit %version% is available.' | trans update }} <a href="admin/system/update">{{ 'Update now!' | trans }}</a>
             </div>
 
         </div>

@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Console\Commands;
+namespace Foxkit\Console\Commands;
 
-use Pagekit\Application\Console\Command;
-use Pagekit\Installer\Package\PackageScripts;
+use Foxkit\Application\Console\Command;
+use Foxkit\Installer\Package\PackageScripts;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -17,7 +17,7 @@ class MigrationCommand extends Command
     /**
      * {@inheritdoc}
      */
-    protected $description = 'Migrates Pagekit';
+    protected $description = 'Migrates Foxkit';
 
     /**
      * {@inheritdoc}
@@ -32,6 +32,6 @@ class MigrationCommand extends Command
         }
 
         $config->set('version', $this->container->version());
-        $this->line(sprintf('<info>%s</info>', __('Your Pagekit database has been updated successfully.')));
+        $this->line(sprintf('<info>%s</info>', __('Your Foxkit database has been updated successfully.')));
     }
 }

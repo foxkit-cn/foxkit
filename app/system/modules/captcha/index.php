@@ -1,6 +1,6 @@
 <?php
 
-use Pagekit\Captcha\CaptchaListener;
+use Foxkit\Captcha\CaptchaListener;
 
 return [
 
@@ -8,7 +8,7 @@ return [
 
     'autoload' => [
 
-        'Pagekit\\Captcha\\' => 'src'
+        'Foxkit\\Captcha\\' => 'src'
 
     ],
 

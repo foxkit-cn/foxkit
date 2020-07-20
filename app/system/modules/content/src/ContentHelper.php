@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Content;
+namespace Foxkit\Content;
 
-use Pagekit\Application as App;
-use Pagekit\Content\Event\ContentEvent;
+use Foxkit\Application as App;
+use Foxkit\Content\Event\ContentEvent;
 
 class ContentHelper
 {

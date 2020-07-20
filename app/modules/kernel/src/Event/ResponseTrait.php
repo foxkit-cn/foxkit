@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Kernel\Event;
+namespace Foxkit\Kernel\Event;
 
 use Symfony\Component\HttpFoundation\Response;
 

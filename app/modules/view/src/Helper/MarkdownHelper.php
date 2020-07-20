@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\View\Helper;
+namespace Foxkit\View\Helper;
 
-use Pagekit\Markdown\Markdown;
+use Foxkit\Markdown\Markdown;
 
 class MarkdownHelper extends Helper
 {

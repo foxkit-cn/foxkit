@@ -15,6 +15,7 @@
         }
     ],
     "require": {
+        "composer/composer": "^1.10.9",
         "doctrine/annotations": "~1.2.3",
         "doctrine/dbal": "~2.5.1",
         "ircmaxell/random-lib": "~1.0.0",
@@ -23,6 +24,7 @@
         "nikic/php-parser": "~2.0.0",
         "psr/log": "~1.0.0",
         "swiftmailer/swiftmailer": "~5.4.5",
+        "symfony/console": "^5.1",
         "symfony/debug": "~3.0.0",
         "symfony/finder": "~3.0.0",
         "symfony/http-foundation": "~3.0.0",
@@ -30,7 +32,10 @@
         "symfony/stopwatch": "~3.0.0",
         "symfony/templating": "~3.0.0",
         "symfony/translation": "~3.0.0",
-        "twig/twig": "^1.22"
+        "twig/twig": "^1.22",
+        "ext-json": "*",
+        "ext-pdo": "*",
+        "ext-zip": "*"
     },
     "autoload": {
         "psr-4": {

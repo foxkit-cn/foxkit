@@ -1,11 +1,11 @@
 <?php
 
-namespace Pagekit\Module;
+namespace Foxkit\Module;
 
-use Pagekit\Application;
-use Pagekit\Module\Loader\CallableLoader;
-use Pagekit\Module\Loader\LoaderInterface;
-use Pagekit\Module\Loader\ModuleLoader;
+use Foxkit\Application;
+use Foxkit\Module\Loader\CallableLoader;
+use Foxkit\Module\Loader\LoaderInterface;
+use Foxkit\Module\Loader\ModuleLoader;
 
 class ModuleManager implements \IteratorAggregate
 {
@@ -40,7 +40,7 @@ class ModuleManager implements \IteratorAggregate
     protected $defaults = [
         'main' => null,
         'type' => 'module',
-        'class' => 'Pagekit\Module\Module',
+        'class' => 'Foxkit\Module\Module',
         'config' => []
     ];
 

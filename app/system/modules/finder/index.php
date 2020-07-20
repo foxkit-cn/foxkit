@@ -6,7 +6,7 @@ return [
 
     'autoload' => [
 
-        'Pagekit\\Finder\\' => 'src'
+        'Foxkit\\Finder\\' => 'src'
 
     ],
 
@@ -20,11 +20,11 @@ return [
 
         '/system/finder' => [
             'name' => '@system/finder',
-            'controller' => 'Pagekit\\Finder\\Controller\\FinderController'
+            'controller' => 'Foxkit\\Finder\\Controller\\FinderController'
         ],
         '/site/storage' => [
             'name' => '@site/storage',
-            'controller' => 'Pagekit\\Finder\\Controller\\StorageController'
+            'controller' => 'Foxkit\\Finder\\Controller\\StorageController'
         ]
 
     ],

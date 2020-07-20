@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Database;
+namespace Foxkit\Database;
 
 use Doctrine\DBAL\Schema\AbstractSchemaManager;
 use Doctrine\DBAL\Schema\Comparator;

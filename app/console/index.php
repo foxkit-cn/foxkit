@@ -6,7 +6,7 @@ return [
 
     'autoload' => [
 
-        'Pagekit\\Console\\' => 'src'
+        'Foxkit\\Console\\' => 'src'
 
     ],
 
@@ -14,7 +14,7 @@ return [
 
         'console.init' => function ($event, $console) {
 
-            $namespace = 'Pagekit\\Console\\Commands\\';
+            $namespace = 'Foxkit\\Console\\Commands\\';
 
             foreach (glob(__DIR__ . '/src/Commands/*Command.php') as $file) {
                 $class = $namespace . basename($file, '.php');

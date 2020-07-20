@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Util;
+namespace Foxkit\Util;
 
 class ArrObject implements \ArrayAccess, \Countable, \JsonSerializable
 {

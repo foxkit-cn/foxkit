@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Mail;
+namespace Foxkit\Mail;
 
 use Swift_Attachment;
 use Swift_Image;

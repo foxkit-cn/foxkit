@@ -1,14 +1,14 @@
 <?php
 
-namespace Pagekit\Auth;
+namespace Foxkit\Auth;
 
-use Pagekit\Auth\Event\AuthenticateEvent;
-use Pagekit\Auth\Event\AuthorizeEvent;
-use Pagekit\Auth\Event\LoginEvent;
-use Pagekit\Auth\Event\LogoutEvent;
-use Pagekit\Auth\Exception\BadCredentialsException;
-use Pagekit\Auth\Handler\HandlerInterface;
-use Pagekit\Event\EventDispatcherInterface;
+use Foxkit\Auth\Event\AuthenticateEvent;
+use Foxkit\Auth\Event\AuthorizeEvent;
+use Foxkit\Auth\Event\LoginEvent;
+use Foxkit\Auth\Event\LogoutEvent;
+use Foxkit\Auth\Exception\BadCredentialsException;
+use Foxkit\Auth\Handler\HandlerInterface;
+use Foxkit\Event\EventDispatcherInterface;
 use Symfony\Component\HttpFoundation\Response;
 
 class Auth

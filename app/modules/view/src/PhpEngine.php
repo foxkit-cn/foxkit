@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\View;
+namespace Foxkit\View;
 
 use Symfony\Component\Templating\Loader\FilesystemLoader;
 use Symfony\Component\Templating\Loader\LoaderInterface;

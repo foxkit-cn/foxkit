@@ -83,7 +83,7 @@
             api: {type: String, default: ''},
             search: {type: String, default: ''},
             page: {type: Number, default: 0},
-            type: {type: String, default: 'pagekit-extension'},
+            type: {type: String, default: 'foxkit-extension'},
             installed: {
                 type: Array, default: function () {
                     return [];

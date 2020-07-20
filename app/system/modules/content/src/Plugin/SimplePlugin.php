@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Content\Plugin;
+namespace Foxkit\Content\Plugin;
 
-use Pagekit\Content\Event\ContentEvent;
-use Pagekit\Event\EventSubscriberInterface;
+use Foxkit\Content\Event\ContentEvent;
+use Foxkit\Event\EventSubscriberInterface;
 
 class SimplePlugin implements EventSubscriberInterface
 {

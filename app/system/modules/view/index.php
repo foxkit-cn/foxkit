@@ -1,7 +1,7 @@
 <?php
 
-use Pagekit\Util\ArrObject;
-use Pagekit\View\Event\ResponseListener;
+use Foxkit\Util\ArrObject;
+use Foxkit\View\Event\ResponseListener;
 
 return [
 
@@ -20,7 +20,7 @@ return [
 
         $app->extend('assets', function ($assets) use ($app) {
 
-            $assets->register('file', 'Pagekit\View\Asset\FileLocatorAsset');
+            $assets->register('file', 'Foxkit\View\Asset\FileLocatorAsset');
 
             return $assets;
         });
@@ -29,7 +29,7 @@ return [
 
     'autoload' => [
 
-        'Pagekit\\View\\' => 'src'
+        'Foxkit\\View\\' => 'src'
 
     ],
 
@@ -47,12 +47,12 @@ return [
 
         'view.init' => [function ($event, $view) {
             $view->defer('head');
-            $view->meta(['generator' => 'Pagekit']);
+            $view->meta(['generator' => 'Foxkit']);
             $view->addGlobal('params', new ArrObject());
         }, 20],
 
         'view.data' => function ($event, $data) use ($app) {
-            $data->add('$pagekit', [
+            $data->add('$foxkit', [
                 'url' => $app['router']->getContext()->getBaseUrl(),
                 'csrf' => $app['csrf']->generate()
             ]);

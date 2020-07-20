@@ -1,16 +1,16 @@
 <?php
 
-use Pagekit\Filter\FilterManager;
-use Pagekit\Kernel\Exception\HttpException;
-use Pagekit\Routing\Event\AliasListener;
-use Pagekit\Routing\Event\ConfigureRouteListener;
-use Pagekit\Routing\Event\RouterListener;
-use Pagekit\Routing\Loader\RoutesLoader;
-use Pagekit\Routing\Middleware;
-use Pagekit\Routing\Request\ParamFetcher;
-use Pagekit\Routing\Request\ParamFetcherListener;
-use Pagekit\Routing\Router;
-use Pagekit\Routing\Routes;
+use Foxkit\Filter\FilterManager;
+use Foxkit\Kernel\Exception\HttpException;
+use Foxkit\Routing\Event\AliasListener;
+use Foxkit\Routing\Event\ConfigureRouteListener;
+use Foxkit\Routing\Event\RouterListener;
+use Foxkit\Routing\Loader\RoutesLoader;
+use Foxkit\Routing\Middleware;
+use Foxkit\Routing\Request\ParamFetcher;
+use Foxkit\Routing\Request\ParamFetcherListener;
+use Foxkit\Routing\Router;
+use Foxkit\Routing\Routes;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 return [
@@ -97,7 +97,7 @@ return [
 
     'autoload' => [
 
-        'Pagekit\\Routing\\' => 'src'
+        'Foxkit\\Routing\\' => 'src'
 
     ]
 

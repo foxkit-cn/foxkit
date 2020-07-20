@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Auth\Event;
+namespace Foxkit\Auth\Event;
 
-use Pagekit\Auth\UserInterface;
-use Pagekit\Event\Event as BaseEvent;
+use Foxkit\Auth\UserInterface;
+use Foxkit\Event\Event as BaseEvent;
 
 class Event extends BaseEvent
 {
@@ -15,7 +15,7 @@ class Event extends BaseEvent
     /**
      * Constructor.
      *
-     * @param string $name	 
+     * @param string $name
      * @param UserInterface $user
      */
     public function __construct($name, UserInterface $user = null)

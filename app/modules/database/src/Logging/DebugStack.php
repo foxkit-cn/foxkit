@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Database\Logging;
+namespace Foxkit\Database\Logging;
 
 use Doctrine\DBAL\Logging\DebugStack as BaseDebugStack;
 use Symfony\Component\Stopwatch\Stopwatch;
@@ -49,7 +49,7 @@ class DebugStack extends BaseDebugStack
         if (null !== $this->stopwatch) {
             $this->stopwatch->stop('doctrine');
         }
-        
+
         if ($this->enabled) {
             $this->queries[$this->currentQuery]['callstack'] = $this->callstack;
         }

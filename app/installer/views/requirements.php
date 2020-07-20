@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Pagekit Installer Errors</title>
+        <title>Foxkit Installer Errors</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +15,7 @@
         <div class="uk-height-viewport uk-flex uk-flex-center uk-flex-middle uk-text-center">
             <div class="tm-container">
 
-                <img class="uk-margin-large-bottom" src="app/system/assets/images/pagekit-logo-large-black.svg" alt="Pagekit">
+                <img class="uk-margin-large-bottom" src="app/system/assets/images/foxkit-logo-large-black.svg" alt="Foxkit">
 
                 <div class="uk-panel uk-panel-box">
                     <h1>System Requirements</h1>

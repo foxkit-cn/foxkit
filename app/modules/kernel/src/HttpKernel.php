@@ -1,20 +1,20 @@
 <?php
 
-namespace Pagekit\Kernel;
+namespace Foxkit\Kernel;
 
-use Pagekit\Event\EventDispatcherInterface;
-use Pagekit\Kernel\Event\ControllerEvent;
-use Pagekit\Kernel\Event\ExceptionEvent;
-use Pagekit\Kernel\Event\KernelEvent;
-use Pagekit\Kernel\Event\RequestEvent;
-use Pagekit\Kernel\Exception\BadRequestException;
-use Pagekit\Kernel\Exception\ConflictException;
-use Pagekit\Kernel\Exception\ForbiddenException;
-use Pagekit\Kernel\Exception\HttpException;
-use Pagekit\Kernel\Exception\InternalErrorException;
-use Pagekit\Kernel\Exception\MethodNotAllowedException;
-use Pagekit\Kernel\Exception\NotFoundException;
-use Pagekit\Kernel\Exception\UnauthorizedException;
+use Foxkit\Event\EventDispatcherInterface;
+use Foxkit\Kernel\Event\ControllerEvent;
+use Foxkit\Kernel\Event\ExceptionEvent;
+use Foxkit\Kernel\Event\KernelEvent;
+use Foxkit\Kernel\Event\RequestEvent;
+use Foxkit\Kernel\Exception\BadRequestException;
+use Foxkit\Kernel\Exception\ConflictException;
+use Foxkit\Kernel\Exception\ForbiddenException;
+use Foxkit\Kernel\Exception\HttpException;
+use Foxkit\Kernel\Exception\InternalErrorException;
+use Foxkit\Kernel\Exception\MethodNotAllowedException;
+use Foxkit\Kernel\Exception\NotFoundException;
+use Foxkit\Kernel\Exception\UnauthorizedException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;

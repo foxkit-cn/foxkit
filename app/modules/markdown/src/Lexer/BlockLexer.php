@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Markdown\Lexer;
+namespace Foxkit\Markdown\Lexer;
 
 class BlockLexer
 {

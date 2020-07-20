@@ -1,8 +1,8 @@
 <?php
 
-use Pagekit\Application as App;
-use Pagekit\Module\Loader\AutoLoader;
-use Pagekit\Module\Loader\ConfigLoader;
+use Foxkit\Application as App;
+use Foxkit\Module\Loader\AutoLoader;
+use Foxkit\Module\Loader\ConfigLoader;
 
 $loader = require $path.'/autoload.php';
 

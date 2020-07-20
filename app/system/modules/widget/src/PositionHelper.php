@@ -1,10 +1,10 @@
 <?php
 
-namespace Pagekit\Widget;
+namespace Foxkit\Widget;
 
-use Pagekit\Application as App;
-use Pagekit\View\Helper\Helper;
-use Pagekit\Widget\Model\Widget;
+use Foxkit\Application as App;
+use Foxkit\View\Helper\Helper;
+use Foxkit\Widget\Model\Widget;
 
 class PositionHelper extends Helper
 {

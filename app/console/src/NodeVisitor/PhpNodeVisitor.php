@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Console\NodeVisitor;
+namespace Foxkit\Console\NodeVisitor;
 
 use PhpParser\Lexer;
 use PhpParser\Node;

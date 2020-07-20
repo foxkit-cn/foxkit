@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Kernel\Event;
+namespace Foxkit\Kernel\Event;
 
-use Pagekit\Event\Event;
-use Pagekit\Kernel\HttpKernelInterface;
+use Foxkit\Event\Event;
+use Foxkit\Kernel\HttpKernelInterface;
 
 class KernelEvent extends Event
 {

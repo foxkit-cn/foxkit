@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Application\Traits;
+namespace Foxkit\Application\Traits;
 
-use Pagekit\Event\EventSubscriberInterface;
+use Foxkit\Event\EventSubscriberInterface;
 
 trait EventTrait
 {

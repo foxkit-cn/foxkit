@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Database;
+namespace Foxkit\Database;
 
 final class Events
 {

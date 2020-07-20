@@ -1,10 +1,10 @@
 <?php
 
-namespace Pagekit\System\Controller;
+namespace Foxkit\System\Controller;
 
-use Pagekit\Application as App;
-use Pagekit\Auth\Auth;
-use Pagekit\User\Model\User;
+use Foxkit\Application as App;
+use Foxkit\Auth\Auth;
+use Foxkit\User\Model\User;
 
 class AdminController
 {

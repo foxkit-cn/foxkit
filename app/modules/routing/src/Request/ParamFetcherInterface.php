@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Routing\Request;
+namespace Foxkit\Routing\Request;
 
 interface ParamFetcherInterface
 {

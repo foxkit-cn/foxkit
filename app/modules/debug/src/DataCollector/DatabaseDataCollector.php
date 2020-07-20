@@ -1,10 +1,10 @@
 <?php
 
-namespace Pagekit\Debug\DataCollector;
+namespace Foxkit\Debug\DataCollector;
 
 use DebugBar\Bridge\DoctrineCollector;
 use Doctrine\DBAL\Logging\DebugStack;
-use Pagekit\Database\Connection;
+use Foxkit\Database\Connection;
 
 class DatabaseDataCollector extends DoctrineCollector
 {

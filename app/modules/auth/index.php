@@ -1,8 +1,8 @@
 <?php
 
-use Pagekit\Auth\Auth;
-use Pagekit\Auth\Encoder\NativePasswordEncoder;
-use Pagekit\Auth\Handler\DatabaseHandler;
+use Foxkit\Auth\Auth;
+use Foxkit\Auth\Encoder\NativePasswordEncoder;
+use Foxkit\Auth\Handler\DatabaseHandler;
 use RandomLib\Factory;
 
 return [
@@ -31,7 +31,7 @@ return [
 
     'autoload' => [
 
-        'Pagekit\\Auth\\' => 'src'
+        'Foxkit\\Auth\\' => 'src'
 
     ],
 

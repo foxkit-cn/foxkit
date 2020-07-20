@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Widget\Model;
+namespace Foxkit\Widget\Model;
 
-use Pagekit\Module\Module;
+use Foxkit\Module\Module;
 
 class Type extends Module implements TypeInterface
 {

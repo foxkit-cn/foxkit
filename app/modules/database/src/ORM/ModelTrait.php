@@ -1,8 +1,8 @@
 <?php
 
-namespace Pagekit\Database\ORM;
+namespace Foxkit\Database\ORM;
 
-use Pagekit\Database\Connection;
+use Foxkit\Database\Connection;
 
 trait ModelTrait
 {

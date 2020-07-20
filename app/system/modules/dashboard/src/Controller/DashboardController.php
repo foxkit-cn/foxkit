@@ -1,9 +1,9 @@
 <?php
 
-namespace Pagekit\Dashboard\Controller;
+namespace Foxkit\Dashboard\Controller;
 
-use Pagekit\Application as App;
-use Pagekit\Module\Module;
+use Foxkit\Application as App;
+use Foxkit\Module\Module;
 
 /**
  * @Access(admin=true)

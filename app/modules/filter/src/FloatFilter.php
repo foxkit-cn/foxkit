@@ -1,6 +1,6 @@
 <?php
 
-namespace Pagekit\Filter;
+namespace Foxkit\Filter;
 
 /**
  * This filter converts the value to float.

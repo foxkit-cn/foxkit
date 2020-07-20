@@ -1,11 +1,11 @@
 <?php
 
-namespace Pagekit\User\Event;
+namespace Foxkit\User\Event;
 
-use Pagekit\Application as App;
-use Pagekit\Auth\Event\AuthenticateEvent;
-use Pagekit\Auth\Exception\AuthException;
-use Pagekit\Event\EventSubscriberInterface;
+use Foxkit\Application as App;
+use Foxkit\Auth\Event\AuthenticateEvent;
+use Foxkit\Auth\Exception\AuthException;
+use Foxkit\Event\EventSubscriberInterface;
 
 class LoginAttemptListener implements EventSubscriberInterface
 {
