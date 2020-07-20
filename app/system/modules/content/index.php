@@ -25,7 +25,7 @@ return [
 
     'autoload' => [
 
-        'Pagekit\\Content\\' => 'src'
+        'Foxkit\\Content\\' => 'src'
 
     ]
 

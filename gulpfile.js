@@ -7,7 +7,7 @@ const header = require('gulp-header');
 const rename = require('gulp-rename');
 
 // css 文件的横幅
-const banner = "/*! <%= data.name %> <%= data.version %> | (c) 2020 FoxKit | MIT License */\n";
+const banner = "/*! <%= data.title %> <%= data.version %> | (c) 2020 FoxKit | MIT License */\n";
 
 // 编译任务的软件包路径
 let pkgs = [

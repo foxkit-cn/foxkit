@@ -18,26 +18,28 @@ class InstallerIO extends ConsoleIO
      */
     public function __construct(InputInterface $input = null, OutputInterface $output = null, HelperSet $helperSet = null)
     {
-        $this->input = $input ?: new ArrayInput([]);
-        $this->output = $output ?: new StreamOutput(fopen('php://output', 'w'));
-        $this->helperSet = $helperSet ?: new HelperSet();
+        parent::__construct($input ?: new ArrayInput([]), $output ?: new StreamOutput(fopen('php://output', 'w')), $helperSet ?: new HelperSet());
 
         if (PHP_SAPI != 'cli') {
-
             ob_implicit_flush(true);
             @ob_end_flush();
-
         }
     }
 
     /**
      * {@inheritdoc}
      */
-    public function writeError($messages, $newline = true)
+    public function writeErr($messages, $newline = true)
     {
-        foreach ((array)$messages as $message) {
-            if (preg_match(self::REGEX, $message, $matches)) {
+        if (is_string($messages)) {
+            if (preg_match(self::REGEX, $messages, $matches)) {
                 throw new \RuntimeException($matches[0]);
+            }
+        } elseif (is_array($messages)) {
+            foreach ($messages as $message) {
+                if (preg_match(self::REGEX, $message, $matches)) {
+                    throw new \RuntimeException($matches[0]);
+                }
             }
         }
 
