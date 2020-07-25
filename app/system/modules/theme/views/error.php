@@ -15,7 +15,7 @@
         <div class="uk-height-viewport uk-flex uk-flex-center uk-flex-middle uk-text-center">
             <div class="tm-container">
 
-                <img class="uk-margin-large-bottom" src="<?= $view->url()->getStatic('app/system/assets/images/foxkit-logo-large-black.svg') ?>" alt="Pagekit">
+                <img class="uk-margin-large-bottom" src="<?= $view->url()->getStatic('app/system/assets/images/foxkit-logo-large-black.svg') ?>" alt="Foxkit">
 
                 <div class="uk-panel uk-panel-box">
                     <h1 class="uk-h2"><?= $title ?></h1>
