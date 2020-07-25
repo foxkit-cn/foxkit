@@ -2,7 +2,7 @@
 
 namespace Foxkit\Comment\Model;
 
-use Pagekit\Database\ORM\ModelTrait;
+use Foxkit\Database\ORM\ModelTrait;
 
 trait CommentModelTrait
 {
