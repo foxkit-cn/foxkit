@@ -5,27 +5,22 @@ namespace Foxkit\Routing\Generator;
 use Symfony\Component\Routing\Generator\Dumper\GeneratorDumper;
 
 /**
- * UrlGeneratorDumper creates a PHP class able to generate URLs for a given set of routes.
- *
- * @author Fabien Potencier <fabien@symfony.com>
- * @author Tobias Schultze <http://tobion.de>
- * @copyright (c) Fabien Potencier <fabien@symfony.com>
+ * UrlGeneratorDumper 创建了一个能够为给定的路由集生成 URL 的 PHP 类
  */
 class UrlGeneratorDumper extends GeneratorDumper
 {
     /**
-     * Dumps a set of routes to a PHP class.
+     * 转储一组路由到一个 PHP 类。
      *
-     * @param  array  $options
+     * @param array $options
      * @return string
      */
     public function dump(array $options = [])
     {
         $options = array_merge([
-            'class'      => 'ProjectUrlGenerator',
+            'class' => 'ProjectUrlGenerator',
             'base_class' => 'Symfony\\Component\\Routing\\Generator\\UrlGenerator',
         ], $options);
-
         return <<<EOF
 <?php
 
@@ -36,16 +31,12 @@ use Psr\Log\LoggerInterface;
 /**
  * {$options['class']}
  *
- * This class has been auto-generated
- * by the Symfony Routing Component.
+ * 这个类是由 Symfony Routing 组件自动生成的
  */
 class {$options['class']} extends {$options['base_class']}
 {
     private static \$declaredRoutes = {$this->generateDeclaredRoutes()};
 
-    /**
-     * Constructor.
-     */
     public function __construct(RequestContext \$context, LoggerInterface \$logger = null)
     {
         \$this->context = \$context;
@@ -59,14 +50,13 @@ EOF;
     }
 
     /**
-     * Generates PHP code representing an array of defined routes
-     * together with the routes properties (e.g. requirements).
+     * 生成代表定义的路由数组和路由属性的 PHP 代码（例如：requirements）
      *
      * @return string
      */
     private function generateDeclaredRoutes()
     {
-        $routes = "array(\n";
+        $routes = "[\n";
         foreach ($this->getRoutes()->all() as $name => $route) {
             $compiledRoute = $route->compile();
 
@@ -80,13 +70,13 @@ EOF;
 
             $routes .= sprintf("        '%s' => %s,\n", $name, str_replace("\n", '', var_export($properties, true)));
         }
-        $routes .= '    )';
+        $routes .= '    ]';
 
         return $routes;
     }
 
     /**
-     * Generates PHP code representing the `generate` method that implements the UrlGeneratorInterface.
+     * 生成实现 UrlGeneratorInterface 的 `generate` 方法的 PHP 代码
      *
      * @return string
      */

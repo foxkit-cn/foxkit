@@ -17,19 +17,17 @@ class Config implements \ArrayAccess, \Countable, \JsonSerializable
     protected $dirty = false;
 
     /**
-     * Constructor.
-     *
      * @param mixed $values
      */
     public function __construct($values = [])
     {
-        $this->values = (array) $values;
+        $this->values = (array)$values;
     }
 
     /**
-     * Checks if the given key exists.
+     * 检查给定 key 是否存在
      *
-     * @param  string $key
+     * @param string $key
      * @return bool
      */
     public function has($key)
@@ -38,10 +36,10 @@ class Config implements \ArrayAccess, \Countable, \JsonSerializable
     }
 
     /**
-     * Gets a value by key.
+     * 通过 key 获得一个值
      *
-     * @param  string $key
-     * @param  mixed  $default
+     * @param string $key
+     * @param mixed $default
      * @return mixed
      */
     public function get($key, $default = null)
@@ -50,88 +48,79 @@ class Config implements \ArrayAccess, \Countable, \JsonSerializable
     }
 
     /**
-     * Sets a value.
+     * 设定一个值
      *
-     * @param  string $key
-     * @param  mixed  $value
+     * @param string $key
+     * @param mixed $value
      * @return self
      */
     public function set($key, $value)
     {
         Arr::set($this->values, $key, $value);
-
         $this->dirty = true;
-
         return $this;
     }
 
     /**
-     * Removes one or more values.
+     * 删除一个或多个值
      *
-     * @param  array|string $keys
+     * @param array|string $keys
      * @return self
      */
     public function remove($keys)
     {
         Arr::remove($this->values, $keys);
-
         $this->dirty = true;
-
         return $this;
     }
 
     /**
-     * Push value to the end of array.
+     * 将数值推送到数组的末端
      *
-     * @param  string $key
-     * @param  mixed  $value
+     * @param string $key
+     * @param mixed $value
      * @return self
      */
     public function push($key, $value)
     {
         $values = $this->get($key);
-
         $values[] = $value;
-
         return $this->set($key, $values);
     }
 
     /**
-     * Removes a value from array.
+     * 从数组中删除一个值
      *
-     * @param  string $key
-     * @param  mixed  $value
+     * @param string $key
+     * @param mixed $value
      * @return self
      */
     public function pull($key, $value)
     {
         $values = $this->get($key);
-
         Arr::pull($values, $value);
-
         return $this->set($key, $values);
     }
 
     /**
-     * Merges values from another array.
+     * 合并另一个数组的值
      *
-     * @param  mixed $values
-     * @param  bool  $replace
+     * @param mixed $values
+     * @param bool $replace
      * @return self
      */
     public function merge($values, $replace = false)
     {
         $this->values = Arr::merge($this->values, $values, $replace);
-        $this->dirty  = true;
-
+        $this->dirty = true;
         return $this;
     }
 
     /**
-     * Extracts config values.
+     * 提取配置值
      *
-     * @param  array $keys
-     * @param  bool  $include
+     * @param array $keys
+     * @param bool $include
      * @return array
      */
     public function extract($keys, $include = true)
@@ -140,9 +129,9 @@ class Config implements \ArrayAccess, \Countable, \JsonSerializable
     }
 
     /**
-     * Checks if the values are modified.
+     * 检查数值是否被修改
      *
-     * @return array
+     * @return bool
      */
     public function dirty()
     {
@@ -150,17 +139,17 @@ class Config implements \ArrayAccess, \Countable, \JsonSerializable
     }
 
     /**
-     * Dumps the values as php.
+     * 将数值转储为 php
      *
      * @return string
      */
     public function dump()
     {
-        return '<?php return '.var_export($this->values, true).';';
+        return '<?php return ' . var_export($this->values, true) . ';';
     }
 
     /**
-     * Gets the value count.
+     * 获取值长度
      *
      * @return int
      */
@@ -170,7 +159,7 @@ class Config implements \ArrayAccess, \Countable, \JsonSerializable
     }
 
     /**
-     * Gets the values as a plain array.
+     * 以普通数组的形式获取数值
      *
      * @return array
      */
@@ -180,7 +169,7 @@ class Config implements \ArrayAccess, \Countable, \JsonSerializable
     }
 
     /**
-     * Implements JsonSerializable interface.
+     * 实现 JsonSerializable 接口
      *
      * @return array
      */
@@ -190,8 +179,10 @@ class Config implements \ArrayAccess, \Countable, \JsonSerializable
     }
 
     /**
-     * Implements ArrayAccess interface.
+     * 实现 ArrayAccess 接口
      *
+     * @param $key
+     * @return bool
      * @see has()
      */
     public function offsetExists($key)
@@ -200,8 +191,10 @@ class Config implements \ArrayAccess, \Countable, \JsonSerializable
     }
 
     /**
-     * Implements ArrayAccess interface.
+     * 实现 ArrayAccess 接口
      *
+     * @param $key
+     * @return mixed
      * @see get()
      */
     public function offsetGet($key)
@@ -210,8 +203,10 @@ class Config implements \ArrayAccess, \Countable, \JsonSerializable
     }
 
     /**
-     * Implements ArrayAccess interface.
+     * 实现 ArrayAccess 接口
      *
+     * @param $key
+     * @param $value
      * @see set()
      */
     public function offsetSet($key, $value)
@@ -220,8 +215,9 @@ class Config implements \ArrayAccess, \Countable, \JsonSerializable
     }
 
     /**
-     * Implements ArrayAccess interface.
+     * 实现 ArrayAccess 接口
      *
+     * @param $key
      * @see remove()
      */
     public function offsetUnset($key)

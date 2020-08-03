@@ -5,17 +5,17 @@ namespace Foxkit\Routing;
 interface ParamsResolverInterface
 {
     /**
-     * Callback to modify parameters after route matching.
+     * 路由匹配后回调修改参数
      *
-     * @param  array $parameters
+     * @param array $parameters
      * @return array
      */
     public function match(array $parameters = []);
 
     /**
-     * Callback to modify parameters during URL generation.
+     * 在生成 URL 时回调修改参数
      *
-     * @param  array $parameters
+     * @param array $parameters
      * @return array
      */
     public function generate(array $parameters = []);

@@ -5,72 +5,72 @@ namespace Foxkit\Event;
 interface EventDispatcherInterface
 {
     /**
-     * Adds an event listener.
+     * 添加一个事件监听
      *
-     * @param string   $event
+     * @param string $event
      * @param callable $listener
-     * @param int      $priority
+     * @param int $priority
      */
     public function on($event, $listener, $priority = 0);
 
     /**
-     * Removes one or more event listeners.
+     * 移除一个或多个事件监听
      *
-     * @param string   $event
+     * @param string $event
      * @param callable $listener
      */
     public function off($event, $listener = null);
 
     /**
-     * Adds an event subscriber.
+     * 添加一个事件订阅
      *
      * @param EventSubscriberInterface $subscriber
      */
     public function subscribe(EventSubscriberInterface $subscriber);
 
     /**
-     * Removes an event subscriber.
+     * 移除一个事件订阅
      *
      * @param EventSubscriberInterface $subscriber
      */
     public function unsubscribe(EventSubscriberInterface $subscriber);
 
     /**
-     * Triggers an event.
+     * 触发一个事件
      *
-     * @param  string|EventInterface $event
-     * @param  array                 $arguments
+     * @param string|EventInterface $event
+     * @param array $arguments
      * @return EventInterface
      */
     public function trigger($event, array $arguments = []);
 
     /**
-     * Checks if a event has listeners.
+     * 检查事件是否有监听
      *
-     * @param  string $event
+     * @param string $event
      * @return bool
      */
     public function hasListeners($event = null);
 
     /**
-     * Gets all listeners of an event.
+     * 获取一个事件的所有监听
      *
-     * @param  string $event
+     * @param string $event
      * @return array
      */
     public function getListeners($event = null);
 
     /**
-     * Gets the listener priority for a specific event.
+     * 获取指定事件的监听优先级
      *
-     * @param  string   $event
-     * @param  callable $listener
-     * @return int|null The event listener priority
+     * @param string $event
+     * @param callable $listener
+     * @return int|null 事件监听优先级
      */
     public function getListenerPriority($event, $listener);
 
     /**
-     * Gets the default Event class.
+     * 获取默认的事件类
      *
      * @return string
      */

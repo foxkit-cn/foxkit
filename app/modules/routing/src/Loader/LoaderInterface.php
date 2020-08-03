@@ -7,9 +7,9 @@ use Foxkit\Routing\Route;
 interface LoaderInterface
 {
     /**
-     * Loads routes.
+     * 加载路由
      *
-     * @param  mixed $routes
+     * @param mixed $routes
      * @return Route[]
      */
     public function load($routes);

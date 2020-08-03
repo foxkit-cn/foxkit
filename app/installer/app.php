@@ -4,11 +4,11 @@ use Foxkit\Application as App;
 use Foxkit\Module\Loader\AutoLoader;
 use Foxkit\Module\Loader\ConfigLoader;
 
-$loader = require $path.'/autoload.php';
-$requirements = require __DIR__.'/requirements.php';
+$loader = require $path . '/autoload.php';
+$requirements = require __DIR__ . '/requirements.php';
 
 if ($failed = $requirements->getFailedRequirements()) {
-    require __DIR__.'/views/requirements.php';
+    require __DIR__ . '/views/requirements.php';
     exit;
 }
 
@@ -22,8 +22,8 @@ $app['module']->register([
 ], $path);
 
 $app['module']->addLoader(new AutoLoader($app['autoloader']));
-$app['module']->addLoader(new ConfigLoader(require $path.'/app/system/config.php'));
-$app['module']->addLoader(new ConfigLoader(require __DIR__.'/config.php'));
+$app['module']->addLoader(new ConfigLoader(require $path . '/app/system/config.php'));
+$app['module']->addLoader(new ConfigLoader(require __DIR__ . '/config.php'));
 $app['module']->load('installer');
 
 $app->run();

@@ -37,7 +37,7 @@ class Composer
 
     /**
      * @param array $config
-     * @param null  $output
+     * @param null $output
      */
     public function __construct($config, $output = null)
     {
@@ -58,23 +58,22 @@ class Composer
      * @param bool $packagist
      * @param bool $writeConfig
      * @param bool $preferSource
-     * @return bool
+     * @return void
+     * @throws \Exception
      */
     public function install(array $install, $packagist = false, $writeConfig = true, $preferSource = false)
     {
         $this->addPackages($install);
-
         $refresh = [];
         $versionParser = new VersionParser();
         foreach ($install as $name => $version) {
             try {
                 $normalized = $versionParser->normalize($version);
                 $refresh[] = new Package($name, $normalized, $version);
-            } catch (\UnexpectedValueException $e) {}
+            } catch (\UnexpectedValueException $e) {
+            }
         }
-
         $this->composerUpdate(array_keys($install), $refresh, $packagist, $preferSource);
-
         if ($writeConfig) {
             $this->writeConfig();
         }
@@ -84,22 +83,20 @@ class Composer
     /**
      * @param array|string $uninstall [name, name, ...]
      * @param bool $writeConfig
+     * @throws \Exception
      */
     public function uninstall($uninstall, $writeConfig = true)
     {
-        $uninstall = (array) $uninstall;
-
+        $uninstall = (array)$uninstall;
         $this->removePackages($uninstall);
-
         $this->composerUpdate($uninstall);
-
         if ($writeConfig) {
             $this->writeConfig();
         }
     }
 
     /**
-     * Checks if a package is installed by composer.
+     * 检查软件包是否由 composer 安装
      *
      * @param $name
      * @return bool
@@ -108,22 +105,20 @@ class Composer
     {
         $installed = $this->paths['path.packages'] . '/composer/installed.json';
         $installed = file_exists($installed) ? json_decode(file_get_contents($installed), true) : [];
-
         $installed = array_map(function ($pkg) {
             return $pkg['name'];
         }, $installed);
-
         return array_search($name, $installed) !== false;
     }
 
     /**
-     * Runs Composer Update command.
+     * 运行 Composer 更新命令
      *
-     * @param  array|bool $updates
+     * @param array|bool $updates
      * @param array $refresh
      * @param bool $packagist
      * @param bool $preferSource
-     * @return bool
+     * @return void
      * @throws \Exception
      */
     protected function composerUpdate($updates = false, $refresh = [], $packagist = false, $preferSource = false)
@@ -131,35 +126,29 @@ class Composer
         $installed = new JsonFile($this->paths['path.vendor'] . '/composer/installed.json');
         $internal = new CompositeRepository([]);
         $internal->addRepository(new InstalledFilesystemRepository($installed));
-
         $composer = $this->getComposer($packagist);
         $composer->getDownloadManager()->setOutputProgress(false);
-
         $local = $composer->getRepositoryManager()->getLocalRepository();
         foreach ($refresh as $package) {
             $local->removePackage($package);
         }
-
         $installer = Installer::create($this->getIO(), $composer)
             ->setAdditionalInstalledRepository($internal)
             ->setOptimizeAutoloader(true)
             ->setUpdate(true);
-
         if ($preferSource) {
             $installer->setPreferSource(true);
         } else {
             $installer->setPreferDist(true);
         }
-
         if ($updates) {
             $installer->setUpdateWhitelist($updates)->setWhitelistDependencies();
         }
-
         $installer->run();
     }
 
     /**
-     * Returns composer instance.
+     * 返回 composer 实例
      *
      * @param bool $packagist
      * @return null
@@ -169,12 +158,11 @@ class Composer
         $config = $this->blueprint;
         $config['config'] = ['vendor-dir' => $this->paths['path.packages'], 'cache-files-ttl' => 0];
         $config['require'] = $this->packages;
-
         if (!$packagist) {
             $config['repositories'][] = ['packagist' => false];
         }
 
-        // set memory limit, if < 512M
+        // 如果 < 512M，设置内存限制
         $memory = trim(ini_get('memory_limit'));
         if ($memory != -1 && $this->memoryInBytes($memory) < 512 * 1024 * 1024) {
             @ini_set('memory_limit', '512M');
@@ -184,7 +172,6 @@ class Composer
             'home' => $this->paths['path.temp'] . '/composer',
             'cache-dir' => $this->paths['path.temp'] . '/composer/cache'
         ]);
-
         $composer = Factory::create($this->getIO(), $config);
         $composer->setLocker(new Locker(
             $this->getIO(),
@@ -193,13 +180,12 @@ class Composer
             $composer->getInstallationManager(),
             json_encode($config)
         ));
-
         return $composer;
     }
 
 
     /**
-     * @return InstallerIO
+     * @return ConsoleIO
      */
     protected function getIO()
     {
@@ -208,7 +194,7 @@ class Composer
 
     /**
      * @param $packages
-     * @return array
+     * @return void
      */
     protected function addPackages($packages)
     {
@@ -217,7 +203,7 @@ class Composer
 
     /**
      * @param $packages
-     * @return array
+     * @return void
      */
     protected function removePackages($packages)
     {
@@ -225,7 +211,7 @@ class Composer
     }
 
     /**
-     * Reads packages from package file.
+     * 从软件包文件中读取软件包
      *
      * @return array
      */
@@ -235,7 +221,7 @@ class Composer
     }
 
     /**
-     * Writes changes to packages file.
+     * 写入对包文件的修改
      */
     protected function writeConfig()
     {
@@ -243,7 +229,7 @@ class Composer
     }
 
     /**
-     * Converts memory value from 'php.ini' into bytes.
+     * 将 'php.ini' 中的内存值转换为 bytes
      *
      * @param $value
      * @return int
@@ -251,15 +237,15 @@ class Composer
     protected function memoryInBytes($value)
     {
         $unit = strtolower(substr($value, -1, 1));
-        $value = (int) $value;
+        $value = (int)$value;
 
         switch ($unit) {
             case 'g':
                 $value *= 1024;
-            // no break (cumulative multiplier)
+            // 不加 break (累积乘数)
             case 'm':
                 $value *= 1024;
-            // no break (cumulative multiplier)
+            // 不加 break (累积乘数)
             case 'k':
                 $value *= 1024;
         }

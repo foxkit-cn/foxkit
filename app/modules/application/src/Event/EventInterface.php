@@ -5,28 +5,28 @@ namespace Foxkit\Event;
 interface EventInterface
 {
     /**
-     * Gets the event name.
+     * 获取事件名称
      *
      * @return string
      */
     public function getName();
 
     /**
-     * Gets the event dispatcher.
+     * 获取事件调度器
      *
      * @return EventDispatcherInterface
      */
     public function getDispatcher();
 
     /**
-     * Is propagation stopped?
+     * 是否停止传播
      *
      * @return bool
      */
     public function isPropagationStopped();
 
     /**
-     * Stop further event propagation.
+     * 停止进一步的事件传播
      *
      * @return void
      */

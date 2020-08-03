@@ -10,8 +10,6 @@ class CallableLoader implements LoaderInterface
     protected $callable;
 
     /**
-     * Constructor.
-     *
      * @param callable $callable
      */
     public function __construct(callable $callable)

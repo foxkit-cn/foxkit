@@ -2,12 +2,14 @@
 
 namespace Foxkit\Application\Traits;
 
+use Foxkit\Container;
+
 trait StaticTrait
 {
     protected static $instance;
 
     /**
-     * Gets a container instance.
+     * 获取一个容器实例
      *
      * @return Container
      */
@@ -17,9 +19,9 @@ trait StaticTrait
     }
 
     /**
-     * Checks if a parameter or service is defined.
+     * 检查是否定义了参数或服务
      *
-     * @param  string $name
+     * @param string $name
      * @return bool
      */
     public static function has($name)
@@ -28,9 +30,9 @@ trait StaticTrait
     }
 
     /**
-     * Gets a parameter or service.
+     * 获取一个参数或服务
      *
-     * @param  string $name
+     * @param string $name
      * @return mixed
      */
     public static function get($name)
@@ -39,10 +41,10 @@ trait StaticTrait
     }
 
     /**
-     * Sets a parameter or service.
+     * 设置一个参数或服务
      *
      * @param string $name
-     * @param mixed  $value
+     * @param mixed $value
      */
     public static function set($name, $value)
     {
@@ -50,7 +52,7 @@ trait StaticTrait
     }
 
     /**
-     * Removes a parameter or service.
+     * 删除一个参数或服务
      *
      * @param string $name
      */
@@ -60,16 +62,15 @@ trait StaticTrait
     }
 
     /**
-     * Magic method to access the container in a static context.
+     * 在静态上下文中访问容器的魔法方法
      *
-     * @param  string $name
-     * @param  array  $args
+     * @param string $name
+     * @param array $args
      * @return mixed
      */
     public static function __callStatic($name, $args)
     {
         $value = static::$instance->offsetGet($name);
-
         return $args ? call_user_func_array($value, $args) : $value;
     }
 }

@@ -27,10 +27,8 @@ class Event implements EventInterface, \ArrayAccess
     protected $dispatcher;
 
     /**
-     * Constructor.
-     *
      * @param string $name
-     * @param array  $parameters
+     * @param array $parameters
      */
     public function __construct($name, array $parameters = [])
     {
@@ -47,20 +45,19 @@ class Event implements EventInterface, \ArrayAccess
     }
 
     /**
-     * Sets the event name.
+     * 设置事件名称
      *
-     * @param  string $name
+     * @param string $name
      * @return self
      */
     public function setName($name)
     {
         $this->name = $name;
-
         return $this;
     }
 
     /**
-     * Gets all parameters.
+     * 获取所有参数
      *
      * @return array|object|\ArrayAccess
      */
@@ -70,21 +67,20 @@ class Event implements EventInterface, \ArrayAccess
     }
 
     /**
-     * Sets all parameters.
+     * 设置所有参数
      *
-     * @param  array
+     * @param array
      * @return self
      */
     public function setParameters(array $parameters)
     {
         $this->parameters = $parameters;
-
         return $this;
     }
 
     /**
-     * @param  mixed $values
-     * @param  bool  $replace
+     * @param mixed $values
+     * @param bool $replace
      * @return self
      */
     public function addParameters(array $values, $replace = false)
@@ -102,7 +98,7 @@ class Event implements EventInterface, \ArrayAccess
     }
 
     /**
-     * Sets the event dispatcher.
+     * 设置事件发送器
      *
      * @param EventDispatcherInterface $dispatcher
      */
@@ -128,9 +124,9 @@ class Event implements EventInterface, \ArrayAccess
     }
 
     /**
-     * Checks if a parameter exists.
+     * 检查是否存在参数
      *
-     * @param  string $name
+     * @param string $name
      * @return mixed
      */
     public function offsetExists($name)
@@ -139,9 +135,9 @@ class Event implements EventInterface, \ArrayAccess
     }
 
     /**
-     * Gets a parameter.
+     * 获取一个参数
      *
-     * @param  string $name
+     * @param string $name
      * @return mixed
      */
     public function offsetGet($name)
@@ -150,10 +146,10 @@ class Event implements EventInterface, \ArrayAccess
     }
 
     /**
-     * Sets a parameter.
+     * 设置一个参数
      *
-     * @param  string   $name
-     * @param  callable $callback
+     * @param string $name
+     * @param callable $callback
      */
     public function offsetSet($name, $callback)
     {
@@ -161,7 +157,7 @@ class Event implements EventInterface, \ArrayAccess
     }
 
     /**
-     * Unsets a parameter.
+     * 取消设置参数
      *
      * @param string $name
      */

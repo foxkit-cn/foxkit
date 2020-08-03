@@ -17,8 +17,6 @@ class PackageScripts
     protected $current;
 
     /**
-     * Constructor.
-     *
      * @param string $file
      * @param string $current
      */
@@ -29,7 +27,7 @@ class PackageScripts
     }
 
     /**
-     * Runs the script's install hook.
+     * 运行脚本的 install 钩子
      */
     public function install()
     {
@@ -37,7 +35,7 @@ class PackageScripts
     }
 
     /**
-     * Runs the script's uninstall hook.
+     *  运行脚本的 uninstall 钩子
      */
     public function uninstall()
     {
@@ -45,7 +43,7 @@ class PackageScripts
     }
 
     /**
-     * Runs the script's enable hook.
+     *  运行脚本的 enable 钩子
      */
     public function enable()
     {
@@ -53,7 +51,7 @@ class PackageScripts
     }
 
     /**
-     * Runs the script's disable hook.
+     *  运行脚本的 disable 钩子
      */
     public function disable()
     {
@@ -61,7 +59,7 @@ class PackageScripts
     }
 
     /**
-     * Runs the script's update hooks.
+     *  运行脚本的 update 钩子
      */
     public function update()
     {
@@ -69,21 +67,20 @@ class PackageScripts
     }
 
     /**
-     * Checks for script updates.
+     * 检查脚本更新。
      */
     public function hasUpdates()
     {
-        return (bool) $this->getUpdates();
+        return (bool)$this->getUpdates();
     }
 
     /**
-     * @param  string $name
+     * @param string $name
      * @return array
      */
     protected function get($name)
     {
         $scripts = $this->load();
-
         return isset($scripts[$name]) ? $scripts[$name] : [];
     }
 
@@ -95,7 +92,6 @@ class PackageScripts
         if (!$this->file || !file_exists($this->file)) {
             return [];
         }
-
         return require $this->file;
     }
 
@@ -105,12 +101,10 @@ class PackageScripts
     protected function run($scripts)
     {
         array_map(function ($script) {
-
             if (is_callable($script)) {
                 call_user_func($script, App::getInstance());
             }
-
-        }, (array) $scripts);
+        }, (array)$scripts);
     }
 
     /**
@@ -119,14 +113,11 @@ class PackageScripts
     protected function getUpdates()
     {
         $updates = $this->get('updates');
-
         $versions = array_filter(array_keys($updates), function ($version) {
             return version_compare($version, $this->current, '>');
         });
-
         $updates = array_intersect_key($updates, array_flip($versions));
         uksort($updates, 'version_compare');
-
         return $updates;
     }
 }

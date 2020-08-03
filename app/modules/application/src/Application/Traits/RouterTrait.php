@@ -9,6 +9,9 @@ use Symfony\Component\HttpFoundation\Response;
 trait RouterTrait
 {
     /**
+     * @param $code
+     * @param null $message
+     * @param array $headers
      * @see HttpKernel::abort()
      */
     public static function abort($code, $message = null, array $headers = [])
@@ -17,9 +20,9 @@ trait RouterTrait
     }
 
     /**
-     * Registers an error handler.
+     * 注册一个错误处理程序
      *
-     * @param mixed   $callback
+     * @param mixed $callback
      * @param integer $priority
      */
     public static function error($callback, $priority = -8)
@@ -28,6 +31,11 @@ trait RouterTrait
     }
 
     /**
+     * @param string $url
+     * @param array $parameters
+     * @param int $status
+     * @param array $headers
+     * @return
      * @see Router::redirect()
      */
     public static function redirect($url = '', $parameters = [], $status = 302, $headers = [])
@@ -36,12 +44,12 @@ trait RouterTrait
     }
 
     /**
-     * Handles a subrequest to forward an action internally.
+     * 处理内部转发操作的子请求
      *
-     * @param  string $name
-     * @param  array  $parameters
-     * @throws \RuntimeException
+     * @param string $name
+     * @param array $parameters
      * @return Response
+     * @throws \RuntimeException
      */
     public static function forward($name, $parameters = [])
     {

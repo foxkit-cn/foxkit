@@ -19,7 +19,6 @@ class InstallerIO extends ConsoleIO
     public function __construct(InputInterface $input = null, OutputInterface $output = null, HelperSet $helperSet = null)
     {
         parent::__construct($input ?: new ArrayInput([]), $output ?: new StreamOutput(fopen('php://output', 'w')), $helperSet ?: new HelperSet());
-
         if (PHP_SAPI != 'cli') {
             ob_implicit_flush(true);
             @ob_end_flush();
@@ -42,7 +41,6 @@ class InstallerIO extends ConsoleIO
                 }
             }
         }
-
         parent::writeError($messages, $newline);
     }
 }

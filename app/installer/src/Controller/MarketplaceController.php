@@ -18,7 +18,7 @@ class MarketplaceController
         return [
             '$view' => [
                 'title' => __('Marketplace'),
-                'name'  => 'installer:views/marketplace.php'
+                'name' => 'installer:views/marketplace.php'
             ],
             '$data' => [
                 'title' => 'Themes',
@@ -32,13 +32,15 @@ class MarketplaceController
 
     /**
      * @Request({"page":"int"})
+     * @param null $page
+     * @return array[]
      */
     public function extensionsAction($page = null)
     {
         return [
             '$view' => [
                 'title' => __('Marketplace'),
-                'name'  => 'installer:views/marketplace.php'
+                'name' => 'installer:views/marketplace.php'
             ],
             '$data' => [
                 'title' => 'Extensions',

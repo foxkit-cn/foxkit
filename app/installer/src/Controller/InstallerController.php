@@ -12,9 +12,6 @@ class InstallerController
      */
     protected $installer;
 
-    /**
-     * Constructor.
-     */
     public function __construct()
     {
         $app = App::getInstance();
@@ -24,7 +21,6 @@ class InstallerController
     public function indexAction()
     {
         $intl = App::module('system/intl');
-
         return [
             '$view' => [
                 'title' => __('Foxkit Installer'),
@@ -40,6 +36,8 @@ class InstallerController
 
     /**
      * @Request({"config": "array"})
+     * @param array $config
+     * @return array
      */
     public function checkAction($config = [])
     {
@@ -48,10 +46,13 @@ class InstallerController
 
     /**
      * @Request({"config": "array", "option": "array", "user": "array"})
+     * @param array $config
+     * @param array $option
+     * @param array $user
+     * @return array
      */
     public function installAction($config = [], $option = [], $user = [])
     {
         return $this->installer->install($config, $option, $user);
     }
-
 }

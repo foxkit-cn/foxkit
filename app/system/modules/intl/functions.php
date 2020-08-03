@@ -5,7 +5,12 @@ use Foxkit\Application as App;
 if (!function_exists('__')) {
 
     /**
-     * Translates the given message, alias for method trans()
+     * 翻译给定的消息，是方法 trans() 的别名
+     * @param $id
+     * @param array $parameters
+     * @param string $domain
+     * @param null $locale
+     * @return
      */
     function __($id, array $parameters = [], $domain = 'messages', $locale = null) {
         return App::translator()->trans($id, $parameters, $domain, $locale);
@@ -15,7 +20,13 @@ if (!function_exists('__')) {
 if (!function_exists('_c')) {
 
     /**
-     * Translates the given choice message by choosing a translation according to a number, alias for method transChoice()
+     * 根据数字选择翻译给定的选择信息，是方法 transChoice() 的别名
+     * @param $id
+     * @param $number
+     * @param array $parameters
+     * @param null $domain
+     * @param null $locale
+     * @return
      */
     function _c($id, $number, array $parameters = [], $domain = null, $locale = null) {
         return App::translator()->transChoice($id, $number, $parameters, $domain, $locale);

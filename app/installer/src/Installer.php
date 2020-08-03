@@ -23,7 +23,7 @@ class Installer
 
 
     /**
-     * @var Application Foxkit Application instance
+     * @var Application
      */
     protected $app;
 
@@ -35,11 +35,9 @@ class Installer
     public function __construct(Application $app)
     {
         $this->app = $app;
-
         if (function_exists('opcache_reset')) {
             opcache_reset();
         }
-
         $this->config = file_exists($this->configFile);
     }
 
@@ -47,11 +45,8 @@ class Installer
     {
         $status = 'no-connection';
         $message = '';
-
         try {
-
             try {
-
                 if (!$this->config) {
                     foreach ($config as $name => $values) {
                         if ($module = $this->app->module($name)) {
@@ -59,18 +54,14 @@ class Installer
                         }
                     }
                 }
-
                 $this->app->db()->connect();
-
                 if ($this->app->db()->getUtility()->tableExists('@system_config')) {
                     $status = 'tables-exist';
                     $message = __('Existing Foxkit installation detected. Choose different table prefix?');
                 } else {
                     $status = 'no-tables';
                 }
-
             } catch (ConnectionException $e) {
-
                 if ($e->getPrevious()->getCode() == 1049) {
                     $this->createDatabase();
                     $status = 'no-tables';
@@ -78,16 +69,12 @@ class Installer
                     throw $e;
                 }
             }
-
         } catch (\Exception $e) {
-
             $message = __('Database connection failed!');
-
             if ($e->getCode() == 1045) {
                 $message = __('Database access denied!');
             }
         }
-
         return ['status' => $status, 'message' => $message];
     }
 
@@ -96,20 +83,15 @@ class Installer
         $status = $this->check($config);
         $message = $status['message'];
         $status = $status['status'];
-
         try {
-
             if ('no-connection' == $status) {
                 $this->app->abort(400, __('No database connection.'));
             }
-
             if ('tables-exist' == $status) {
                 $this->app->abort(400, $message);
             }
-
-            $scripts = new PackageScripts($this->app->path().'/app/system/scripts.php');
+            $scripts = new PackageScripts($this->app->path() . '/app/system/scripts.php');
             $scripts->install();
-
             $this->app->db()->insert('@system_user', [
                 'name' => $user['username'],
                 'username' => $user['username'],
@@ -119,76 +101,55 @@ class Installer
                 'registered' => date('Y-m-d H:i:s'),
                 'roles' => '2,3'
             ]);
-
             $option['system']['version'] = $this->app->version();
-
             foreach ($option as $name => $values) {
                 $this->app->config()->set($name, $this->app->config($name)->merge($values));
             }
-
             $packageManager = new PackageManager(new NullOutput());
             foreach (glob($this->app->get('path.packages') . '/*/*/composer.json') as $package) {
                 $package = $this->app->package()->load($package);
-                if ($package->get('type') === 'foxkit-extension' || $package->get('type') === 'foxkit-theme' ) {
+                if ($package->get('type') === 'foxkit-extension' || $package->get('type') === 'foxkit-theme') {
                     $packageManager->enable($package);
                 }
             }
-
-            if (file_exists(__DIR__.'/../install.php')) {
-                require_once __DIR__.'/../install.php';
+            if (file_exists(__DIR__ . '/../install.php')) {
+                require_once __DIR__ . '/../install.php';
             }
-
             if (!$this->config) {
-
                 $configuration = new Config();
                 $configuration->set('application.debug', false);
-
                 foreach ($config as $key => $value) {
                     $configuration->set($key, $value);
                 }
-
                 $configuration->set('system.secret', $this->app->get('auth.random')->generateString(64));
-
                 if (!file_put_contents($this->configFile, $configuration->dump())) {
-
                     $status = 'write-failed';
-
                     $this->app->abort(400, __('Can\'t write config.'));
                 }
             }
-
             $this->app->module('system/cache')->clearCache();
-
             $status = 'success';
-
         } catch (DBALException $e) {
-
             $status = 'db-sql-failed';
             $message = __('Database error: %error%', ['%error%' => $e->getMessage()]);
-
         } catch (\Exception $e) {
-
             $message = $e->getMessage();
-
         }
-
         return ['status' => $status, 'message' => $message];
     }
 
     /**
      * @return void
+     * @throws DBALException
      */
     protected function createDatabase()
     {
         $module = $this->app->module('database');
         $params = $module->config('connections')[$module->config('default')];
-
         $name = $params['dbname'];
         unset($params['dbname']);
-
         $db = DriverManager::getConnection($params);
         $db->getSchemaManager()->createDatabase($db->quoteIdentifier($name));
         $db->close();
     }
-
 }

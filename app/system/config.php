@@ -2,7 +2,7 @@
 
 return [
     'application' => [
-        'version' => '0.0.1', // 保持与 package.json 一致
+        'version' => '0.1.0', // 保持与 package.json 一致
     ],
     'auth' => [
         'table' => '@system_auth',

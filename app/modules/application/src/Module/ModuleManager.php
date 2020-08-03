@@ -45,8 +45,6 @@ class ModuleManager implements \IteratorAggregate
     ];
 
     /**
-     * Constructor.
-     *
      * @param Application $app
      */
     public function __construct(Application $app)
@@ -56,8 +54,10 @@ class ModuleManager implements \IteratorAggregate
     }
 
     /**
-     * Get shortcut.
+     * 获取快捷方式
      *
+     * @param $name
+     * @return mixed|null
      * @see get()
      */
     public function __invoke($name)
@@ -66,9 +66,9 @@ class ModuleManager implements \IteratorAggregate
     }
 
     /**
-     * Gets a module.
+     * 获取一个模块
      *
-     * @param  string $name
+     * @param string $name
      * @return mixed|null
      */
     public function get($name)
@@ -77,7 +77,7 @@ class ModuleManager implements \IteratorAggregate
     }
 
     /**
-     * Gets all modules.
+     * 获取所有模块
      *
      * @return array
      */
@@ -87,93 +87,74 @@ class ModuleManager implements \IteratorAggregate
     }
 
     /**
-     * Loads modules by name.
+     * 根据名称加载模块
      *
-     * @param  string|array $modules
+     * @param string|array $modules
      * @return self
      */
     public function load($modules)
     {
         $resolved = [];
-
         if (is_string($modules)) {
-            $modules = (array) $modules;
+            $modules = (array)$modules;
         }
-
-        foreach ((array) $modules as $name) {
-
+        foreach ((array)$modules as $name) {
             if (!isset($this->registered[$name])) {
                 throw new \RuntimeException("Undefined module: $name");
             }
-
             $this->resolveModules($this->registered[$name], $resolved);
         }
-
         $resolved = array_diff_key($resolved, $this->modules);
-
         foreach ($resolved as $name => $module) {
-
             foreach ($this->preLoaders as $loader) {
                 $module = $loader->load($module);
             }
-
             foreach ($this->postLoaders as $loader) {
                 $module = $loader->load($module);
             }
-
             $this->modules[$name] = $module;
         }
-
         return $this;
     }
 
     /**
-     * Registers modules from path(s).
+     * 从路径注册模块
      *
-     * @param  string|array $paths
-     * @param  string $basePath
+     * @param string|array $paths
+     * @param string $basePath
      * @return self
      */
     public function register($paths, $basePath = null)
     {
         $app = $this->app;
         $includes = [];
-
-        foreach ((array) $paths as $path) {
-
+        foreach ((array)$paths as $path) {
             $files = glob($this->resolvePath($path, $basePath), GLOB_NOSORT) ?: [];
-
             foreach ($files as $file) {
-
                 if (!is_array($module = include $file) || !isset($module['name'])) {
                     continue;
                 }
-
                 $module = array_replace($this->defaults, $module);
                 $module['path'] = strtr(dirname($file), '\\', '/');
-
                 if (isset($module['include'])) {
-                    foreach ((array) $module['include'] as $include) {
+                    foreach ((array)$module['include'] as $include) {
                         $includes[] = $this->resolvePath($include, $module['path']);
                     }
                 }
-
                 $this->registered[$module['name']] = $module;
             }
         }
-
         if ($includes) {
             $this->register($includes);
         }
-
         return $this;
     }
 
     /**
-     * Adds a module loader.
+     * 添加一个模块加载器
      *
-     * @param  LoaderInterface|callable $loader
-     * @param  boolean $post
+     * @param LoaderInterface|callable $loader
+     * @param boolean $post
      * @return self
      */
     public function addLoader($loader, $post = false)
@@ -181,18 +162,16 @@ class ModuleManager implements \IteratorAggregate
         if (is_callable($loader)) {
             $loader = new CallableLoader($loader);
         }
-
         if (!$post) {
             $this->preLoaders[] = $loader;
         } else {
             $this->postLoaders[] = $loader;
         }
-
         return $this;
     }
 
     /**
-     * Implements the IteratorAggregate.
+     * 实现 IteratorAggregate
      *
      * @return \ArrayIterator
      */
@@ -202,7 +181,7 @@ class ModuleManager implements \IteratorAggregate
     }
 
     /**
-     * Resolves module requirements.
+     * 解决模块 requirements
      *
      * @param array $module
      * @param array $resolved
@@ -213,41 +192,35 @@ class ModuleManager implements \IteratorAggregate
     protected function resolveModules(array $module, array &$resolved = [], array &$unresolved = [])
     {
         $unresolved[$module['name']] = $module;
-
         if (isset($module['require'])) {
-            foreach ((array) $module['require'] as $required) {
+            foreach ((array)$module['require'] as $required) {
                 if (!isset($resolved[$required])) {
-
                     if (isset($unresolved[$required])) {
                         throw new \RuntimeException(sprintf('Circular requirement "%s > %s" detected.', $module['name'], $required));
                     }
-
                     if (isset($this->registered[$required])) {
                         $this->resolveModules($this->registered[$required], $resolved, $unresolved);
                     }
                 }
             }
         }
-
         $resolved[$module['name']] = $module;
         unset($unresolved[$module['name']]);
     }
 
     /**
-     * Resolves a absolute path to a given base path.
+     * 解析一个给定基本路径的绝对路径
      *
-     * @param  string $path
-     * @param  string $basePath
+     * @param string $path
+     * @param string $basePath
      * @return string
      */
     protected function resolvePath($path, $basePath = null)
     {
         $path = strtr($path, '\\', '/');
-
         if (!($path[0] == '/' || (strlen($path) > 3 && ctype_alpha($path[0]) && $path[1] == ':' && $path[2] == '/'))) {
             $path = "$basePath/$path";
         }
-
         return $path;
     }
 }

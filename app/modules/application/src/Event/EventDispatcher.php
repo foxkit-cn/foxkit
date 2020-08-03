@@ -20,8 +20,6 @@ class EventDispatcher implements EventDispatcherInterface
     protected $sorted = [];
 
     /**
-     * Constructor.
-     *
      * @param string $event
      */
     public function __construct($event = 'Foxkit\Event\Event')
@@ -46,12 +44,10 @@ class EventDispatcher implements EventDispatcherInterface
         if (!isset($this->listeners[$event])) {
             return;
         }
-
         if ($listener === null) {
             unset($this->listeners[$event], $this->sorted[$event]);
             return;
         }
-
         foreach ($this->listeners[$event] as $priority => $listeners) {
             if (false !== ($key = array_search($listener, $listeners, true))) {
                 unset($this->listeners[$event][$priority][$key], $this->sorted[$event]);
@@ -65,7 +61,6 @@ class EventDispatcher implements EventDispatcherInterface
     public function subscribe(EventSubscriberInterface $subscriber)
     {
         foreach ($subscriber->subscribe() as $event => $params) {
-
             if (is_string($params)) {
                 $this->on($event, [$subscriber, $params]);
             } elseif (is_callable($params)) {
@@ -83,7 +78,6 @@ class EventDispatcher implements EventDispatcherInterface
                     }
                 }
             }
-
         }
     }
 
@@ -113,20 +107,14 @@ class EventDispatcher implements EventDispatcherInterface
         } else {
             $e = $event;
         }
-
         $e->setDispatcher($this);
-
         array_unshift($arguments, $e);
-
         foreach ($this->getListeners($e->getName()) as $listener) {
-
             call_user_func_array($listener, $arguments);
-
             if ($e->isPropagationStopped()) {
                 break;
             }
         }
-
         return $e;
     }
 
@@ -135,7 +123,7 @@ class EventDispatcher implements EventDispatcherInterface
      */
     public function hasListeners($event = null)
     {
-        return (bool) count($this->getListeners($event));
+        return (bool)count($this->getListeners($event));
     }
 
     /**
@@ -146,13 +134,11 @@ class EventDispatcher implements EventDispatcherInterface
         if ($event !== null) {
             return isset($this->sorted[$event]) ? $this->sorted[$event] : $this->sortListeners($event);
         }
-
         foreach (array_keys($this->listeners) as $event) {
             if (!isset($this->sorted[$event])) {
                 $this->sortListeners($event);
             }
         }
-
         return array_filter($this->sorted);
     }
 
@@ -164,7 +150,6 @@ class EventDispatcher implements EventDispatcherInterface
         if (!isset($this->listeners[$event])) {
             return;
         }
-
         foreach ($this->listeners[$event] as $priority => $listeners) {
             if (false !== array_search($listener, $listeners, true)) {
                 return $priority;
@@ -181,20 +166,18 @@ class EventDispatcher implements EventDispatcherInterface
     }
 
     /**
-     * Sorts all listeners of an event by their priority.
+     * 按优先级对事件的所有监听进行排序
      *
-     * @param  string $event
+     * @param string $event
      * @return array
      */
     protected function sortListeners($event)
     {
         $sorted = [];
-
         if (isset($this->listeners[$event])) {
             krsort($this->listeners[$event]);
             $sorted = call_user_func_array('array_merge', $this->listeners[$event]);
         }
-
         return $this->sorted[$event] = $sorted;
     }
 }

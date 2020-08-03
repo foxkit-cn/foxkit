@@ -19,38 +19,32 @@ class Application extends Container
     protected $booted = false;
 
     /**
-     * Constructor.
-     *
      * @param array $values
      */
     public function __construct(array $values = [])
     {
         parent::__construct($values);
-
         $this['events'] = function () {
             return new EventDispatcher();
         };
-
         $this['module'] = function () {
             return new ModuleManager($this);
-         };
+        };
     }
 
     /**
-     * Boots all modules.
+     * 启动所有模块
      */
     public function boot()
     {
         if (!$this->booted) {
-
             $this->booted = true;
             $this->trigger('boot', [$this]);
-
         }
     }
 
     /**
-     * Handles the request.
+     * 处理请求
      *
      * @param Request $request
      */
@@ -59,19 +53,16 @@ class Application extends Container
         if ($request === null) {
             $request = Request::createFromGlobals();
         }
-
         if (!$this->booted) {
             $this->boot();
         }
-
         $response = $this['kernel']->handle($request);
         $response->send();
-
         $this['kernel']->terminate($request, $response);
     }
 
     /**
-     * Checks if running in the console.
+     * 检查是否在控制台中运行
      *
      * @return bool
      */

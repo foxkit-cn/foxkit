@@ -29,8 +29,6 @@ class Module implements ModuleInterface, EventSubscriberInterface
     public $options;
 
     /**
-     * Constructor.
-     *
      * @param array $options
      */
     public function __construct(array $options = [])
@@ -47,11 +45,9 @@ class Module implements ModuleInterface, EventSubscriberInterface
     public function main(App $app)
     {
         $main = $this->options['main'];
-
         if ($main instanceof \Closure) {
             $main = $main->bindTo($this, $this);
         }
-
         if (is_callable($main)) {
             return call_user_func($main, $app);
         }
@@ -65,7 +61,6 @@ class Module implements ModuleInterface, EventSubscriberInterface
         if (is_array($key)) {
             return Arr::extract($this->options, $key);
         }
-
         return Arr::get($this->options, $key, $default);
     }
 
@@ -77,7 +72,6 @@ class Module implements ModuleInterface, EventSubscriberInterface
         if (is_array($key)) {
             return Arr::extract($this->config, $key);
         }
-
         return Arr::get($this->config, $key, $default);
     }
 

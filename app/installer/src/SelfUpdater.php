@@ -30,25 +30,20 @@ class SelfUpdater
     protected $output;
 
     /**
-     * Constructor.
-     *
-     * @param mixed  $output
+     * @param mixed $output
      */
     public function __construct(OutputInterface $output = null)
     {
         $this->output = $output ?: new StreamOutput(fopen('php://output', 'w'));
-
         if (PHP_SAPI != 'cli') {
-
             ob_implicit_flush(true);
             @ob_end_flush();
-
             $this->output->setFormatter(new HtmlOutputFormatter());
         }
     }
 
     /**
-     * Runs Foxkit self update.
+     * 运行 FoxKit 自我更新
      *
      * @param $file
      * @throws \Exception
@@ -57,66 +52,50 @@ class SelfUpdater
     {
         try {
             $path = App::path();
-
             if (!file_exists($file)) {
                 throw new \RuntimeException('File not found.');
             }
-
             $this->output->write('Preparing update...');
             $fileList = $this->getFileList($file);
             unset($fileList[array_search('.htaccess', $fileList)]);
-
             $fileList = array_values(array_filter($fileList, function ($file) {
                 foreach ($this->ignoreFolder as $ignore) {
-                    if(strpos($file, $ignore) === 0) {
+                    if (strpos($file, $ignore) === 0) {
                         return false;
                     }
                 }
-
                 return true;
             }));
-
             if ($this->isWritable($fileList, $path) !== true) {
                 throw new \RuntimeException(array_reduce($fileList, function ($carry, $file) {
                     return $carry . sprintf("'%s' not writable\n", $file);
                 }));
             }
-
             $requirements = include "zip://{$file}#app/installer/requirements.php";
             if ($failed = $requirements->getFailedRequirements()) {
-
                 throw new \RuntimeException(array_reduce($failed, function ($carry, $problem) {
                     return $carry . "\n" . $problem->getHelpText();
                 }));
-
             }
-
             $this->output->writeln('<info>done.</info>');
             $this->output->write('Entering update mode...');
-
             $this->setUpdateMode(true);
             $this->output->writeln('<info>done.</info>');
-
             $this->output->write('Extracting files...');
             $this->extract($file, $fileList, $path);
             $this->output->writeln('<info>done.</info>');
-
             $this->output->write('Removing old files...');
             foreach ($this->cleanup($fileList, $path) as $file) {
                 $this->writeln(sprintf('<error>\'%s\’ could not be removed</error>', $file));
             }
-
             unlink($file);
             $this->output->writeln('<info>done.</info>');
-
             $this->output->write('Deactivating update mode...');
             $this->setUpdateMode(false);
             $this->output->writeln('<info>done.</info>');
-
             if (function_exists('opcache_reset')) {
                 opcache_reset();
             }
-
         } catch (\Exception $e) {
             @unlink($file);
             throw $e;
@@ -125,7 +104,7 @@ class SelfUpdater
     }
 
     /**
-     * Generates file list for given archive.
+     * 为给定的存档生成文件列表
      *
      * @param $file
      * @return array
@@ -133,23 +112,20 @@ class SelfUpdater
     protected function getFileList($file)
     {
         $list = [];
-
         $zip = new \ZipArchive;
         if ($zip->open($file) === true) {
-
             for ($i = 0; $i < $zip->numFiles; $i++) {
                 $list[] = $zip->getNameIndex($i);
             }
             $zip->close();
-
             return $list;
         } else {
-            throw new \RuntimeException('Can not build file list.');
+            throw new \RuntimeException('无法建立文件列表');
         }
     }
 
     /**
-     * Checks if directory is writable.
+     * 检查目录是否可写
      *
      * @param $fileList
      * @param $path
@@ -158,29 +134,24 @@ class SelfUpdater
     protected function isWritable($fileList, $path)
     {
         $notWritable = [];
-
         if (!file_exists($path)) {
-            throw new \RuntimeException(sprintf('"%s" not writable', $path));
+            throw new \RuntimeException(sprintf('"%s" 不可写', $path));
         }
-
         foreach ($fileList as $file) {
             $file = $path . '/' . $file;
-
             while (!file_exists($file)) {
                 $file = dirname($file);
             }
-
             if (!is_writable($file)) {
                 $notWritable[] = $file;
             }
         }
-
         return $notWritable ?: true;
     }
 
 
     /**
-     * Extracts an archive.
+     * 提取一个档案
      *
      * @param $file
      * @param $fileList
@@ -190,16 +161,15 @@ class SelfUpdater
     {
         $zip = new \ZipArchive;
         if ($zip->open($file) === true) {
-
             $zip->extractTo($path, $fileList);
             $zip->close();
         } else {
-            throw new \RuntimeException('Package extraction failed.');
+            throw new \RuntimeException('包提取失败');
         }
     }
 
     /**
-     * Scans directory for old files.
+     * 扫描目录中的旧文件
      *
      * @param $fileList
      * @param $path
@@ -208,11 +178,9 @@ class SelfUpdater
     protected function cleanup($fileList, $path)
     {
         $errorList = [];
-
         foreach ($this->cleanFolder as $dir) {
             array_merge($errorList, $this->doCleanup($fileList, $dir, $path));
         }
-
         return $errorList;
     }
 
@@ -225,14 +193,11 @@ class SelfUpdater
     protected function doCleanup($fileList, $dir, $path)
     {
         $errorList = [];
-
         foreach (array_diff(@scandir($path . '/' . $dir) ?: [], ['..', '.']) as $file) {
             $file = ($dir ? $dir . '/' : '') . $file;
             $realPath = $path . '/' . $file;
-
             if (is_dir($realPath)) {
                 array_merge($errorList, $this->doCleanup($fileList, $file, $path));
-
                 if (!in_array($file, $fileList)) {
                     @rmdir($realPath);
                 }
@@ -245,12 +210,12 @@ class SelfUpdater
     }
 
     /**
-     * Toggles update mode without booting Foxkit application.
+     * 在不启动 FoxKit 应用程序的情况下切换更新模式
      *
      * @param $active
      */
     protected function setUpdateMode($active)
     {
-        // TODO: Implement this.
+        // TODO
     }
 }

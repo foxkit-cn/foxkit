@@ -5,11 +5,9 @@ namespace Foxkit\Kernel\Exception;
 class HttpException extends \RuntimeException
 {
     /**
-     * Constructor.
-     *
-     * @param string     $message
+     * @param string $message
      * @param \Exception $previous
-     * @param int        $code
+     * @param int $code
      */
     public function __construct($message, $previous = null, $code = 500)
     {

@@ -13,9 +13,7 @@ class RequestContext extends BaseContext
     public function fromRequest(Request $request)
     {
         parent::fromRequest($request);
-
         $this->setBaseUrl($request->server->get('HTTP_MOD_REWRITE') == 'On' ? $request->getBasePath() : "{$request->getBasePath()}/index.php");
-
         return $this;
     }
 }

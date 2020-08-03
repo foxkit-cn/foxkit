@@ -5,7 +5,7 @@ namespace Foxkit\Event;
 interface EventSubscriberInterface
 {
     /**
-     * Returns an array of event names this subscriber wants to listen to.
+     * 返回 subscriber 想要监听的事件名称的数组
      *
      * @return array
      */

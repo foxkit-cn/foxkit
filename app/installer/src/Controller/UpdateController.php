@@ -28,16 +28,16 @@ class UpdateController
 
     /**
      * @Request({"url": "string"}, csrf=true)
+     * @param $url
+     * @return array
      */
     public function downloadAction($url)
     {
         $file = tempnam(App::get('path.temp'), 'update_');
         App::session()->set('system.update', $file);
-
         if (!file_put_contents($file, @fopen($url, 'r'))) {
             App::abort(500, 'Download failed or path not writable.');
         }
-
         return [];
     }
 
@@ -50,23 +50,18 @@ class UpdateController
             App::abort(400, __('You may not call this step directly.'));
         }
         App::session()->remove('system.update');
-
         return App::response()->stream(function () use ($file) {
             $output = new StreamOutput(fopen('php://output', 'w'));
             try {
-
                 if (!file_exists($file) || !is_file($file)) {
                     throw new \RuntimeException('File does not exist.');
                 }
-
                 $updater = new SelfUpdater($output);
                 $updater->update($file);
-
             } catch (\Exception $e) {
                 $output->writeln(sprintf("\n<error>%s</error>", $e->getMessage()));
                 $output->write("status=error");
             }
-
         });
     }
 }

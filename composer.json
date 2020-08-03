@@ -35,7 +35,8 @@
         "twig/twig": "^1.22",
         "ext-json": "*",
         "ext-pdo": "*",
-        "ext-zip": "*"
+        "ext-zip": "*",
+        "ext-zend-opcache": "*"
     },
     "autoload": {
         "psr-4": {

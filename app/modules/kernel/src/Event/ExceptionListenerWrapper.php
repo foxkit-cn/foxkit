@@ -10,8 +10,6 @@ class ExceptionListenerWrapper
     protected $callback;
 
     /**
-     * Constructor.
-     *
      * @param mixed $callback
      */
     public function __construct($callback)
@@ -22,15 +20,11 @@ class ExceptionListenerWrapper
     public function __invoke($event)
     {
         $exception = $event->getException();
-
         if (!$this->shouldRun($exception)) {
             return;
         }
-
         $code = $exception instanceof HttpException ? $exception->getCode() : 500;
-
         $response = call_user_func($this->callback, $exception, $code);
-
         if ($response instanceof Response) {
             $event->setResponse($response);
         }
@@ -46,7 +40,6 @@ class ExceptionListenerWrapper
         } else {
             $callbackReflection = new \ReflectionFunction($this->callback);
         }
-
         if ($callbackReflection->getNumberOfParameters() > 0) {
             $parameters = $callbackReflection->getParameters();
             $expectedException = $parameters[0];
@@ -54,7 +47,6 @@ class ExceptionListenerWrapper
                 return false;
             }
         }
-
         return true;
     }
 }

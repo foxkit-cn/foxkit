@@ -20,8 +20,6 @@ class Container implements \ArrayAccess
     protected $factories = [];
 
     /**
-     * Constructor.
-     *
      * @param array $values
      */
     public function __construct(array $values = [])
@@ -36,10 +34,10 @@ class Container implements \ArrayAccess
     }
 
     /**
-     * Gets a parameter/service or calls the invoke method.
+     * 获取一个 参数/服务 或调用 invoke 方法
      *
-     * @param  string $name
-     * @param  array  $args
+     * @param string $name
+     * @param array $args
      * @return mixed
      */
     public function __call($name, $args)
@@ -48,9 +46,9 @@ class Container implements \ArrayAccess
     }
 
     /**
-     * Sets a closure as a factory service.
+     * 将一个匿名函数设置为工厂服务
      *
-     * @param string   $name
+     * @param string $name
      * @param \Closure $closure
      */
     public function factory($name, \Closure $closure)
@@ -60,11 +58,10 @@ class Container implements \ArrayAccess
     }
 
     /**
-     * Extends an existing service definition.
+     * 扩展现有的服务定义
      *
-     * @param string   $name
+     * @param string $name
      * @param \Closure $closure
-     *
      * @throws \InvalidArgumentException
      */
     public function extend($name, \Closure $closure)
@@ -72,24 +69,20 @@ class Container implements \ArrayAccess
         if (!array_key_exists($name, $this->values)) {
             throw new \InvalidArgumentException(sprintf('"%s" is not defined.', $name));
         }
-
         if (!($this->values[$name] instanceof \Closure)) {
             throw new \InvalidArgumentException(sprintf('"%s" service definition is not a Closure.', $name));
         }
-
         $factory = $this->values[$name];
-
         $this->offsetSet($name, function ($c) use ($closure, $factory) {
             return $closure($factory($c), $c);
         });
     }
 
     /**
-     * Gets a parameter/service without resolving.
+     * 获取一个不需要解析的 参数/服务
      *
-     * @param  string $name
+     * @param string $name
      * @return mixed
-     *
      * @throws \InvalidArgumentException
      */
     public function raw($name)
@@ -97,12 +90,11 @@ class Container implements \ArrayAccess
         if (!array_key_exists($name, $this->values)) {
             throw new \InvalidArgumentException(sprintf('"%s" is not defined.', $name));
         }
-
         return isset($this->raw[$name]) ? $this->raw[$name] : $this->values[$name];
     }
 
     /**
-     * Returns all defined names.
+     * 返回所有定义的名称
      *
      * @return array
      */
@@ -112,9 +104,9 @@ class Container implements \ArrayAccess
     }
 
     /**
-     * Checks if a parameter/service is defined.
+     * 检查是否定义了 参数/服务
      *
-     * @param  string $name
+     * @param string $name
      * @return bool
      */
     public function offsetExists($name)
@@ -123,11 +115,10 @@ class Container implements \ArrayAccess
     }
 
     /**
-     * Gets a parameter/service.
+     *  获取一个 参数/服务
      *
-     * @param  string $name
+     * @param string $name
      * @return mixed
-     *
      * @throws \InvalidArgumentException
      */
     public function offsetGet($name)
@@ -135,26 +126,21 @@ class Container implements \ArrayAccess
         if (!array_key_exists($name, $this->values)) {
             throw new \InvalidArgumentException(sprintf('"%s" is not defined.', $name));
         }
-
         if (array_key_exists($name, $this->raw) || !($this->values[$name] instanceof \Closure)) {
             return $this->values[$name];
         }
-
         if (isset($this->factories[$name])) {
             return $this->values[$name]($this);
         }
-
         $this->raw[$name] = $this->values[$name];
-
         return $this->values[$name] = $this->values[$name]($this);
     }
 
     /**
-     * Sets a parameter/service.
+     * 设置一个 参数/服务
      *
      * @param string $name
-     * @param mixed  $value
-     *
+     * @param mixed $value
      * @throws \RuntimeException
      */
     public function offsetSet($name, $value)
@@ -162,12 +148,11 @@ class Container implements \ArrayAccess
         if (array_key_exists($name, $this->raw)) {
             throw new \RuntimeException(sprintf('Cannot override service definition "%s".', $name));
         }
-
         $this->values[$name] = $value;
     }
 
     /**
-     * Removes a parameter/service.
+     * 删除一个 参数/服务
      *
      * @param string $name
      */
